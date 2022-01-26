@@ -19,8 +19,10 @@ Pensemos que se trata de nuestra formación profesional. El tiempo o dinero que 
 Personas fisicas mayores de 18 años
 
 ### Integrantes del grupo
-Colombo, Adriel 
+Colombo, Adriel
+
 Monjes, Paulina 
+
 Rodriguez, Enzo
 
 ### Referentes
