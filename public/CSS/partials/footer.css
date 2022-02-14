@@ -1,0 +1,30 @@
+
+
+
+footer {
+    background-color: var();
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: var(--negro);
+}
+
+.ending {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer section {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: var(--gris-oscuro);
+}

@@ -1,0 +1,26 @@
+
+/*Estilos globales*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var();
+    background-color: var(--blanco);
+}
+
+h3 {
+    font-size: var(--title);
+}
+
+p {
+    font-size: var(--text);
+}
+

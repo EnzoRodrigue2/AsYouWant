@@ -1,0 +1,44 @@
+/* JESUS TAKE THE WHEEL*/
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section article {
+    background-color: var(--gris-claro);
+    width: 30%;
+}
+
+main section article .course-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+main section article .course-card div {
+    display: flex;
+    flex-direction: row;
+}
+
+/*BOTONES*/
+
+.buttons {
+    display: flex;
+    color: var(--negro);
+    background-color: var(--gris-oscuro);
+}
+
+.add {
+    width: 22%;
+}
+
+.buy {
+    width: 73%;
+}
