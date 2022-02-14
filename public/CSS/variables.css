@@ -1,14 +1,17 @@
 /* @import ; Fuente*/
 
+
 :root {
-    --amarillo: #F2B90F;
-    --azul: #049DD9;
-    --celeste: #05C7F2;
-    --gris-claro: #f2f2f2;
-    --gris-oscuro: #666;
+    --celeste: #00ABD5;
+    --rojo: #92140c;
+    --violeta: #2a1e5c;
+    --violeta-oscuro: #0a010d;
+    --gris-oscuro: #5E5D5C;
+    --gris-claro: #ebebeb;
     --blanco: #FFF;
-    --negro: #000;
+    --negro: #000000;
     /*fuente*/
+
 
     /*Font Sizes*/
     --text: 12px;
