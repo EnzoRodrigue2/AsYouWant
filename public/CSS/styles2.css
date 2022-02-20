@@ -1,0 +1,175 @@
+
+:root{
+    --celeste: #00ABD5;
+    --amarillo: #fcba04;
+    --violeta: #28112b;
+    --marron: #453643;
+    --gris-claro: #ebebeb;
+    --gris-oscuro: #5E5D5C;
+    --blanco: #FFF;
+    --negro: #000000;
+    /*Fuente*/
+
+
+    /*Font Sizes*/
+    --text: 12px;
+    --title: 24px;
+    --text-lg: 18px;
+    --text-md: 16px;
+}
+
+/* JESUS TAKE THE WHEEL*/
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section article {
+    background-color: var(--gris-claro);
+    width: 30%;
+}
+
+main section article .course-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+main section article .course-card div {
+    display: flex;
+    flex-direction: row;
+}
+
+/*BOTONES*/
+
+.buttons {
+    display: flex;
+    color: var(--negro);
+    background-color: var(--gris-oscuro);
+}
+
+.add {
+    width: 22%;
+}
+
+.buy {
+    width: 73%;
+}
+
+/*Estilos globales*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var();
+    background-color: var(--blanco);
+}
+
+h3 {
+    font-size: var(--title);
+}
+
+p {
+    font-size: var(--text);
+}
+
+/*LET'S GOOOOOOOO*/
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenido-carrito {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido-carrito article {
+    display: flex;
+}
+
+.resumen {
+    display: flex;
+    flex-direction: column;
+}
+
+.resumen button {
+    color: var(--negro);
+    background-color: var(--gris-oscuro);
+    font-size: var(--text-md);
+}
+
+/*OTROS CURSOS*/
+
+.cursos2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cursos2 article {
+    background-color: var(--gris-claro);
+    width: 30%;
+}
+
+.course-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.course-card div {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+footer {
+    background-color: var();
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: var(--negro);
+}
+
+.ending {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer section {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: var(--gris-oscuro);
+}
