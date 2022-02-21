@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
 
 :root{
     --celeste: #00ABD5;
@@ -10,6 +11,7 @@
     --negro: #000000;
     /*Fuente*/
 
+    --Poppins: 'Poppins', serif;
 
     /*Font Sizes*/
     --text: 12px;
@@ -69,6 +71,8 @@ main section article .course-card div {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    text-decoration: none;
+    font-family: var(--Poppins);
 }
 
 html {
@@ -172,4 +176,38 @@ footer section {
     flex-direction: row;
     flex-wrap: wrap;
     color: var(--gris-oscuro);
+}
+
+
+/* Estilos detalle de producto  */
+
+header {
+    background-color: var(--celeste);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.top-header {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 30%;
+}
+
+.rigth-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.head-user {
+    display: flex;
+    border-left: 2px bold --negro;
+    align-items: center;
+}
+.menu-header a{
+    width: 10%;
 }
