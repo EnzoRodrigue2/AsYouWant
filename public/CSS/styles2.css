@@ -20,7 +20,7 @@
     --text-md: 16px;
 }
 
-/* JESUS TAKE THE WHEEL*/
+/*Estilos home*/
 
 main {
     width: 90%;
@@ -30,11 +30,14 @@ main {
 main section {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 main section article {
     background-color: var(--gris-claro);
     width: 30%;
+    margin: 1.5rem 1rem;
+    padding: 1rem;
 }
 
 main section article .course-card {
@@ -47,6 +50,13 @@ main section article .course-card {
 main section article .course-card div {
     display: flex;
     flex-direction: row;
+    justify-content: space-between
+}
+
+.course-card .media {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 /*BOTONES*/
@@ -54,7 +64,8 @@ main section article .course-card div {
 .buttons {
     display: flex;
     color: var(--negro);
-    background-color: var(--gris-oscuro);
+    width: 100%;
+    margin: 10px;
 }
 
 .add {
@@ -92,14 +103,14 @@ p {
     font-size: var(--text);
 }
 
-/*LET'S GOOOOOOOO*/
+/*Estilos carrito*/
 
-main {
+.carrito main {
     width: 90%;
     margin: 0 auto;
 }
 
-main section {
+.carrito section {
     display: flex;
     flex-wrap: wrap;
 }
@@ -107,15 +118,21 @@ main section {
 .contenido-carrito {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
 }
 
 .contenido-carrito article {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    margin: 10px;
 }
 
 .resumen {
     display: flex;
     flex-direction: column;
+    width: 30%;
 }
 
 .resumen button {
@@ -159,6 +176,11 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     color: var(--negro);
+    margin: 20px 10px;
+}
+
+footer .logo {
+    width: 150px;
 }
 
 .ending {
@@ -166,15 +188,18 @@ footer {
     justify-content: space-between;
 }
 
-footer section {
+footer .opciones {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    width: 20%;
 }
 
 .social-media {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     color: var(--gris-oscuro);
 }
 
