@@ -6,124 +6,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos</title>
     <link rel="stylesheet" href="/CSS/styles2.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <!-- <link rel="stylesheet" href="/CSS/styles.css"> -->
 
 </head>
 <body>
     <header>
-        <div class="top-header">
-            <picture class="logo">
-                <img src="/Images/Logo1.svg" alt="El logo de AsYuoWant">
-            </picture>
-            <div class="form" action="#" method="GET">
-                <div class="input">Que queres aprender hoy?</div>
-                <div class="submit"><a href="/public/Images/Iconos/bxs-collection.svg"</div>
+        <div class="complet-nav">
+            <div class="logo">
+                <img class="icon-header" src="/Images/Iconos/bx-menu.svg">
+                <picture class="logo-lg">
+                    <a href="/"><img class="lgo-simple" src="/Images/lgo_simple.svg" alt="Logo de Mercadoliebre"></a>
+                </picture>
             </div>
-        </div>
-        <div>
-            <article>
-                <picture class="menu-header">
-                    <a href="/views/home.html"><img src="/public/Images/Iconos/bxs-collection.svg"></i>
-                </picture>
-            </article>
-            <article>
-                <picture class="menu-header">
-                    <a href="/views/user.html"><img src="/public/Images/Iconos/campana.svg"></i>
-                </picture>
-            </article>
-            <article>
-                <picture class="menu-header">
-                    <a href="/views/carrito.html"><img src="/public/Images/Iconos/bx-cart.svg"></a>
-                </picture>
-            </article>
-        </div>
-        <div>
-            <article>
-                <picture class="menu-header">
-                    <a href="/views/login.html"><img src="/public/Images/Iconos/bx-user-circle.svg" </a>
-                </picture>
-            </article>
+            <nav class="header-nav">
+                <form class="form">
+                    <input type="text" class="input" placeholder="Que vas a aprender hoy?">
+                    <button type="submit" class="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <div class="contein-user-nav">
+                    <ul class="user-nav">
+                        <li>
+                            <img src="/Images/Iconos/bxs-collection.svg">
+                        </li>
+                        <li>
+                            <img src="/Images/Iconos/campana.svg">
+                        </li>
+                        <li>
+                            <img src="/Images/Iconos/bx-cart.svg">
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-user">
+                    <img src="/Images/Iconos/bx-user-circle.svg">
+                </div>
+            </nav>
         </div>
     </header>
-    <div>
-        <!-- colocar recurso multimedia-->
-    </div>
-    <section>
-        <article>
-            <div>
-                <h1>
-                    Nombre del curso
-                </h1>
-                <p>
-                    descripcion delcurso
-                </p>
-            </div>
-            <div>
-                <!--carrusel de fotos del curso-->
-            </div>
+    <main>
+        <div class="top-curso">
+            <img class="miniatura" src="/public/Images/Imagenes/670x419-Como-vender-cursos-online_-¡guia-completa-de-ventas.jpg">
+            <!-- colocar recurso multimedia-->
+        </div>
+        <section>
+            <article>
+                <div>
+                    <h1>
+                        Nombre del curso
+                    </h1>
+                    <p>
+                        descripcion delcurso
+                    </p>
+                </div>
+                <div>
+                    <!--carrusel de fotos del curso-->
+                </div>
+                <div>
+                    <h3>
+                        Descripcion
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam doloremque, exercitationem quasi atque similique consectetur repudiandae facilis nam nisi esse vero dolorum iure. Necessitatibus at, minima officiis tenetur veniam nulla?
+                    </p>
+                </div>
+            </article>
             <div>
                 <h3>
-                    Descripcion
-                </h1>
+                    Temario del curso
+                </h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam doloremque, exercitationem quasi atque similique consectetur repudiandae facilis nam nisi esse vero dolorum iure. Necessitatibus at, minima officiis tenetur veniam nulla?
+                    2 Módulos —45 Clases —2h 52m de duración total
                 </p>
+                <div class="tem-desplegable">
+                    <ul>
+                        <il>
+                            introduccion
+                        </il>
+                        <il>
+                            Tema 1
+                        </il>
+                        <il>
+                            Tema 2
+                        </il>
+                    </ul>
+                </div>
             </div>
-        </article>
-        <div>
-            <h3>
-                Temario del curso
-            </h3>
-            <p>
-                2 Módulos —45 Clases —2h 52m de duración total
-            </p>
-            <div class="tem-desplegable">
-                <ul>
-                    <il>
-                        introduccion
-                    </il>
-                    <il>
-                        Tema 1
-                    </il>
-                    <il>
-                        Tema 2
-                    </il>
-                </ul>
+            <div class="conteiner">
+                <h1>
+                    Valoraciones
+                </h1>
+                <article >
+                    <picture class="icon-conteiner">
+                        <a href="/views/comment-curso"><img src="/Images/Iconos/bx-user.svg"></a>
+                        <h2 class="cifra-conteiner">2000</h2>
+                        <p class="text-conteiner">
+                            Alumnos
+                        </p>
+                    </picture>
+                </article>
+                <article >
+                    <picture class="icon-conteiner">
+                        <a href="/views/comment-curso"><img src="/Images/Iconos/bx-comment.svg"></a>
+                        <h2 class="cifra-conteiner">2000</h2>
+                        <p class="text-conteiner">
+                            Comentarios
+                        </p>
+                    </picture>
+                </article>
+                <article >
+                    <picture class="icon-conteiner">
+                        <a href="/views/comment-curso"><img src="/Images/Iconos/bxs-like.svg"></a>
+                        <h2 class="cifra-conteiner">1500</h2>
+                        <p class="text-conteiner">
+                            Comentarios
+                        </p>
+                    </picture>
+                </article>
             </div>
-        </div>
-        <div class="conteiner">
-            <h1>
-                Valoraciones
-            </h1>
-            <article >
-                <picture class="icon-conteiner">
-                    <a href="/views/comment-curso"><img src="/public/Images/Iconos/bx-user.svg"></a>
-                    <h2 class="cifra-conteiner">2000</h2>
-                    <p class="text-conteiner">
-                        Alumnos
-                    </p>
-                </picture>
-            </article>
-            <article >
-                <picture class="icon-conteiner">
-                    <a href="/views/comment-curso"><img src="/public/Images/Iconos/bx-comment.svg"></a>
-                    <h2 class="cifra-conteiner">2000</h2>
-                    <p class="text-conteiner">
-                        Comentarios
-                    </p>
-                </picture>
-            </article>
-            <article >
-                <picture class="icon-conteiner">
-                    <a href="/views/comment-curso"><img src="/public/Images/Iconos/bxs-like.svg"></a>
-                    <h2 class="cifra-conteiner">1500</h2>
-                    <p class="text-conteiner">
-                        Comentarios
-                    </p>
-                </picture>
-            </article>
-        </div>
-    </section>
-    
+        </section>
+        
+    </main>
 </body>
 </html>
