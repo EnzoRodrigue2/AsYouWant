@@ -10,46 +10,44 @@
 </head>
 <body>
     <header>
-        <div class="top-header">
-            <picture class="logo">
-                <img src="/Images/Logo1.svg" alt="El logo de AsYuoWant">
-            </picture>
-            <div class="form" action="#" method="GET">
-                <div class="input">Que queres aprender hoy?</div>
-                <div class="submit"><a href="/public/Images/Iconos/bxs-collection.svg"</div>
+        <div class="complet-nav">
+            <div class="logo">
+                <img class="icon-header" src="/Images/Iconos/bx-menu.svg">
+                <picture class="logo-lg">
+                    <a href="/"><img class="lgo-simple" src="/Images/lgo_simple.svg" alt="Logo de marca"></a>
+                </picture>
             </div>
-        </div>
-        <div>
-            <article>
-                <picture class="menu-header">
-                    <a href="/views/home.html"><img src="/public/Images/Iconos/bxs-collection.svg"></i>
-                </picture>
-            </article>
-            <article>
-                <picture class="menu-header">
-                    <a href="/views/user.html"><img src="/public/Images/Iconos/campana.svg"></i>
-                </picture>
-            </article>
-            <article>
-                <picture class="menu-header">
-                    <a href="/views/carrito.html"><img src="/public/Images/Iconos/bx-cart.svg"></a>
-                </picture>
-            </article>
-        </div>
-        <div>
-            <article>
-                <picture class="menu-header">
-                    <a href="/views/login.html"><img src="/public/Images/Iconos/bx-user-circle.svg" </a>
-                </picture>
-            </article>
+            <nav class="header-nav">
+                <form class="form">
+                    <input type="text" class="input" placeholder="Que vas a aprender hoy?">
+                    <button type="submit" class="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <div class="contein-user-nav">
+                    <ul class="user-nav">
+                        <li>
+                            <img src="/Images/Iconos/bxs-collection.svg">
+                        </li>
+                        <li>
+                            <img src="/Images/Iconos/campana.svg">
+                        </li>
+                        <li>
+                            <img src="/Images/Iconos/bx-cart.svg">
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-user">
+                    <img src="/Images/Iconos/bx-user-circle.svg">
+                </div>
+            </nav>
         </div>
     </header>
     <section>
         <!--Carrusel de imagenes-->
     </section>
     <main>
+        <div class="top-home">
         <h1>Cursos Recomendados</h1>
-        <section>
+            <section>
                 <article>
                     <img src="/Images/bordado.jpg" width="100%" alt="Bordado">
                     <div class="course-card">
@@ -221,7 +219,8 @@
                         <button class="buy">Comprar</button>
                     </div>
                 </article>
-        </section>
+            </section>
+        </div>
     </main>
     <footer>
         <div class="links">
@@ -243,7 +242,7 @@
             </section>
         </div>
         <div class="ending">
-            <img src="/Images/Logo1.svg" class="logo">
+            <img src="/Images/lgo_simple.svg" class="logo">
             <section class="opciones">
                 <div class="social-media">
                     <button class="btn" id="facebook>"><i class="fab fa-facebook"></i></button>

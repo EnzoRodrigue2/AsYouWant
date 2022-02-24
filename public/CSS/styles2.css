@@ -38,6 +38,10 @@ main {
     margin: 0 auto;
 }
 
+.top-home {
+    padding-top: 60px;
+}
+
 main section {
     display: flex;
     flex-wrap: wrap;
@@ -56,6 +60,7 @@ main section article .course-card {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin: 1rem;
 }
 
 main section article .course-card div {
@@ -68,6 +73,9 @@ main section article .course-card div {
     width: 30%;
     display: flex;
     justify-content: space-evenly;
+    padding: 0.5rem;
+    font-size: var(--text-md);
+    color: var(--marron)
 }
 
 /*BOTONES*/
@@ -80,11 +88,21 @@ main section article .course-card div {
 }
 
 .add {
-    width: 22%;
+    width: 15%;
+    padding: 0.8rem;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--celeste);
 }
 
 .buy {
-    width: 73%;
+    width: 79%;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--celeste);
 }
 
 /*Estilos globales*/
@@ -121,6 +139,10 @@ p {
     margin: 0 auto;
 }
 
+.carrito .top-carrito {
+    padding-top: 60px
+}
+
 .carrito section {
     display: flex;
     flex-wrap: wrap;
@@ -138,18 +160,42 @@ p {
     display: flex;
     justify-content: space-between;
     margin: 10px;
+    background-color: var(--blanco);
+    border-bottom: solid 1px;
+}
+
+.contenido-carrito .inf-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.contenido-carrito button {
+    font-size: 2em;
+    border: none;
+    color: var(--violeta);
+    padding: 0.5em 1em;
+    background-color: var(--blanco)
 }
 
 .resumen {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     width: 30%;
+    margin: 7rem 0 15rem;
+    padding: 1rem;
+    background-color: var(--gris-claro);
 }
 
 .resumen button {
-    color: var(--negro);
-    background-color: var(--gris-oscuro);
+    color: var(--violeta);
+    background-color: var(--celeste);
     font-size: var(--text-md);
+    font-weight: bold;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
 }
 
 /*OTROS CURSOS*/
@@ -176,7 +222,7 @@ p {
     flex-direction: row;
 }
 
-
+/*ESTILOS FOOTER*/
 
 footer {
     background-color: var();
@@ -187,7 +233,8 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     color: var(--negro);
-    margin: 20px 10px;
+    padding: 20px 10px;
+    margin-bottom: 100px;
 }
 
 footer .logo {
@@ -203,7 +250,7 @@ footer .opciones {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 20%;
+    width: 15%;
 }
 
 .social-media {
@@ -211,9 +258,13 @@ footer .opciones {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    color: var(--gris-oscuro);
+    padding-right: 1rem;
 }
 
+footer .btn{
+    color: var(--marron);
+    border: none;
+}
 
 /* Estilos detalle de producto  */
 

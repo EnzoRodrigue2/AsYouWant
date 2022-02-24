@@ -10,67 +10,71 @@
 </head>
 <body>
     <header>
-        <div class="top-header">
-            <picture class="logo">
-                <img src="/Images/Logo1.svg" alt="El logo de AsYuoWant">
-            </picture>
-            <div class="form" action="#" method="GET">
-                <div class="input">Que queres aprender hoy?</div>
-                <div class="submit"><a href="/public/Images/Iconos/bxs-collection.svg"</div>
+        <div class="complet-nav">
+            <div class="logo">
+                <img class="icon-header" src="/Images/Iconos/bx-menu.svg">
+                <picture class="logo-lg">
+                    <a href="/"><img class="lgo-simple" src="/Images/lgo_simple.svg" alt="Logo de marca"></a>
+                </picture>
             </div>
-        </div>
-        <div>
-            <article>
-                <picture class="menu-header">
-                    <a href="/views/home.html"><img src="/public/Images/Iconos/bxs-collection.svg"></i>
-                </picture>
-            </article>
-            <article>
-                <picture class="menu-header">
-                    <a href="/views/user.html"><img src="/public/Images/Iconos/campana.svg"></i>
-                </picture>
-            </article>
-            <article>
-                <picture class="menu-header">
-                    <a href="/views/carrito.html"><img src="/public/Images/Iconos/bx-cart.svg"></a>
-                </picture>
-            </article>
-        </div>
-        <div>
-            <article>
-                <picture class="menu-header">
-                    <a href="/views/login.html"><img src="/public/Images/Iconos/bx-user-circle.svg" </a>
-                </picture>
-            </article>
+            <nav class="header-nav">
+                <form class="form">
+                    <input type="text" class="input" placeholder="Que vas a aprender hoy?">
+                    <button type="submit" class="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <div class="contein-user-nav">
+                    <ul class="user-nav">
+                        <li>
+                            <img src="/Images/Iconos/bxs-collection.svg">
+                        </li>
+                        <li>
+                            <img src="/Images/Iconos/campana.svg">
+                        </li>
+                        <li>
+                            <img src="/Images/Iconos/bx-cart.svg">
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-user">
+                    <img src="/Images/Iconos/bx-user-circle.svg">
+                </div>
+            </nav>
         </div>
     </header>
     <main class="carrito">
+        <div class="top-carrito">
         <h1>Tu carrito</h1>
         <section>
             <div class="contenido-carrito">
                 <article>
                     <img src="/Images/camera.jpg" height="100px" alt="Fotografía">
+                    <div class="inf-btn">
                     <div class="info">
                         <p>Nombre del curso</p>
                         <p>Precio</p>
                     </div>
                     <button type="reset"><i class="fas fa-trash-alt"></i></button>
+                </div>
                 </article>
                 <article>
                     <img src="/Images/virtualidad.jpg" height="100px" alt="Virtualidad">
-                    <div class="info">
-                        <p>Nombre del curso</p>
-                        <p>Precio</p>
+                    <div class="inf-btn">
+                        <div class="info">
+                            <p>Nombre del curso</p>
+                            <p>Precio</p>
+                        </div>
+                        <button type="reset"><i class="fas fa-trash-alt"></i></button>
                     </div>
-                    <button type="reset"><i class="fas fa-trash-alt"></i></button>
                 </article>
                 <article>
                     <img src="/Images/costura.jpg" height="100px" alt="Costura">
+                    <div class="inf-btn">
                     <div class="info">
                         <p>Nombre del curso</p>
                         <p>Precio</p>
                     </div>
                     <button type="reset"><i class="fas fa-trash-alt"></i></button>
+                </div>
                 </article>
             </div>
             <div class="resumen">
@@ -145,6 +149,8 @@
                 </article>
             </div>
         </section>
+            
+        </div>
     </main>
     <footer>
         <div class="links">
@@ -166,8 +172,8 @@
             </section>
         </div>
         <div class="ending">
-            <picture class="logo"></picture>
-            <section>
+            <img src="/Images/lgo_simple.svg" class="logo">
+            <section class="opciones">
                 <div class="social-media">
                     <button class="btn" id="facebook>"><i class="fab fa-facebook"></i></button>
                     <button class="btn" id="instagram"><i class="fab fa-instagram"></i></button>
@@ -176,8 +182,8 @@
                     <button class="btn" id="youtube"><i class="fab fa-youtube"></i></button>
                 </div>
                 <form method="get">
-                    <label for="moneda">Seleccione la moneda</label>
-                    <select name="moneda">
+                    <label for="moneda">Moneda</label>
+                    <select name="moneda" placeholder="Moneda">
                     <option value="Pesos">Pesos(Arg)</option>
                     <option value="Dolares">Dólares(US)</option>
                     <option value="Yenes">Yenes(JP)</option>
