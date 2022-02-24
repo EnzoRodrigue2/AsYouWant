@@ -225,7 +225,8 @@ p {
 /*ESTILOS FOOTER*/
 
 footer {
-    background-color: var();
+    background-color: var(--gris-claro);
+    padding: 10px;
 }
 
 .links {
@@ -316,6 +317,18 @@ header {
     display: flex;
 }
 
+footer form {
+        background: var(--amarillo);
+        border: 0;
+        color: inherit;
+        font: inherit;
+        font-size: var(--text);
+        line-height: normal;
+        overflow: visible;
+        padding: 5px 5px;
+        border-radius: 5px;
+}
+
 .input {
     background: var(--blanco);
     border: 0;
@@ -392,6 +405,9 @@ div .product-main {
     width: 60%;
     margin-right: 20px;
 }
+
+/* Estilos descricion y detalles del curso */
+
 .descripcion-curso {
     flex-grow: 10;
 }
@@ -406,6 +422,8 @@ div .product-main {
 .carrusel {
     width: 100%;
 }
+
+/* Estilos temario */
 
 .temario {
     margin: 40px 0;
@@ -423,6 +441,8 @@ div .product-main {
     font-size: medium;
     font-weight: bold;
 }
+
+/* Estilos caja de opiniones */
 
 .opiniones-box {
     margin-bottom: 50px;
@@ -477,6 +497,30 @@ a {
 
 }
 
+/* Estilos caja de comentarios */
+.comentarios-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 60px;
+    background: #F0F0F0;
+    box-shadow: inset 0px 0px 21px 6px rgba(0, 0, 0, 0.25);
+}
+
+.comentario-indiv {
+    display: flex;
+    margin: 10px 0;
+    padding-right: 30px;
+}
+.comentario-indiv picture {
+    padding-right: 20px;
+}
+.commit-user {
+    width: 50px;
+}
+
+/* Estilos seccion de costos */
+
 .detalles-costos {
     padding: 10px 10px 30px 10px;
     width: 40%;
@@ -486,9 +530,15 @@ a {
     height: fit-content;
 }
 
+.precio-moneda {
+    display: flex;
+    padding: 10px 0;
+    align-items: baseline;
+}
+
 .precio {
-    margin: 10px 0;
-    font-size: var(--title);
+    font-size: xx-large;
+    font-weight: 500;
 }
 
 .detalles-costos ul {
@@ -496,9 +546,14 @@ a {
     font-size: var(--text-lg);
     padding: 10px 0;
 }
+
 .detalles-costos ul li h4 {
     font-weight: normal;
     font-size: var(--text);
+}
+
+.detalles-costos ul li {
+    margin: 10px 0;
 }
 
 .boton-compra {
@@ -506,5 +561,10 @@ a {
     justify-content: center;
     background-color: var(--amarillo);
     border-radius: 5px;
-    font-weight: lighter;
+    font-weight: normal;
+    padding: 10px;
+}
+.boton-accion{
+    font-size: var(--title);
+    font-weight: 500;
 }
