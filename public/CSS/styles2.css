@@ -356,6 +356,23 @@ div .product-main {
     width: 100%;
 }
 
+.temario {
+    margin: 40px 0;
+}
+
+.box-tipo {
+    background-color: var(--marron);
+    border-radius: 5px;
+    box-shadow: -2px 13px 29px rgba(0, 0, 0, 0.35);
+    margin: 10px 0;
+    padding: 6px;
+}
+
+.text-insider {
+    font-size: medium;
+    font-weight: bold;
+}
+
 .opiniones-box {
     margin-bottom: 50px;
 }
@@ -363,18 +380,41 @@ div .product-main {
 .conteiner {
     display: flex; 
     justify-content: center;
-    box-shadow: -2px 13px 29px rgba(0, 0, 0, 0.25);
+    box-shadow: -2px 13px 29px rgba(0, 0, 0, 0.35);
     padding: 10px;
     margin-top: 15px;
-    background-color: var(--marron);
+    background-color: var(--gris-oscuro);
 }
+
+a {
+    display: flex;
+}
+
 .icon-conteiner {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.icon-conteiner img {
+    width: 30%;
+    
 }
 
 .text-conteiner {
     text-align: center;
+    color: var(--blanco);
+    font-size: var(--text-md);
+}
+
+a {
+    display: contents;
+    width: 100%;
+}
+
+.cifra-conteiner {
+    color: var(--blanco);
+    font-size: var(--text-md);
 }
 
 .conteiner-son {
@@ -394,6 +434,12 @@ div .product-main {
     box-shadow: -2px 13px 29px rgba(0, 0, 0, 0.25);
     height: fit-content;
 }
+
+.precio {
+    margin: 10px 0;
+    font-size: var(--title);
+}
+
 .detalles-costos ul {
     list-style: none;
     font-size: var(--text-lg);
