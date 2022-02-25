@@ -1,0 +1,93 @@
+header {
+    width: 100%;
+}
+
+.complet-nav {
+    background-color: var(--celeste);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+}
+.logo-lg {
+    margin-left: 10px;
+}
+
+.logo img .lgo-simple {
+    width: 100%;
+
+}
+
+.logo img {
+    max-width: 200px;
+}
+
+.icon-sec {
+    width: 100%;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+}
+
+
+
+.input {
+    background: var(--blanco);
+    border: 0;
+    color: inherit;
+    font: inherit;
+    font-size: var(--text);
+    line-height: normal;
+    overflow: visible;
+    padding: 5px 5px;
+    border-radius: 5px 0 0 5px;
+}
+
+.submit {
+    background: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0
+}
+
+.fa-search {
+    padding: 10px;
+    background-color: var(--violeta);
+    color: var(--blanco);
+    border-radius: 0 5px 5px 0;
+}
+
+.contein-user-nav {
+    margin: 0 10px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.user-nav {
+    display: flex;
+    border-left: 2px bold --negro;
+    align-items: center;
+    list-style: none;
+}
+
+.user-nav li {
+    margin: 0 5px;
+}  

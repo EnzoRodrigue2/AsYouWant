@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+
+@import "/CSS/variables.css";
+@import "/CSS/partials/header.css";
+@import "/CSS/partials/footer.css";
+@import "/CSS/partials/info_productos.css";
+@import "/CSS/partials/carrito.css";
+
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: var(--Poppins);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var();
+    background-color: var(--blanco);
+}
+
+h3 {
+    font-size: var(--title);
+}
+
+p {
+    font-size: var(--text);
+}
+
+
+h1 {
+    font-size: var(--title);
+    font-family: var(--Poppins);
+    font-weight: bold;
+}
+
+h3 {
+    font-size: var(--text-lg);
+    font-weight: normal;
+}
+.top-home {
+    padding-top: 60px;
+}
+
+

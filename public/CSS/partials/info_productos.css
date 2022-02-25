@@ -1,0 +1,280 @@
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+main section article {
+    background-color: var(--gris-claro);
+    width: 30%;
+    margin: 1.5rem 1rem;
+    padding: 1rem;
+}
+
+
+div .top-curso {
+    padding-top: 60px;
+    
+}
+.top-curso a {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    object-fit: contain;
+}
+
+.top-curso img {
+    width: 100%;
+    padding-top: 60px;
+    height: max-content;
+}
+
+.detalles-curso {
+    display: flex;
+    margin-top: 10px;
+}
+
+div .product-main {
+    width: 60%;
+    margin-right: 20px;
+}
+
+/* Estilos descricion y detalles del curso */
+
+.descripcion-curso {
+    flex-grow: 10;
+}
+
+.max-tittle {
+    font-size: 45px;
+    font-weight: bolder;
+    line-height: 40px;
+    text-transform: uppercase;
+    
+}
+.carrusel {
+    width: 100%;
+}
+
+/* Estilos temario */
+
+.temario {
+    margin: 40px 0;
+}
+
+.box-tipo {
+    background-color: var(--marron);
+    border-radius: 5px;
+    box-shadow: -2px 13px 29px rgba(0, 0, 0, 0.35);
+    margin: 10px 0;
+    padding: 6px;
+}
+
+.text-insider {
+    font-size: medium;
+    font-weight: bold;
+}
+
+/* Estilos caja de opiniones */
+
+.opiniones-box {
+    margin-bottom: 50px;
+}
+
+.conteiner {
+    display: flex; 
+    justify-content: center;
+    box-shadow: -2px 13px 29px rgba(0, 0, 0, 0.35);
+    padding: 10px;
+    margin-top: 15px;
+    background-color: var(--gris-oscuro);
+}
+
+a {
+    display: flex;
+}
+
+.icon-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-conteiner img {
+    width: 30%;
+    
+}
+
+.text-conteiner {
+    text-align: center;
+    color: var(--blanco);
+    font-size: var(--text-md);
+}
+
+a {
+    display: contents;
+    width: 100%;
+}
+
+.cifra-conteiner {
+    color: var(--blanco);
+    font-size: var(--text-md);
+}
+
+.conteiner-son {
+    padding: 10px;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+/* Estilos caja de comentarios */
+.comentarios-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 60px;
+    background: #F0F0F0;
+    box-shadow: inset 0px 0px 21px 6px rgba(0, 0, 0, 0.25);
+}
+
+.comentario-indiv {
+    display: flex;
+    margin: 10px 0;
+    padding-right: 30px;
+}
+.comentario-indiv picture {
+    padding-right: 20px;
+}
+.commit-user {
+    width: 50px;
+}
+
+/* Estilos recomendaciones de cursos */
+
+.recomendaciones-box {
+    display: flex;
+    width: 100%;
+}
+
+.lista-recomendaciones{
+    list-style: none;
+}
+
+.recomendacion-indiv {
+    display: flex;
+    margin: 15px 0;
+    
+}
+
+.miniatura-curso {
+    overflow: hidden;
+    width: 20%;
+}
+.imagen-miniatura {
+    width: 100%;
+}
+
+.recomendacion-detalles {
+    width: 60%; 
+    margin-left: 15px;
+}
+
+.recomendacion-detalles_titulo1 {
+    font-size: var(--text-lg);
+    font-weight: bold;
+}
+
+.recomendacion-detalle_puntuaciones {
+    display: flex;
+    align-self: center;
+    background-color: var(--gris-oscuro);
+    border-radius: 5px;
+    padding: inherit;
+    margin-top: 3%;
+}
+
+.recomendacion-detalle_puntuaciones_alumnos {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 5px;
+    width: 15%;
+}
+
+.recomendacion-detalle_puntuaciones_calificacion-box {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.recomendacion-detalle_puntuaciones_alumnos_cifra {
+    margin-left: 5px;
+}
+
+.recomendacion-detalle_puntuaciones_calificacion_cifra {
+    margin-left: 5px;
+}
+
+.recomendacion-detalle_puntuaciones {
+    
+}
+
+
+/* Estilos seccion de costos */
+
+.detalles-costos {
+    padding: 10px 10px 30px 10px;
+    width: 40%;
+    max-width: 572px;
+    background: #FFFFFF;
+    box-shadow: -2px 13px 29px rgba(0, 0, 0, 0.25);
+    height: fit-content;
+}
+
+.precio-moneda {
+    display: flex;
+    padding: 10px 0;
+    align-items: baseline;
+}
+
+.precio {
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+.detalles-costos ul {
+    list-style: none;
+    font-size: var(--text-lg);
+    padding: 10px 0;
+}
+
+.detalles-costos ul li h4 {
+    font-weight: normal;
+    font-size: var(--text);
+}
+
+.detalles-costos ul li {
+    margin: 10px 0;
+}
+
+.boton-compra {
+    display: flex;
+    justify-content: center;
+    background-color: var(--amarillo);
+    border-radius: 5px;
+    font-weight: normal;
+    padding: 10px;
+}
+.boton-accion{
+    font-size: var(--title);
+    font-weight: 500;
+}

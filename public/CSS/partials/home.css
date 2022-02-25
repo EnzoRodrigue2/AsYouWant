@@ -1,0 +1,95 @@
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.top-home {
+    padding-top: 60px;
+}
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+main section article {
+    background-color: var(--gris-claro);
+    width: 30%;
+    margin: 1.5rem 1rem;
+    padding: 1rem;
+}
+
+main section article .course-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+main section article .course-card div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.course-card .media {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+    font-size: var(--text-md);
+    color: var(--marron)
+}
+
+/*BOTONES*/
+
+.buttons {
+    display: flex;
+    color: var(--negro);
+    width: 100%;
+    margin: 10px;
+}
+
+.add {
+    width: 15%;
+    padding: 0.8rem;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--celeste);
+}
+
+.buy {
+    width: 79%;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--celeste);
+}
+
+*OTROS CURSOS*/
+
+.cursos2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cursos2 article {
+    background-color: var(--gris-claro);
+    width: 30%;
+}
+
+.course-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.course-card div {
+    display: flex;
+    flex-direction: row;
+}

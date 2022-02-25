@@ -1,0 +1,54 @@
+footer {
+    background-color: var(--gris-claro);
+    padding: 10px;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: var(--negro);
+    padding: 20px 10px;
+    margin-bottom: 100px;
+}
+
+footer .logo {
+    width: 150px;
+}
+
+.ending {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .opciones {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 15%;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 1rem;
+}
+
+footer .btn{
+    color: var(--marron);
+    border: none;
+}
+
+footer form {
+    background: var(--amarillo);
+    border: 0;
+    color: inherit;
+    font: inherit;
+    font-size: var(--text);
+    line-height: normal;
+    overflow: visible;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
