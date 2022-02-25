@@ -519,6 +519,77 @@ a {
     width: 50px;
 }
 
+/* Estilos recomendaciones de cursos */
+
+.recomendaciones-box {
+    display: flex;
+    width: 100%;
+}
+
+.lista-recomendaciones{
+    list-style: none;
+}
+
+.recomendacion-indiv {
+    display: flex;
+    margin: 15px 0;
+    
+}
+
+.miniatura-curso {
+    overflow: hidden;
+    width: 20%;
+}
+.imagen-miniatura {
+    width: 100%;
+}
+
+.recomendacion-detalles {
+    width: 60%; 
+    margin-left: 15px;
+}
+
+.recomendacion-detalles_titulo1 {
+    font-size: var(--text-lg);
+    font-weight: bold;
+}
+
+.recomendacion-detalle_puntuaciones {
+    display: flex;
+    align-self: center;
+    background-color: var(--gris-oscuro);
+    border-radius: 5px;
+    padding: inherit;
+    margin-top: 3%;
+}
+
+.recomendacion-detalle_puntuaciones_alumnos {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 5px;
+    width: 15%;
+}
+
+.recomendacion-detalle_puntuaciones_calificacion-box {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.recomendacion-detalle_puntuaciones_alumnos_cifra {
+    margin-left: 5px;
+}
+
+.recomendacion-detalle_puntuaciones_calificacion_cifra {
+    margin-left: 5px;
+}
+
+.recomendacion-detalle_puntuaciones {
+    
+}
+
+
 /* Estilos seccion de costos */
 
 .detalles-costos {
