@@ -5,6 +5,7 @@ const app = express();
 
 const publicPath = path.resolve(__dirname, './public');
 
+app.set('views engine', 'ejs');
 
 
 app.use(express.static(publicPath));
