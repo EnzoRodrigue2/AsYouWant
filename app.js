@@ -1,4 +1,5 @@
 const express = require('express');
+const res = require('express/lib/response');
 const path = require('path');
 
 const app = express();
@@ -14,6 +15,7 @@ app.post('/', (req, res) => res.sendFile(path.resolve(__dirname, './views/index.
 app.get('/producto', (req, res) => res.sendFile(path.resolve(__dirname, './views/info_product.html')));
 app.get('/login', (req, res) => res.sendFile(path.resolve(__dirname, './views/login.html')));
 app.get('/carrito', (req, res) => res.sendFile(path.resolve(__dirname, './views/carrito.html')));
+app.get('/crear-producto', (req, res) => res.sendFile(path.resolve(__dirname, './views/crear-producto.html')));
 
 
 app.listen(process.env.PORT || 3000, () => console.log("Servidor corriendo en Puerto: 3000"));
