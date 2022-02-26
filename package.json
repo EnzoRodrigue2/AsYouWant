@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Pauli019/Proyecto_integrador#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.2"
   },
   "description": ""
