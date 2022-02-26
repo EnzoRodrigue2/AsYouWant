@@ -14,6 +14,8 @@ footer {
 
 footer .logo {
     width: 150px;
+    padding: 5px;
+    background-color: var(--celeste);
 }
 
 .ending {
@@ -42,7 +44,7 @@ footer .btn{
 }
 
 footer form {
-    background: var(--amarillo);
+    background: var(--celeste);
     border: 0;
     color: inherit;
     font: inherit;

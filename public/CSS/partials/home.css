@@ -20,7 +20,7 @@ main section article {
     padding: 1rem;
 }
 
-main section article .course-card {
+.course-card {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,7 @@ main section article .course-card {
     margin: 1rem;
 }
 
-main section article .course-card div {
+.course-card div {
     display: flex;
     flex-direction: row;
     justify-content: space-between
@@ -70,26 +70,16 @@ main section article .course-card div {
     background-color: var(--celeste);
 }
 
-*OTROS CURSOS*/
-
-.cursos2 {
-    display: flex;
-    flex-wrap: wrap;
+/*RESPONSIVE*/
+@media (max-width: 760px) {
+    main section article {
+        min-width: 40%;
+        margin: 0.5rem 0;
+    }
 }
 
-.cursos2 article {
-    background-color: var(--gris-claro);
-    width: 30%;
-}
-
-.course-card {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.course-card div {
-    display: flex;
-    flex-direction: row;
+@media (max-width: 360px) {
+    main section article {
+        width: 90%;
+    }
 }

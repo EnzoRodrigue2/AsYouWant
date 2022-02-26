@@ -62,3 +62,60 @@
     border: none;
     border-radius: 5px;
 }
+
+/*CURSOS CARRITO*/
+
+.cursos2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cursos2 article {
+    background-color: var(--gris-claro);
+    width: 30%;
+    margin: 1.5rem 1rem;
+    padding: 1rem;
+}
+
+.course-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.course-card div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.course-card .media {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+    font-size: var(--text-md);
+    color: var(--marron)
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 760px) {
+    .contenido-carrito {
+        width: 95%
+    }
+    .resumen {
+        width: 90%;
+    }
+    .cursos2 article {
+        min-width: 42%;
+    }
+}
+
+@media (max-width: 360px) {
+    .cursos2 article {
+        min-width: 90%;
+    }
+}
