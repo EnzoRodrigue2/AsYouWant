@@ -1,8 +1,93 @@
 main {
     width: 90%;
     margin: 0 auto;
+    background-color: var(--gris-claro);
 }
 
 .top-crear {
     padding-top: 60px;
+}
+
+main form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form div {
+    width: 95%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.description input, .price input {
+    border: var(--gris-claro);
+    margin: 0.5rem;
+    padding: 5px;
+    border-radius: 5px;
+    width: 380px;
+}
+
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5em;
+    max-width: 520px;
+}
+
+.category input {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.multimedia {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5em;
+}
+
+.multimedia input {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.crearBtn {
+    display: flex;
+    max-width: 400px;
+}
+
+.button {
+    width: 45%;
+    border: var(--celeste);
+    border-radius: 5px;
+    color: var(--violeta);
+    font-weight: bold;
+    background-color: var(--celeste);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--amarillo);
+}
+
+@media (max-width: 760px) {
+    .description input, .price input, .button {
+        width: 360px;
+    }
+}
+
+@media (max-width: 360px) {
+    .category {
+        flex-direction: column;
+    }
+    .crearBtn {
+        flex-direction: column;
+    }
+    .description input, .price input, .button {
+        width: 250px;
+    }
 }

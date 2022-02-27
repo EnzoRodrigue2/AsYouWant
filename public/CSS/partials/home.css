@@ -59,6 +59,8 @@ main section article {
     border: none;
     border-radius: 5px;
     background-color: var(--celeste);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .buy {
@@ -68,6 +70,12 @@ main section article {
     border: none;
     border-radius: 5px;
     background-color: var(--celeste);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.add:hover, .buy:hover {
+    background-color: var(--amarillo);
 }
 
 /*RESPONSIVE*/
