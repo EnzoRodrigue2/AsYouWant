@@ -84,6 +84,9 @@ main form div {
     .category {
         flex-direction: column;
     }
+    .multimedia {
+        flex-direction: column;
+    }
     .crearBtn {
         flex-direction: column;
     }
