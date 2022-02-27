@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edición de producto</title>
+    <link href="/CSS/styles1.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f3d6912ee9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="complet-nav">
+            <div class="logo">
+                <img class="icon-header" src="/Images/Iconos/bx-menu.svg">
+                <picture class="logo-lg">
+                    <a href="/"><img class="lgo-simple" src="/Images/lgo_simple.svg" alt="Logo de marca"></a>
+                </picture>
+            </div>
+            <nav class="header-nav">
+                <form class="form">
+                    <input type="text" class="input" placeholder="Que vas a aprender hoy?">
+                    <button type="submit" class="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <div class="contein-user-nav">
+                    <ul class="user-nav">
+                        <li>
+                            <img src="/Images/Iconos/bxs-collection.svg">
+                        </li>
+                        <li>
+                            <img src="/Images/Iconos/campana.svg">
+                        </li>
+                        <li>
+                            <img src="/Images/Iconos/bx-cart.svg">
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-user">
+                    <img src="/Images/Iconos/bx-user-circle.svg">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="top-editar">
+            <h1>Creación de cursos</h1>
+            <form action="/editar-producto" method="put">
+                <div>
+                <h3>Información básica</h3>
+                <div class="description">
+                    <input type="text" name="Curso" placeholder="Nombre del Curso"><br>
+                    <input type="text" name="Description" placeholder="Descripción del curso"><br>
+                </div>
+                <h3>Categoría</h3>
+                <div class="category">
+                    <label for="category"><input type="radio" name="category" value="fotografia" id="fotografia">Fotografía</label><br>
+                    <label for="category"><input type="radio" name="category" value="habilidades-blandas" id="habilidades-blandas">Habilidades blandas</label><br>
+                    <label for="category"><input type="radio" name="category" value="dibujo-pintura" id="dibujo-pintura">Dibujo y pintura</label><br>
+                    <label for="category"><input type="radio" name="category" value="manualidades" id="manualidades">Manualidades</label><br>
+                    <label for="category"><input type="radio" name="category" value="cocina-cocteleria" id="cocina-cocteleria">Cocina y coctelería</label><br>
+                </div>
+                <h3>Cover del curso</h3>
+                <div class="foto">
+                    <input type="file" name="Imagen" id="imagen"><br>
+                </div>
+                <h3>Opciones de material</h3>
+                <div class="multimedia">
+                    <label for="multimedia"><input type="checkbox" name="visual" value="visual" id="visual">Visual</label><br>
+                    <label for="multimedia"><input type="checkbox" name="audio" value="audio" id="audio">Audio</label><br>
+                    <label for="multimedia"><input type="checkbox" name="audiovisual" value="audiovisual" id="audiovisual">Audiovisual</label><br>
+                </div>
+                <h3>Carga de multimedia</h3>
+                <div class="multimedia">
+                    <label>Material en pdf<input type="file" name="pdf" id="pdf" accept="file_extension"></label><br>
+                    <label>Material auditivo<input type="file" name="audio" id="audio" accept="audio/*"></label><br>
+                    <label>Material audiovisual<input type="file" name="video" id="video" accept="video/*"></label><br>
+                </div>
+                <h3>Precio</h3>
+                <div class="price">
+                    <input type="number" name="precio" placeholder="Precio del curso"><br>
+                </div>
+                <div class="crearBtn">
+                    <input type="submit" value="Editar" class="button">
+                    <input type="reset" value="Borrar datos" class="button">
+                </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="links">
+            <section class="contenido-footer">
+                <h4>Companía</h4>
+                <p>Enlaces o referencias</p>
+            </section>
+            <section class="contenido-footer">
+                <h4>Comunidad</h4>
+                <p>Enlaces o referencias</p>
+            </section>
+            <section class="contenido-footer">
+                <h4>Enlaces útiles</h4>
+                <p>Enlaces o referencias</p>
+            </section>
+            <section class="contenido-footer">
+                <h4>Aplicación</h4>
+                <p>Enlaces o referencias</p>
+            </section>
+        </div>
+        <div class="ending">
+            <img src="/Images/lgo_simple.svg" class="logo">
+            <section class="opciones">
+                <div class="social-media">
+                    <button class="btn" id="facebook>"><i class="fab fa-facebook"></i></button>
+                    <button class="btn" id="instagram"><i class="fab fa-instagram"></i></button>
+                    <button class="btn" id="linkedin"><i class="fab fa-linkedin"></i></button>
+                    <button class="btn" id="twitter"><i class="fab fa-twitter"></i></button>
+                    <button class="btn" id="youtube"><i class="fab fa-youtube"></i></button>
+                </div>
+                <form method="get">
+                    <label for="moneda">Moneda</label>
+                    <select name="moneda" placeholder="Moneda">
+                    <option value="Pesos">Pesos(Arg)</option>
+                    <option value="Dolares">Dólares(US)</option>
+                    <option value="Yenes">Yenes(JP)</option>
+                </select>
+                </form>
+                
+            </section>
+        </div>
+    </footer>
+</body>
+</html>
