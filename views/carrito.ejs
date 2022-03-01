@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <main class="carrito">
+        <div class="top-carrito">
+        <h1>Tu carrito</h1>
+        <section>
+            <div class="contenido-carrito">
+                <article>
+                    <img src="/Images/camera.jpg" height="100px" alt="Fotografía">
+                    <div class="inf-btn">
+                    <div class="info">
+                        <h3>Fotografía profesional</h3>
+                        <p>Precio</p>
+                    </div>
+                    <button type="reset"><i class="fas fa-trash-alt"></i></button>
+                </div>
+                </article>
+                <article>
+                    <img src="/Images/virtualidad.jpg" height="100px" alt="Virtualidad">
+                    <div class="inf-btn">
+                        <div class="info">
+                            <h3>Preparación de clases virtuales</h3>
+                            <p>Precio</p>
+                        </div>
+                        <button type="reset"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                </article>
+                <article>
+                    <img src="/Images/costura.jpg" height="100px" alt="Costura">
+                    <div class="inf-btn">
+                    <div class="info">
+                        <h3>Costura nivel 1</h3>
+                        <p>Precio</p>
+                    </div>
+                    <button type="reset"><i class="fas fa-trash-alt"></i></button>
+                </div>
+                </article>
+            </div>
+            <div class="resumen">
+                <h2>Resumen</h2>
+                <div>
+                    <p>Subtotal</p>
+                    <p>Descuentos aplicados</p>
+                    <p>Total a pagar</p>
+                </div>
+                <button type="submit">Comprar ahora</button>
+            </div>
+        </section>
+        <section>
+            <h2>Podría interesarte</h2>
+            <div class="cursos2">
+                <article>
+                    <img src="/Images/bordado.jpg" width="100%" alt="Bordado">
+                    <div class="course-card">
+                        <h3>Bordado a mano nivel 1</h3>
+                        <div>
+                            <p>Profesor/es</p>
+                            <div class="media">
+                                <i class="fas fa-file-alt"></i>
+                                <i class="fas fa-headphones"></i>
+                                <i class="fas fa-video"></i>
+                            </div>
+                        </div>
+                        <p>Precio</p>
+                    </div>
+                    <div class="buttons">
+                        <button class="add"><i class="fas fa-cart-plus"></i></button>
+                        <button class="buy">Comprar</button>
+                    </div>
+                </article>
+                <article>
+                    <img src="/Images/selfie.jpg" width="100%" alt="Autorretrato">
+                    <div class="course-card">
+                        <h3>Autorretratos fotográficos</h3>
+                        <div>
+                            <p>Profesor/es</p>
+                            <div class="media">
+                                <i class="fas fa-file-alt"></i>
+                                <i class="fas fa-headphones"></i>
+                                <i class="fas fa-video"></i>
+                            </div>
+                        </div>
+                        <p>Precio</p>
+                    </div>
+                    <div class="buttons">
+                        <button class="add"><i class="fas fa-cart-plus"></i></button>
+                        <button class="buy">Comprar</button>
+                    </div>
+                </article>
+                <article>
+                    <img src="/Images/scrum.jpg" width="100%" alt="Metodología">
+                    <div class="course-card">
+                        <h3>Metodología scrum</h3>
+                        <div>
+                            <p>Profesor/es</p>
+                            <div class="media">
+                                <i class="fas fa-file-alt"></i>
+                                <i class="fas fa-headphones"></i>
+                                <i class="fas fa-video"></i>
+                            </div>
+                        </div>
+                        <p>Precio</p>
+                    </div>
+                    <div class="buttons">
+                        <button class="add"><i class="fas fa-cart-plus"></i></button>
+                        <button class="buy">Comprar</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+            
+        </div>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>
