@@ -38,6 +38,7 @@ app.post('/', (req, res) => res.render(path.resolve(__dirname, './views/index.ej
 app.get('/login', (req, res) => res.render(path.resolve(__dirname, './views/login.ejs')));
 app.get('/carrito', (req, res) => res.render(path.resolve(__dirname, './views/carrito.ejs')));
 app.get('/crear-producto', (req, res) => res.render(path.resolve(__dirname, './views/crear-producto.ejs')));
+app.get('/editar-producto', (req, res) => res.render(path.resolve(__dirname, './views/editar-producto.ejs')))
 app.get('/producto', (req, res) => res.render(path.resolve(__dirname, './views/info-producto.ejs')));
 
 
