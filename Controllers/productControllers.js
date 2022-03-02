@@ -1,20 +1,22 @@
 const controller = {
-    index: {
+    // index: {
 
-    },
+    // },
 
     producto: (req, res) => {
-            res.sendFile(path.resolve(__dirname, './views/info_product.html'));
+        res.render('info-producto');
     },
 
     
-    list: {
+    // list: {
 
-    },
-    detalle: {
+    // },
+    // detalle: {
 
-    },
-    detalleComentario: {
+    // },
+    // detalleComentario: {
         
-    }
-}
+    // }
+};
+
+module.exports = controller;
