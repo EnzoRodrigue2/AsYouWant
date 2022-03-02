@@ -1,6 +1,7 @@
 const express = require('express');
 const res = require('express/lib/response');
 const path = require('path');
+const methoOverride = require('method-override');
 
 const app = express();
 
@@ -8,6 +9,8 @@ const publicPath = path.resolve(__dirname, './public');
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.use(methoOverride('_method'));
+
 
 app.use(express.static(publicPath));
 
