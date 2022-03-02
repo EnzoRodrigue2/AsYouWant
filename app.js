@@ -5,6 +5,10 @@ const path = require('path');
 const app = express();
 
 const publicPath = path.resolve(__dirname, './public');
+
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+
 app.use(express.static(publicPath));
 
 const rutasProductos = require('./Routes/productos');
