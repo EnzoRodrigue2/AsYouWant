@@ -1,6 +1,7 @@
-main {
+.detalle_producto {
     width: 90%;
     margin: 0 auto;
+    background-color: var(--blanco) !important;
 }
 
 main section {
