@@ -1,66 +1,43 @@
-const express = require('express');
-const path = require('path');
-const methodOverride = require('method-override');
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 
-const app = express();
+var mainRouter = require('./routes/main.routes');
+var usersRouter = require('./routes/users.routes');
+var productsRouter = require("./routes/products.routes");
 
-const publicPath = path.resolve(__dirname, './public');
+var app = express();
 
-app.use(express.static(publicPath));
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
-app.use(express.urlencoded({extended: false}));
+app.use(logger('dev'));
 app.use(express.json());
-app.use(methodOverride('_method'));
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.set('views engine', 'ejs');
-app.set('views', path.join(__dirname, './views'));
+app.use('/', mainRouter);
+app.use("/productos", productsRouter);
+app.use('/usuario', usersRouter);
 
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
+});
 
-const rutasProductos = require('./Routes/productos');
-// // const rutasProductos = require('./Routes/productos');
-// // const rutasMain = require('./Controllers/mainControllers');
-// // const rutasUser = require('./Controllers/userControler');
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
 
-
-
-
-
-app.use('/producto', rutasProductos);
-
-
-// app.use('/user',rutasUser);
-// app.use('/main', rutasMain);
-
-
-// Rutas a ejs( metodo 'render')
-
-// app.get('/', (req, res) => res.render(path.resolve(__dirname, './views/index.ejs')));
-// app.post('/', (req, res) => res.render(path.resolve(__dirname, './views/index.ejs')));
-// app.get('/login', (req, res) => res.render(path.resolve(__dirname, './views/login.ejs')));
-// app.get('/carrito', (req, res) => res.render(path.resolve(__dirname, './views/carrito.ejs')));
-// app.get('/crear-producto', (req, res) => res.render(path.resolve(__dirname, './views/crear-producto.ejs')));
-// app.get('/editar-producto', (req, res) => res.render(path.resolve(__dirname, './views/editar-producto.ejs')))
-// app.get('/producto', (req, res) => res.render(path.resolve(__dirname, './views/info-producto.ejs')));
-
-
-app.listen(process.env.PORT || 3000, () => console.log("Servidor corriendo en Puerto: 3000"));
-
-
-
-
-
-
-
-
-
-
-
-// Rutas a HTML(metodo 'sendFiles')
-
-// app.get('/', (req, res) => res.sendFile(path.resolve(__dirname, './views/index.html')));
-// app.post('/', (req, res) => res.sendFile(path.resolve(__dirname, './views/index.html')));
-// app.get('/login', (req, res) => res.sendFile(path.resolve(__dirname, './views/login.html')));
-// app.get('/carrito', (req, res) => res.sendFile(path.resolve(__dirname, './views/carrito.html')));
-// app.get('/crear-producto', (req, res) => res.sendFile(path.resolve(__dirname, './views/crear-producto.html')));
-// app.get('/producto', (req, res) => res.sendFile(path.resolve(__dirname, './views/info_product.html')));
+module.exports = app;

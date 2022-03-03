@@ -1,7 +1,8 @@
 const controller = {
-    login: {
-
+    login:(req,res,next) => {
+res.send('Aqui va el formulario')
     },
+
     register: {
 
     },

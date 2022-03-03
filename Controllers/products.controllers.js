@@ -1,18 +1,17 @@
-
-
 const controller = {
     // index: {
 
     // },
 
-    producto: (req, res) => {
+    detalle: (req, res) => {
+        
         res.render('info-producto');
     },
 
     
-    // list: {
+     list: {
 
-    // },
+     },
     // detalle: {
 
     // },
