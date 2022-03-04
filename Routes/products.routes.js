@@ -6,7 +6,7 @@ const productController = require("../Controllers/products.controllers");
 //router.get("/", productController.list);
 
 /* GET Info producto especifico. */
-router.get("/info", productController.detalle);
+router.get("/info/:id", productController.detalle);
 //router.get("/info/:id", productController.) // http://localhost:4000/productos/info/2
 
 
