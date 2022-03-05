@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "imagen_principal":"/images/imagenes/img-person.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -56,7 +56,7 @@
         }
     },
     {
-        "id": "2",
+        "id": 2,
         "imagen_principal":"/images/imagenes/camera.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -112,7 +112,7 @@
         }
     },
     {
-        "id": "3",
+        "id": 3,
         "imagen_principal":"/images/bordado.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -168,7 +168,7 @@
         }
     },
     {
-        "id": "4",
+        "id": 4,
         "imagen_principal":"/images/drink.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -224,7 +224,7 @@
         }
     },
     {
-        "id": "4",
+        "id": 4,
         "imagen_principal":"/images/costura.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -280,7 +280,7 @@
         }
     },
     {
-        "id": "5",
+        "id": 5,
         "imagen_principal":"/images/ted-talk.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -336,7 +336,7 @@
         }
     },
     {
-        "id": "6",
+        "id": 6,
         "imagen_principal":"/images/virtualidad.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -392,7 +392,7 @@
         }
     },
     {
-        "id": "7",
+        "id": 7,
         "imagen_principal":"/images/watercolor.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -448,7 +448,7 @@
         }
     },
     {
-        "id": "8",
+        "id": 8,
         "imagen_principal":"/images/selfie.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
