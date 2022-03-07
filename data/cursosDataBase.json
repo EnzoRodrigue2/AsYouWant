@@ -59,7 +59,7 @@
     {
         "id": 2,
         "categoria": ["multimedia", "fotografia", "imagen"],
-        "imagen_principal":"/images/imagenes/camera.jpg",
+        "imagen_principal":"/images/camera.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
             "imagen-2": "cursos-en-linea.jpg",
