@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "categoria": ["organizacion", "liderazgo", "co-working"],
         "imagen_principal":"/images/imagenes/img-person.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -57,6 +58,7 @@
     },
     {
         "id": 2,
+        "categoria": ["multimedia", "fotografia", "imagen"],
         "imagen_principal":"/images/imagenes/camera.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -113,6 +115,7 @@
     },
     {
         "id": 3,
+        "categoria": ["manualidades", "decoracion"],
         "imagen_principal":"/images/bordado.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -169,6 +172,7 @@
     },
     {
         "id": 4,
+        "categoria": ["social", "fiesta", "alimentos"],
         "imagen_principal":"/images/drink.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -225,6 +229,7 @@
     },
     {
         "id": 4,
+        "categoria": ["manualidades", "decoracion"],
         "imagen_principal":"/images/costura.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -281,6 +286,7 @@
     },
     {
         "id": 5,
+        "categoria": ["liderazgo", "habilidades blandas", "oratoria"],
         "imagen_principal":"/images/ted-talk.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -337,6 +343,7 @@
     },
     {
         "id": 6,
+        "categoria": ["multimedia", "virtualidad", "tecnologia"],
         "imagen_principal":"/images/virtualidad.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -393,6 +400,7 @@
     },
     {
         "id": 7,
+        "categoria": ["manualidades", "arte", "imagen"],
         "imagen_principal":"/images/watercolor.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -449,6 +457,7 @@
     },
     {
         "id": 8,
+        "categoria": ["multimedia", "fotografia", "imagen"],
         "imagen_principal":"/images/selfie.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",

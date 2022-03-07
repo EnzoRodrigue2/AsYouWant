@@ -13,6 +13,16 @@ const searchForId = (id) => {
     return productos
 };
 
+const searchForSimilar = (thisCategoria) => {
+    let productosSugeridos = []
+    for(var i=0; i < products.length; i++) {
+        if (products[i].categoria.includes(thisCategoria)) {
+            productosSugeridos.push(products[i])
+        };
+    }
+    return productosSugeridos;
+};
+
 
 const controller = {
     // index: {
@@ -23,9 +33,14 @@ const controller = {
         let idProducto = req.params.id;
         let productDetail = searchForId(idProducto)
         productDetail = productDetail[0]
-        res.render('info-producto-2',{productDetail} );
+
+        let thisCategoria = productDetail.categoria;
+        let sugerencias= searchForSimilar(thisCategoria);
+        console.log(sugerencias);
+        res.render('info-producto-2',{productDetail,sugerencias} );
         
     },
+    
 
     
     list: (req, res) => {
