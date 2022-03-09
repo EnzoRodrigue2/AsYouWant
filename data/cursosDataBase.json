@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "categoria": ["organizacion", "liderazgo", "co-working"],
+        "categoria": "organizacion",
         "imagen_principal":"/images/imagenes/img-person.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -58,7 +58,7 @@
     },
     {
         "id": 2,
-        "categoria": ["multimedia", "fotografia", "imagen"],
+        "categoria": "multimedia",
         "imagen_principal":"/images/camera.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -115,7 +115,7 @@
     },
     {
         "id": 3,
-        "categoria": ["manualidades", "decoracion"],
+        "categoria": "manualidades",
         "imagen_principal":"/images/bordado.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -172,7 +172,7 @@
     },
     {
         "id": 4,
-        "categoria": ["social", "fiesta", "alimentos"],
+        "categoria": "alimentos",
         "imagen_principal":"/images/drink.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -229,7 +229,7 @@
     },
     {
         "id": 4,
-        "categoria": ["manualidades", "decoracion"],
+        "categoria": "manualidades",
         "imagen_principal":"/images/costura.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -286,7 +286,7 @@
     },
     {
         "id": 5,
-        "categoria": ["liderazgo", "habilidades blandas", "oratoria"],
+        "categoria": "liderazgo",
         "imagen_principal":"/images/ted-talk.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -343,7 +343,7 @@
     },
     {
         "id": 6,
-        "categoria": ["multimedia", "virtualidad", "tecnologia"],
+        "categoria": "multimedia",
         "imagen_principal":"/images/virtualidad.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -400,7 +400,7 @@
     },
     {
         "id": 7,
-        "categoria": ["manualidades", "arte", "imagen"],
+        "categoria": "manualidades", 
         "imagen_principal":"/images/watercolor.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -457,7 +457,7 @@
     },
     {
         "id": 8,
-        "categoria": ["multimedia", "fotografia", "imagen"],
+        "categoria": "multimedia", 
         "imagen_principal":"/images/selfie.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
