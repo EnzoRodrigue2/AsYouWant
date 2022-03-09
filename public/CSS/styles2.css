@@ -20,6 +20,11 @@
     --text-md: 16px;
 }
 
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
 h1 {
     font-size: var(--title);
     font-family: var(--Poppins);
