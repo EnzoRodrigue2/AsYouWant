@@ -1,7 +1,45 @@
 
 
-.top-home {
+.carrusel {
+    max-width: 1000px;
+    position: relative;
     padding-top: 60px;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.btn-prev, .btn-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: 20px;
+    padding: 1.5rem;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+}
+
+.btn-next {
+    right: 0;
+}
+
+.btn-prev:hover, .btn-next:hover {
+    color: white;
+}
+
+@keyframes fading {
+    0% {opacity: 100%;}
+    100% {opacity: 0%;}
+}
+
+.fade {
+    animation: fading;
+    animation-duration: 1.5s;
 }
 
 main section {
