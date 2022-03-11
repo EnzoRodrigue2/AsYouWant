@@ -1,7 +1,9 @@
 [
     {
         "id": 1,
+        "titulo": "Metodologias agiles:scrum",
         "categoria": "organizacion",
+        "precio": 1500,
         "imagen_principal":"/images/imagenes/img-person.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -9,7 +11,6 @@
             "imagen-3": "cursos-online.jpeg"
         },
 
-        "titulo": "Metodologias agiles:scrum",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -58,7 +59,9 @@
     },
     {
         "id": 2,
+        "titulo": "Fotografia profesional",
         "categoria": "multimedia",
+        "precio": 1500,
         "imagen_principal":"/images/camera.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -66,7 +69,6 @@
             "imagen-3": "cursos-online.jpeg"
         },
 
-        "titulo": "Fotografia profesional",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -115,7 +117,9 @@
     },
     {
         "id": 3,
+        "titulo": "Bordado a mano nivel 1",
         "categoria": "manualidades",
+        "precio": 1500,
         "imagen_principal":"/images/bordado.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -123,7 +127,6 @@
             "imagen-3": "cursos-online.jpeg"
         },
 
-        "titulo": "Bordado a mano nivel 1",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -172,7 +175,9 @@
     },
     {
         "id": 4,
+        "titulo": "Tragos con y sin alcohol",
         "categoria": "alimentos",
+        "precio": 1500,
         "imagen_principal":"/images/drink.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -180,7 +185,6 @@
             "imagen-3": "cursos-online.jpeg"
         },
 
-        "titulo": "Tragos con y sin alcohol",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -229,7 +233,9 @@
     },
     {
         "id": 4,
+        "titulo": "Costura para modistas",
         "categoria": "manualidades",
+        "precio": 1500,
         "imagen_principal":"/images/costura.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -237,7 +243,6 @@
             "imagen-3": "cursos-online.jpeg"
         },
 
-        "titulo": "Costura para modistas",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -286,7 +291,9 @@
     },
     {
         "id": 5,
+        "titulo": "Preparación de discursos y exposiciones",
         "categoria": "liderazgo",
+        "precio": 1500,
         "imagen_principal":"/images/ted-talk.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -294,7 +301,6 @@
             "imagen-3": "cursos-online.jpeg"
         },
 
-        "titulo": "Preparación de discursos y exposiciones",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -343,7 +349,9 @@
     },
     {
         "id": 6,
+        "titulo": "Preparación de clases virtuales",
         "categoria": "multimedia",
+        "precio": 1500,
         "imagen_principal":"/images/virtualidad.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -351,7 +359,6 @@
             "imagen-3": "cursos-online.jpeg"
         },
 
-        "titulo": "Preparación de clases virtuales",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -400,7 +407,9 @@
     },
     {
         "id": 7,
+        "titulo": "Técnicas básicas con acuarela",
         "categoria": "manualidades", 
+        "precio": 1500,
         "imagen_principal":"/images/watercolor.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -408,7 +417,6 @@
             "imagen-3": "cursos-online.jpeg"
         },
 
-        "titulo": "Técnicas básicas con acuarela",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -457,7 +465,9 @@
     },
     {
         "id": 8,
+        "titulo": "Autorretratos fotográficos",
         "categoria": "multimedia", 
+        "precio": 1500,
         "imagen_principal":"/images/selfie.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
@@ -465,7 +475,6 @@
             "imagen-3": "cursos-online.jpeg"
         },
 
-        "titulo": "Autorretratos fotográficos",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",

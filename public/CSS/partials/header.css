@@ -91,3 +91,9 @@ header {
 .user-nav li {
     margin: 0 5px;
 }  
+
+.header-bottom :hover {
+    padding: 3pxpx;
+    background-color: rgba(69, 54, 67, 0.5);
+
+}

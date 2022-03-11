@@ -7,7 +7,7 @@
         <a href="video"><img class="miniatura" src="<%= productDetail.imagen_principal %>"></a>
     </div>
     <main class="detalle_producto" >
-
+        
         <div class="detalles-curso">
             <div class="product-main">
                 <article class="descripcion-curso">
@@ -186,48 +186,66 @@
                 </div>
                 
             </div>
-            <div class="detalles-costos">
-                <div class="precio-moneda">
-                    <h2 class="precio">
-                        $1500
-                    </h2>
-                    <h3 class="moneda">
-                        ARS
-                    </h3>
+            <div class="costos-edicion">
+                <div class="detalles-costos">
+                    <div class="precio-moneda">
+                        <h2 class="precio">
+                            <%= productDetail.precio %>
+                        </h2>
+                        <h3 class="moneda">
+                            ARS
+                        </h3>
+                    </div>
+                    <div class="boton-compra">
+                        <img src="/Images/Iconos/bx-cart.svg">
+                        <h2 class="boton-accion">
+                            comprar
+                        </h2>
+                    </div>
+                    <ul><h4>Informacion del curso</h4>
+                        <li>
+                            <h4>Valoraciones positivas</h4>
+                        </li>
+                        <li>
+                            <h4>Alumnos</h4>
+                        </li>
+                        <li>
+                            <h4>Lecciones</h4>
+                        </li>
+                        <li>
+                            <h4>Formato</h4>
+                        </li>
+                        <li>
+                            <h4>Idioma</h4>
+                        </li>
+                        <li>
+                            <h4>Subtitulos</h4>
+                        </li>
+                        <li>
+                            <h4>Nivel</h4>
+                        </li>
+                        <li>
+                            <h4>Certificación</h4>
+                        </li>
+                    </ul>
+                    
                 </div>
-                <div class="boton-compra">
-                    <img src="/Images/Iconos/bx-cart.svg">
-                    <h2 class="boton-accion">
-                        comprar
-                    </h2>
+                <div class="opciones_producto_buttom">
+                    <a href="/productos/<%=productDetail.id%>/edit">
+                        <div class="boton-edit">
+                            <h2 class="boton-accion">
+                                editar
+                            </h2>
+                        </div>
+                    </a>
+                    <a href="/productos/<%=productDetail.id%>/delete">
+                        <div class="boton-delete">
+                            <h2 class="boton-accion">
+                                eliminar
+                            </h2>
+                        </div>
+                    </a>
                 </div>
-                <ul><h4>Informacion del curso</h4>
-                    <li>
-                        <h4>Valoraciones positivas</h4>
-                    </li>
-                    <li>
-                        <h4>Alumnos</h4>
-                    </li>
-                    <li>
-                        <h4>Lecciones</h4>
-                    </li>
-                    <li>
-                        <h4>Formato</h4>
-                    </li>
-                    <li>
-                        <h4>Idioma</h4>
-                    </li>
-                    <li>
-                        <h4>Subtitulos</h4>
-                    </li>
-                    <li>
-                        <h4>Nivel</h4>
-                    </li>
-                    <li>
-                        <h4>Certificación</h4>
-                    </li>
-                </ul>
-                
             </div>
         </div>
     </main>

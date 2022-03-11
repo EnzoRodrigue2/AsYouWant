@@ -46,9 +46,13 @@ const controller = {
     list: (req, res) => {
         res.render('info-producto-2' );
     },
-    // detalle: {
+    edit: (req,res) => {
+        let idProducto = req.params.id;
+        let productEditar = searchForId(idProducto)
+        productEditar = productEditar[0]
+        res.render('editar-producto', {productEditar})
 
-    // },
+    },
     // detalleComentario: {
         
     // }
