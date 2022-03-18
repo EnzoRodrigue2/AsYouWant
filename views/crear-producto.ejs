@@ -9,36 +9,36 @@
             <form action="/crear-producto" method="post">
                 <div>
                 <h3>Información básica</h3>
-                <div class="description">
+                <div class="description-crear">
                     <input type="text" name="Curso" placeholder="Nombre del Curso"><br>
-                    <input type="text" name="Description" placeholder="Descripción del curso"><br>
+                    <input type="textarea" name="Description" placeholder="Descripción del curso"><br>
                 </div>
                 <h3>Categoría</h3>
-                <div class="category">
-                    <label for="category"><input type="radio" name="category" value="fotografia" id="fotografia">Fotografía</label><br>
-                    <label for="category"><input type="radio" name="category" value="habilidades-blandas" id="habilidades-blandas">Habilidades blandas</label><br>
-                    <label for="category"><input type="radio" name="category" value="dibujo-pintura" id="dibujo-pintura">Dibujo y pintura</label><br>
-                    <label for="category"><input type="radio" name="category" value="manualidades" id="manualidades">Manualidades</label><br>
-                    <label for="category"><input type="radio" name="category" value="cocina-cocteleria" id="cocina-cocteleria">Cocina y coctelería</label><br>
+                <div class="category-crear">
+                    <label for="category-crear"><input type="radio" name="category" value="fotografia" id="fotografia">Fotografía</label><br>
+                    <label for="category-crear"><input type="radio" name="category" value="habilidades-blandas" id="habilidades-blandas">Habilidades blandas</label><br>
+                    <label for="category-crear"><input type="radio" name="category" value="dibujo-pintura" id="dibujo-pintura">Dibujo y pintura</label><br>
+                    <label for="category-crear"><input type="radio" name="category" value="manualidades" id="manualidades">Manualidades</label><br>
+                    <label for="category-crear"><input type="radio" name="category" value="cocina-cocteleria" id="cocina-cocteleria">Cocina y coctelería</label><br>
                 </div>
                 <h3>Cover del curso</h3>
-                <div class="foto">
+                <div class="foto-crear">
                     <input type="file" name="Imagen" id="imagen"><br>
                 </div>
                 <h3>Opciones de material</h3>
-                <div class="multimedia">
-                    <label for="multimedia"><input type="checkbox" name="visual" value="visual" id="visual">Visual</label><br>
-                    <label for="multimedia"><input type="checkbox" name="audio" value="audio" id="audio">Audio</label><br>
-                    <label for="multimedia"><input type="checkbox" name="audiovisual" value="audiovisual" id="audiovisual">Audiovisual</label><br>
+                <div class="multimedia-crear">
+                    <label for="multimedia-crear"><input type="checkbox" name="visual" value="visual" id="visual">Visual</label><br>
+                    <label for="multimedia-crear"><input type="checkbox" name="audio" value="audio" id="audio">Audio</label><br>
+                    <label for="multimedia-crear"><input type="checkbox" name="audiovisual" value="audiovisual" id="audiovisual">Audiovisual</label><br>
                 </div>
                 <h3>Carga de multimedia</h3>
-                <div class="multimedia">
+                <div class="multimedia-crear">
                     <label>Material en pdf<input type="file" name="pdf" id="pdf" accept="file_extension"></label><br>
                     <label>Material auditivo<input type="file" name="audio" id="audio" accept="audio/*"></label><br>
                     <label>Material audiovisual<input type="file" name="video" id="video" accept="video/*"></label><br>
                 </div>
                 <h3>Precio</h3>
-                <div class="price">
+                <div class="price-crear">
                     <input type="number" name="precio" placeholder="Precio del curso"><br>
                 </div>
                 <div class="crearBtn">
