@@ -8,6 +8,7 @@
 @import "/CSS/partials/home.css";
 @import "/CSS/partials/crear.css";
 @import "/CSS/partials/editar.css";
+@import "/CSS/partials/register.css";
 
 * {
     margin: 0px;

@@ -8,14 +8,14 @@
     padding-top: 60px;
 }
 
-main form {
+.crear_form {
     width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main form div {
+.crear_form div {
     width: 95%;
     margin: 0.5rem;
     padding: 0.5rem;

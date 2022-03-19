@@ -3,8 +3,8 @@ const controller = {
 res.send('Aqui va el formulario')
     },
 
-    register: {
-
+    register:(req,res,next) => {
+        res.render('register')
     },
 
     cuenta: {

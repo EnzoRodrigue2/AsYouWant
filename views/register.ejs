@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <main class="register_main">
+        <div class="register_lefth">
+            <picture class="register_logo">
+                <img src="/Images/Logo1.svg" class="register_logo">
+            </picture>
+        </div>
+        <div class="register_rigth">
+            <h1 class="register_title">
+                Registrate para comenzar a aprender
+            </h1>
+            <form method="POST" action="/register" class="register_form">
+                <div class="register_form-campo">
+                    <label for="nombre" class="register_label">Nombre</label>
+                    <input type="text" class="register_input" placeholder="Ej:Juan" >
+                </div>
+                <div class="register_form-campo">
+                    <label for="nombre" class="register_label">Apellido</label>
+                    <input type="text" class="register_input" placeholder="Ej:Perez" >
+                </div>
+                <div class="register_form-campo">
+                    <label for="nombre" class="register_label">Email</label>
+                    <input type="text" class="register_input" placeholder="nombre@ejemplo.com" >
+                </div>
+                <div class="register_form-campo">
+                    <label for="nombre" class="register_label">Contraseña</label>
+                    <input type="text" class="register_input" placeholder="Contraseña" >
+                </div>
+                <div class="register_form-campo">
+                    <label for="nombre" class="register_label">Confirmar
+                        contraseña</label>
+                    <input type="text" class="register_input" placeholder="Contraseña" >
+                </div>
+                <div class="register_form-campo">
+                    <label for="nombre" class="register_label">Categoria</label>
+                    <div class="category-crear">
+                        <label for="category-crear"><input type="radio" name="category" value="Alumno" id="Alumno">Alumno</label><br>
+                        <label for="category-crear"><input type="radio" name="category" value="Profesor" id="Profesor">Profesor</label><br>
+                        <label for="category-crear"><input type="radio" name="category" value="Editor" id="Editor">Editor</label><br>
+                        <label for="category-crear"><input type="radio" name="category" value="Administrador" id="Administradors">Administrador</label><br>
+                    </div>
+                </div>
+                <div class="register_form-campo">
+                    <label for="nombre" class="register_label">Foto perfil</label>
+                    <input type="text" class="register_input" placeholder="Nombre" >
+                </div>
+                <div class="register_sec-botones">
+                    <input type="submit" value="Registrarme" class="register_boton-register">
+                    <input type="reset" value="Borrar" class="register_boton-borrar">
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
