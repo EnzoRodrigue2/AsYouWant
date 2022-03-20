@@ -6,7 +6,7 @@
     padding-top: 60px;
     margin: auto;
 }
-
+/*
 .mySlides {
     display: none;
 }
@@ -41,7 +41,7 @@
     animation: fading;
     animation-duration: 1.5s;
 }
-
+*/
 main section {
     display: flex;
     flex-wrap: wrap;
