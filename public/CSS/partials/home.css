@@ -75,7 +75,12 @@ main section article {
     justify-content: space-evenly;
     padding: 0.5rem;
     font-size: var(--text-md);
-    color: var(--marron)
+    color: var(--marron);
+    transition: color 0.3s ease;
+}
+
+.course-card .media:hover {
+    color: var(--celeste);
 }
 
 /*BOTONES*/

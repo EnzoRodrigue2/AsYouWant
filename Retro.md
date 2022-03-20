@@ -11,3 +11,5 @@ Para el sprint 3:
 Acordamos weekly meetings en un momento previo a las clases de los miércoles para corroborar avances y asistirnos entre nosotros en caso de problemas o complicaciones. 
 
 Retrospectiva del sprint 3:
+Salvo algunas se tienen las tareas completas, y los inconvenientes se solucionan relativamente rápido. Podemos seguir con este ritmo.
+Se acuerda mantener este ritmo de trabajo para el siguiente sprint, pero buscando completar aquello que aún no se tiene hecho. 
