@@ -10,6 +10,10 @@ router.get("/info/:id", productController.detalle);
 //router.get("/info/:id", productController.) // http://localhost:4000/productos/info/2
 router.get("/info", productController.list);
 
+/*Crear producto nuevo.*/
+router.get("/crear", productController.crear);
+/* router.post("/", productController.list); no estoy segura si está correcta
+
 /* Editar productos */ 
 router.get("/:id/edit",productController.edit);
 router.post("/:id",productController.edit)

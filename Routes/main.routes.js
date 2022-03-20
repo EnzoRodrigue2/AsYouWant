@@ -6,7 +6,7 @@ const mainController = require('../Controllers/main.controllers')
 router.get('/', mainController.home);
 
 /*GET crear producto*/
-router.get('/crear', mainController.crear);
+/*router.get('/crear', mainController.crear);
 
 /*GET editar producto*/
 router.get('/editar', mainController.editar);

@@ -53,6 +53,9 @@ const controller = {
         res.render('editar-producto', {productEditar})
 
     },
+    crear: (req,res) => {
+        res.render('crear-producto')
+    }
     // detalleComentario: {
         
     // }
