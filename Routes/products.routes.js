@@ -16,6 +16,10 @@ router.get("/crear", productController.crear);
 
 /* Editar productos */ 
 router.get("/:id/edit",productController.edit);
-router.post("/:id",productController.edit)
+router.post("/:id",productController.edit);
+
+/* Borrar producto */
+router.get("/:id/delete", productController.delete);
+router.delete('/producto', productController.delete);
 
 module.exports = router;

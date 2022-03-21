@@ -6,12 +6,12 @@
     <main class="main-general-bajo-header">
         <div class="top-editar">
             <h1>Creación de cursos</h1>
-            <form action="/producto/editar?_method=PUT" method="post">
+            <form action="/producto/editar?_method=PUT" method="POST">
                 <div>
                 <h3>Información básica</h3>
                 <div class="description-edit">
-                    <input type="text" name="Curso" placeholder="Nombre del Curso"><br>
-                    <input type="textarea" name="Description" placeholder="Descripción del curso"><br>
+                    <input type="text" name="Curso" placeholder="<%= productEditar.titulo %>"><br>
+                    <input type="textarea" name="Description" placeholder="<%= productEditar.descripcion_corta %>"><br>
                 </div>
                 <h3>Categoría</h3>
                 <div class="category-edit">
@@ -39,7 +39,7 @@
                 </div>
                 <h3>Precio</h3>
                 <div class="price-edit">
-                    <input type="number" name="precio" placeholder="Precio del curso"><br>
+                    <input type="number" name="precio" placeholder="<%= productEditar.precio %>"><br>
                 </div>
                 <div class="editBtn">
                     <input type="submit" value="Editar" class="button">

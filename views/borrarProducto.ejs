@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <main class="delete_main">
+        <div class="delete_lefth">
+            <picture class="delete_logo">
+                <img src="/Images/Logo1.svg" class="delete_logo">
+            </picture>
+        </div>
+        <div class="delete_rigth">
+            <h1 class="delete_title">
+                A continuación confirme que quiere borrar el siguiente curso:
+            </h1>
+            <div class="delete-indiv">
+                <picture class="miniatura-curso">
+                    <img  class="imagen-miniatura" src="<%=productDelete.imagen_principal %>">
+                </picture>
+                <div class="delete-detalles">
+                    <div class="delete-detalles_titulos">
+                        <h2 class="delete-detalles_titulo1">
+                            <%= productDelete.titulo %>
+                        </h2>
+                        <p>
+                            <%= productDelete.descripcion_corta %>
+                        </p>
+                    </div>
+                    <div class="delete-detalle_puntuaciones">
+                        <div class="delete-detalle_puntuaciones_alumnos">
+                            <i class="fas fa-user"></i>
+                            <h4 class="delete-detalle_puntuaciones_alumnos_cifra">1.500</h4>
+                        </div>
+                        <div class="delete-detalle_puntuaciones_calificacion-box">
+                            <i class="fas fa-star"></i>
+                            <h4 class="delete-detalle_puntuaciones_calificacion_cifra">4.5/</h4> <h4 class="delete-detalle_puntuaciones_calificacion_cifra">1.500</h4> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form method="POST" action="/delete?method=DELETE" class="delete_form">
+                <div class="delete_sec-botones">
+                    <input type="submit" value="Volver" class="delete_boton-delete">
+                    <input type="reset" value="Borrar" class="delete_boton-borrar">
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

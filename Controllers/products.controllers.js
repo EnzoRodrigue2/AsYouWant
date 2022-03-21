@@ -55,10 +55,14 @@ const controller = {
     },
     crear: (req,res) => {
         res.render('crear-producto')
+    },
+
+    delete: (req,res) => {
+        let idProducto = req.params.id;
+        let productDelete = searchForId(idProducto)
+        productDelete = productDelete[0]
+        res.render('borrarProducto', {productDelete} )
     }
-    // detalleComentario: {
-        
-    // }
 };
 
 module.exports = controller;
