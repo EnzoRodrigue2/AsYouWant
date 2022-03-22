@@ -8,4 +8,6 @@
 
 16/3/2022 => se decide pasar la reunión al día 19 porque en general se avanza sin problemas. 
 
-18/3/2022 => Se redistribuyen las tareas que faltan realizar. 
+18/3/2022 => Se redistribuyen las tareas que faltan realizar. Se camcia el horario de las weekly meetings, las cuales serán despues de las clases de los miércoles.
+
+21/3/2022 => Distribuimos las tareas del sprint 5, nos adaptamos a las nuevas condiciones de trabajo. *Inserte foto de Bizarrap music sessions con residente*
