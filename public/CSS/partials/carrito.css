@@ -39,8 +39,19 @@
     font-size: 2em;
     border: none;
     color: var(--violeta);
-    padding: 0.5em 1em;
-    background-color: var(--blanco)
+    padding: 0.25em 2em;
+    background-color: var(--blanco);
+    transition: background-color 0.3s ease;
+}
+
+.contenido-carrito .fas {
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 1.75rem 2rem;
+}
+
+.contenido-carrito .fas:hover {
+    background-color: var(--gris-claro);
 }
 
 .resumen {
@@ -61,6 +72,12 @@
     padding: 0.5rem;
     border: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.resumen button:hover {
+    background-color: var(--amarillo);
 }
 
 /*CURSOS CARRITO*/
