@@ -232,7 +232,7 @@
         }
     },
     {
-        "id": 4,
+        "id": 5,
         "titulo": "Costura para modistas",
         "categoria": "manualidades",
         "precio": 1500,
@@ -290,7 +290,7 @@
         }
     },
     {
-        "id": 5,
+        "id": 6,
         "titulo": "Preparación de discursos y exposiciones",
         "categoria": "liderazgo",
         "precio": 1500,
@@ -348,7 +348,7 @@
         }
     },
     {
-        "id": 6,
+        "id": 7,
         "titulo": "Preparación de clases virtuales",
         "categoria": "multimedia",
         "precio": 1500,
@@ -406,7 +406,7 @@
         }
     },
     {
-        "id": 7,
+        "id": 8,
         "titulo": "Técnicas básicas con acuarela",
         "categoria": "manualidades", 
         "precio": 1500,
@@ -464,7 +464,7 @@
         }
     },
     {
-        "id": 8,
+        "id": 9,
         "titulo": "Autorretratos fotográficos",
         "categoria": "multimedia", 
         "precio": 1500,

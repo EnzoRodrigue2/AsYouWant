@@ -35,7 +35,8 @@
             <ul>
                 <% cursos.forEach(el =>{ %>
                     <li class="li-curso">
-                        <article class="container-curso">
+                        <a href="/productos/info/<%=el.id %>">
+                            <article class="container-curso" >
                             <img src="<%=el.imagen_principal %>" width="100%">
                             <div class="course-card">
                                 <h3><%=el.titulo %></h3>
@@ -53,11 +54,11 @@
                                 <button class="add"><i class="fas fa-cart-plus"></i></button>
                                 <button class="buy">Comprar</button>
                             </div>
-                        </article>        
+                        </article>                        
+                        </a>
                     </li>
                 <% }) %>
             </ul>
-
         </section>
     </main>
     <%- include('./partials/footer') %>
