@@ -46,13 +46,24 @@ main section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    flex-direction: row;
 }
 
-main section article {
+main section ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.li-curso {
     background-color: var(--gris-claro);
     width: 30%;
     margin: 1.5rem 1rem;
     padding: 1rem;
+}
+
+.container-curso {
+    width: 100%;
 }
 
 .course-card {
@@ -120,14 +131,14 @@ main section article {
 
 /*RESPONSIVE*/
 @media (max-width: 760px) {
-    main section article {
+    .li-curso {
         min-width: 40%;
         margin: 0.5rem 0;
     }
 }
 
 @media (max-width: 360px) {
-    main section article {
+    .li-curso {
         width: 90%;
     }
 }

@@ -32,177 +32,32 @@
     <main>
         <h1>Cursos Recomendados</h1>
         <section>
-            <article>
-                    <img src="/Images/bordado.jpg" width="100%" alt="Bordado">
-                    <div class="course-card">
-                        <h3>Bordado a mano nivel 1</h3>
-                        <div>
-                            <p>Profesor/es</p>
-                            <div class="media">
-                                <i class="fas fa-file-alt"></i>
-                                <i class="fas fa-headphones"></i>
-                                <i class="fas fa-video"></i>
+            <ul>
+                <% cursos.forEach(el =>{ %>
+                    <li class="li-curso">
+                        <article class="container-curso">
+                            <img src="<%=el.imagen_principal %>" width="100%">
+                            <div class="course-card">
+                                <h3><%=el.titulo %></h3>
+                                <div>
+                                    <p><%=el.profesor %></p>
+                                    <div class="media">
+                                        <i class="fas fa-file-alt"></i>
+                                        <i class="fas fa-headphones"></i>
+                                        <i class="fas fa-video"></i>
+                                    </div>
+                                </div>
+                                <p><%=el.precio %></p>
                             </div>
-                        </div>
-                        <p>Precio</p>
-                    </div>
-                    <div class="buttons">
-                        <button class="add"><i class="fas fa-cart-plus"></i></button>
-                        <button class="buy">Comprar</button>
-                    </div>
-            </article>
-            <article>
-                    <img src="/Images/camera.jpg" width="100%" alt="Fotografía">
-                    <div class="course-card">
-                        <h3>Fotografía profesional</h3>
-                        <div>
-                            <p>Profesor/es</p>
-                            <div class="media">
-                                <i class="fas fa-file-alt"></i>
-                                <i class="fas fa-headphones"></i>
-                                <i class="fas fa-video"></i>
+                            <div class="buttons">
+                                <button class="add"><i class="fas fa-cart-plus"></i></button>
+                                <button class="buy">Comprar</button>
                             </div>
-                        </div>
-                        <p>Precio</p>
-                    </div>
-                    <div class="buttons">
-                        <button class="add"><i class="fas fa-cart-plus"></i></button>
-                        <button class="buy">Comprar</button>
-                    </div>
-            </article>
-            <article>
-                    <img src="/Images/scrum.jpg" width="100%" alt="Metodología">
-                    <div class="course-card">
-                        <h3>Metodología scrum</h3>
-                        <div>
-                            <p>Profesor/es</p>
-                            <div class="media">
-                                <i class="fas fa-file-alt"></i>
-                                <i class="fas fa-headphones"></i>
-                                <i class="fas fa-video"></i>
-                            </div>
-                        </div>
-                        <p>Precio</p>
-                    </div>
-                    <div class="buttons">
-                        <button class="add"><i class="fas fa-cart-plus"></i></button>
-                        <button class="buy">Comprar</button>
-                    </div>
-            </article>
-            <article>
-                    <img src="/Images/costura.jpg" width="100%" alt="Costura">
-                    <div class="course-card">
-                        <h3>Costura nivel 1</h3>
-                        <div>
-                            <p>Profesor/es</p>
-                            <div class="media">
-                                <i class="fas fa-file-alt"></i>
-                                <i class="fas fa-headphones"></i>
-                                <i class="fas fa-video"></i>
-                            </div>
-                        </div>
-                        <p>Precio</p>
-                    </div>
-                    <div class="buttons">
-                        <button class="add"><i class="fas fa-cart-plus"></i></button>
-                        <button class="buy">Comprar</button>
-                    </div>
-            </article>
-            <article>
-                    <img src="/Images/drink.jpg" width="100%" alt="Bebida">
-                    <div class="course-card">
-                        <h3>Tragos con y sin alcohol</h3>
-                        <div>
-                            <p>Profesor/es</p>
-                            <div class="media">
-                                <i class="fas fa-file-alt"></i>
-                                <i class="fas fa-headphones"></i>
-                                <i class="fas fa-video"></i>
-                            </div>
-                        </div>
-                        <p>Precio</p>
-                    </div>
-                    <div class="buttons">
-                        <button class="add"><i class="fas fa-cart-plus"></i></button>
-                        <button class="buy">Comprar</button>
-                    </div>
-            </article>
-            <article>
-                    <img src="/Images/selfie.jpg" width="100%" alt="Autorretrato">
-                    <div class="course-card">
-                        <h3>Autorretratos fotográficos</h3>
-                        <div>
-                            <p>Profesor/es</p>
-                            <div class="media">
-                                <i class="fas fa-file-alt"></i>
-                                <i class="fas fa-headphones"></i>
-                                <i class="fas fa-video"></i>
-                            </div>
-                        </div>
-                        <p>Precio</p>
-                    </div>
-                    <div class="buttons">
-                        <button class="add"><i class="fas fa-cart-plus"></i></button>
-                        <button class="buy">Comprar</button>
-                    </div>
-            </article>
-            <article>
-                    <img src="/Images/ted-talk.jpg" width="100%" alt="Discurso">
-                    <div class="course-card">
-                        <h3>Preparación de discursos y exposiciones</h3>
-                        <div>
-                            <p>Profesor/es</p>
-                            <div class="media">
-                                <i class="fas fa-file-alt"></i>
-                                <i class="fas fa-headphones"></i>
-                                <i class="fas fa-video"></i>
-                            </div>
-                        </div>
-                        <p>Precio</p>
-                    </div>
-                    <div class="buttons">
-                        <button class="add"><i class="fas fa-cart-plus"></i></button>
-                        <button class="buy">Comprar</button>
-                    </div>
-            </article>
-            <article>
-                    <img src="/Images/virtualidad.jpg" width="100%" alt="Virtualidad">
-                    <div class="course-card">
-                        <h3>Preparación de clases virtuales</h3>
-                        <div>
-                            <p>Profesor/es</p>
-                            <div class="media">
-                                <i class="fas fa-file-alt"></i>
-                                <i class="fas fa-headphones"></i>
-                                <i class="fas fa-video"></i>
-                            </div>
-                        </div>
-                        <p>Precio</p>
-                    </div>
-                    <div class="buttons">
-                        <button class="add"><i class="fas fa-cart-plus"></i></button>
-                        <button class="buy">Comprar</button>
-                    </div>
-            </article>
-            <article>
-                    <img src="/Images/watercolor.jpg" width="100%" alt="Acuarela">
-                    <div class="course-card">
-                        <h3>Técnicas básicas con acuarela</h3>
-                        <div>
-                            <p>Profesor/es</p>
-                            <div class="media">
-                                <i class="fas fa-file-alt"></i>
-                                <i class="fas fa-headphones"></i>
-                                <i class="fas fa-video"></i>
-                            </div>
-                        </div>
-                        <p>Precio</p>
-                    </div>
-                    <div class="buttons">
-                        <button class="add"><i class="fas fa-cart-plus"></i></button>
-                        <button class="buy">Comprar</button>
-                    </div>
-            </article>
+                        </article>        
+                    </li>
+                <% }) %>
+            </ul>
+
         </section>
     </main>
     <%- include('./partials/footer') %>
