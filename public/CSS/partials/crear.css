@@ -29,6 +29,14 @@
     width: 380px;
 }
 
+.editar_textArea {
+    border: var(--gris-claro);
+    margin: 0.5rem;
+    padding: 5px;
+    border-radius: 5px;
+    width: 380px;
+}
+
 .category-crear {
     display: flex;
     flex-wrap: wrap;
