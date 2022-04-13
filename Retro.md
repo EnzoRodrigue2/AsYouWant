@@ -17,3 +17,6 @@ Se acuerda mantener este ritmo de trabajo para el siguiente sprint, pero buscand
 Retrospectiva del sprint 4:
 Se llegó a tiempo con las tareas que se debían realizar, la comunicación fue buena, y no surgieron muchos problemas. 
 Para el sprint 5: Vamos a seguir como veníamos hasta ahora, dividiendo mejor las tareas. Solo somos 2 personas en el equipo.
+
+Retrospectiva del sprint 5: No se llegó con todas las tareas por un inconveniente menor, pero se solucionará a tiempo para comenzar el siguiente.
+Para el sprint 6: Se distribuirán mejor las tareas, teniendo en consideración las cargas de cada miembro. 

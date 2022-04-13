@@ -15,3 +15,5 @@
 30/3/2022 => Se conversó acerca del avance, no hay inconvenientes hasta ahora. Solo dos personas presentes. 
 
 08/4/2022 => Se conversó sobre como se armará la base de datos y sus tablas. Dudas sobre la cantidad de modelos a armar, que serán resueltas próximamente. Solo dos personas presentes.
+
+13/4/2022 => los profes nos dieron hasta el día 18/4 para finalizar el sprint. Conversamos sobre como venimos con las tareas, y muchas no se terminaron. Nos damos cuenta de que dividimos mal, así que nos reorganizaremos y seguiremos avanzando para poder llegar a terminar el sprint. 
