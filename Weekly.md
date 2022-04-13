@@ -6,8 +6,12 @@
 
 9/3/2022 => Se escucharon razones por las cuales las tareas que faltaban hacer no estaban hechas. La explicación no sorprendió a nadie. Nos pusimos de acuerdo con algunos aspectos técnicos. 
 
-16/3/2022 => se decide pasar la reunión al día 19 porque en general se avanza sin problemas. 
+16/3/2022 => se decide pasar la reunión al día 18 porque en general se avanza sin problemas. 
 
 18/3/2022 => Se redistribuyen las tareas que faltan realizar. Se camcia el horario de las weekly meetings, las cuales serán despues de las clases de los miércoles.
 
 21/3/2022 => Distribuimos las tareas del sprint 5, nos adaptamos a las nuevas condiciones de trabajo. *Inserte foto de Bizarrap music sessions con residente*
+
+30/3/2022 => Se conversó acerca del avance, no hay inconvenientes hasta ahora. Solo dos personas presentes. 
+
+08/4/2022 => Se conversó sobre como se armará la base de datos y sus tablas. Dudas sobre la cantidad de modelos a armar, que serán resueltas próximamente. Solo dos personas presentes.

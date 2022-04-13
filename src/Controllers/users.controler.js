@@ -11,7 +11,9 @@ res.send('Aqui va el formulario')
 
     },
 
-
+    perfil:(req, res, next) => {
+        res.render('perfil')
+    }
 }
 
 module.exports = controller;

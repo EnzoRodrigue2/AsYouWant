@@ -10,7 +10,7 @@
             "imagen-2": "cursos-en-linea.jpg",
             "imagen-3": "cursos-online.jpeg"
         },
-
+        "profesor": "Esteban Quito",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -68,7 +68,7 @@
             "imagen-2": "cursos-en-linea.jpg",
             "imagen-3": "cursos-online.jpeg"
         },
-
+        "profesor": "Cindy Nero",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -126,7 +126,7 @@
             "imagen-2": "cursos-en-linea.jpg",
             "imagen-3": "cursos-online.jpeg"
         },
-
+        "profesor": "Jhony Laburo",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -184,65 +184,7 @@
             "imagen-2": "cursos-en-linea.jpg",
             "imagen-3": "cursos-online.jpeg"
         },
-
-        "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "titulo_2": "hola que hace",
-        "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "temario": {
-            "datos_generales": {
-                "modulos": 2,
-                "clases": 45,
-                "duracion_total":"3h 52m"
-            },
-            "introducion": {
-                "titulo_int-1": "conceptos generales",
-                "titulo_int-2": "conociendo herramientas principales",
-                "titulo_int-3": "Proyecto final"
-            },
-            "parte-1":{
-                "titulo_p1-1": "Lo que corresponda",
-                "titulo_p1-2": "Algo va aca",
-                "titulo_p1-3": "Aca tambien va algo"
-            },
-            "parte-2": {
-                "titulo_p2-1": "Avanzando",
-                "titulo_p2-2": "Avanzando con onda",
-                "titulo_p2-3": "Ya terminamos, vuelva prontos"
-            }
-        },
-        "Valoraciones": {
-            "alumnos": 500,
-            "comentarios": 100,
-            "positivas": 90 
-        },
-        "preguntas_frecuentes": {
-            "pregunta_1":{
-                "titulo":"Como se llama el profe?",
-                "respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            },
-            "pregunta-2":{
-                "titulo":"Como se va a dar clases",
-                "respuesta": "con toda la onda"
-            },
-            "pregunta-3": {
-                "titulo": "ya no se que mas poner",
-                "respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-
-            }
-        }
-    },
-    {
-        "id": 4,
-        "titulo": "Costura para modistas",
-        "categoria": "manualidades",
-        "precio": 1500,
-        "imagen_principal":"/images/costura.jpg",
-        "carrusel": {
-            "imagen-1": "imagen_2.jpg",
-            "imagen-2": "cursos-en-linea.jpg",
-            "imagen-3": "cursos-online.jpeg"
-        },
-
+        "profesor": "Lali Cuadora",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -291,16 +233,16 @@
     },
     {
         "id": 5,
-        "titulo": "Preparación de discursos y exposiciones",
-        "categoria": "liderazgo",
+        "titulo": "Costura para modistas",
+        "categoria": "manualidades",
         "precio": 1500,
-        "imagen_principal":"/images/ted-talk.jpg",
+        "imagen_principal":"/images/costura.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
             "imagen-2": "cursos-en-linea.jpg",
             "imagen-3": "cursos-online.jpeg"
         },
-
+        "profesor": "Elsa Capuntas",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -349,16 +291,16 @@
     },
     {
         "id": 6,
-        "titulo": "Preparación de clases virtuales",
-        "categoria": "multimedia",
+        "titulo": "Preparación de discursos y exposiciones",
+        "categoria": "liderazgo",
         "precio": 1500,
-        "imagen_principal":"/images/virtualidad.jpg",
+        "imagen_principal":"/images/ted-talk.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
             "imagen-2": "cursos-en-linea.jpg",
             "imagen-3": "cursos-online.jpeg"
         },
-
+        "profesor": "Armando Paredes",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -407,16 +349,16 @@
     },
     {
         "id": 7,
-        "titulo": "Técnicas básicas con acuarela",
-        "categoria": "manualidades", 
+        "titulo": "Preparación de clases virtuales",
+        "categoria": "multimedia",
         "precio": 1500,
-        "imagen_principal":"/images/watercolor.jpg",
+        "imagen_principal":"/images/virtualidad.jpg",
         "carrusel": {
             "imagen-1": "imagen_2.jpg",
             "imagen-2": "cursos-en-linea.jpg",
             "imagen-3": "cursos-online.jpeg"
         },
-
+        "profesor": "Carlitos Tado",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -465,6 +407,64 @@
     },
     {
         "id": 8,
+        "titulo": "Técnicas básicas con acuarela",
+        "categoria": "manualidades", 
+        "precio": 1500,
+        "imagen_principal":"/images/watercolor.jpg",
+        "carrusel": {
+            "imagen-1": "imagen_2.jpg",
+            "imagen-2": "cursos-en-linea.jpg",
+            "imagen-3": "cursos-online.jpeg"
+        },
+        "profesor": "Elga Tito",
+        "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "titulo_2": "hola que hace",
+        "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "temario": {
+            "datos_generales": {
+                "modulos": 2,
+                "clases": 45,
+                "duracion_total":"3h 52m"
+            },
+            "introducion": {
+                "titulo_int-1": "conceptos generales",
+                "titulo_int-2": "conociendo herramientas principales",
+                "titulo_int-3": "Proyecto final"
+            },
+            "parte-1":{
+                "titulo_p1-1": "Lo que corresponda",
+                "titulo_p1-2": "Algo va aca",
+                "titulo_p1-3": "Aca tambien va algo"
+            },
+            "parte-2": {
+                "titulo_p2-1": "Avanzando",
+                "titulo_p2-2": "Avanzando con onda",
+                "titulo_p2-3": "Ya terminamos, vuelva prontos"
+            }
+        },
+        "Valoraciones": {
+            "alumnos": 500,
+            "comentarios": 100,
+            "positivas": 90 
+        },
+        "preguntas_frecuentes": {
+            "pregunta_1":{
+                "titulo":"Como se llama el profe?",
+                "respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            "pregunta-2":{
+                "titulo":"Como se va a dar clases",
+                "respuesta": "con toda la onda"
+            },
+            "pregunta-3": {
+                "titulo": "ya no se que mas poner",
+                "respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+            }
+        }
+    },
+    {
+        "id": 9,
         "titulo": "Autorretratos fotográficos",
         "categoria": "multimedia", 
         "precio": 1500,
@@ -474,7 +474,7 @@
             "imagen-2": "cursos-en-linea.jpg",
             "imagen-3": "cursos-online.jpeg"
         },
-
+        "profesor": "Inés Tornudo",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
