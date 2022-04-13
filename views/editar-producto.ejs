@@ -5,41 +5,42 @@
     <%- include('./partials/header.ejs') %>
     <main class="main-general-bajo-header">
         <div class="top-editar">
-            <h1>Creación de cursos</h1>
+            <h1 class="editar_tituloPrincipal">Edición de cursos</h1>
             <form action="/producto/editar?_method=PUT" method="POST">
                 <div>
-                <h3>Información básica</h3>
+                    <h3 class="editar_tituloInfo">Información básica</h3>
                 <div class="description-edit">
-                    <input type="text" name="Curso" placeholder="<%= productEditar.titulo %>"><br>
-                    <input type="textarea" name="Description" placeholder="<%= productEditar.descripcion_corta %>"><br>
+                    <input type="text" name="titulo" value="<%= productEditar.titulo %>" placeholder="Nombre de curso"><br>
+                    <input type="textarea" name="description_corta" value="<%= productEditar.descripcion_corta %>" placeholder="Descripcion del curso"><br>
+                    <textarea type="text" name="descripcion_larga" placeholder="Descripcion mas detallada del curso"  rows="5" cols="60" class="editar_textArea"><%= productEditar.descripcion_larga %></textarea>
                 </div>
-                <h3>Categoría</h3>
+                <h3 class="editar_tituloInfo">Categoría</h3>
                 <div class="category-edit">
-                    <label for="category-edit"><input type="radio" name="category" value="fotografia" id="fotografia">Fotografía</label><br>
-                    <label for="category-edit"><input type="radio" name="category" value="habilidades-blandas" id="habilidades-blandas">Habilidades blandas</label><br>
-                    <label for="category-edit"><input type="radio" name="category" value="dibujo-pintura" id="dibujo-pintura">Dibujo y pintura</label><br>
-                    <label for="category-edit"><input type="radio" name="category" value="manualidades" id="manualidades">Manualidades</label><br>
-                    <label for="category-edit"><input type="radio" name="category" value="cocina-cocteleria" id="cocina-cocteleria">Cocina y coctelería</label><br>
+                    <label for="category-edit"><input type="radio" name="categoria" value="fotografia" id="fotografia" >Fotografía</label><br>
+                    <label for="category-edit"><input type="radio" name="categoria" value="habilidades-blandas" id="habilidades-blandas" >Habilidades blandas</label><br>
+                    <label for="category-edit"><input type="radio" name="categoria" value="dibujo-pintura" id="dibujo-pintura">Dibujo y pintura</label><br>
+                    <label for="category-edit"><input type="radio" name="categoria" value="manualidades" id="manualidades">Manualidades</label><br>
+                    <label for="category-edit"><input type="radio" name="categoria" value="cocina-cocteleria" id="cocina-cocteleria">Cocina y coctelería</label><br>
                 </div>
-                <h3>Cover del curso</h3>
+                <h3 class="editar_tituloInfo">Cover del curso</h3>
                 <div class="foto">
-                    <input type="file" name="Imagen" id="imagen"><br>
+                    <input type="file" name="imagen_principal" id="imagen_principal"><br>
                 </div>
-                <h3>Opciones de material</h3>
+                <h3 class="editar_tituloInfo">Opciones de material</h3>
                 <div class="multimedia-edit">
                     <label for="multimedia-edit"><input type="checkbox" name="visual" value="visual" id="visual">Visual</label><br>
                     <label for="multimedia-edit"><input type="checkbox" name="audio" value="audio" id="audio">Audio</label><br>
                     <label for="multimedia-edit"><input type="checkbox" name="audiovisual" value="audiovisual" id="audiovisual">Audiovisual</label><br>
                 </div>
-                <h3>Carga de multimedia</h3>
+                <h3 class="editar_tituloInfo">Carga de multimedia</h3>
                 <div class="multimedia-edit">
                     <label>Material en pdf<input type="file" name="pdf" id="pdf" accept="file_extension"></label><br>
                     <label>Material auditivo<input type="file" name="audio" id="audio" accept="audio/*"></label><br>
                     <label>Material audiovisual<input type="file" name="video" id="video" accept="video/*"></label><br>
                 </div>
-                <h3>Precio</h3>
+                <h3 class="editar_tituloInfo">Precio</h3>
                 <div class="price-edit">
-                    <input type="number" name="precio" placeholder="<%= productEditar.precio %>"><br>
+                    <input type="number" name="precio" value="<%= productEditar.precio %>" placeholder="Precio"><br>
                 </div>
                 <div class="editBtn">
                     <input type="submit" value="Editar" class="button">

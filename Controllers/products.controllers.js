@@ -1,4 +1,6 @@
 const { log } = require('console');
+const { json } = require('express/lib/response');
+const res = require('express/lib/response');
 const fs = require('fs');
 const path = require('path');
 
@@ -55,6 +57,16 @@ const controller = {
     },
     crear: (req,res) => {
         res.render('crear-producto')
+    },
+
+    agregar: (req,res) => {
+        let productoNuevo = {
+            id: products[products.length -1].id+1,
+            ...req.body
+        }
+        products.push(productoNuevo);
+        fs.writeFileSync(productsFilePath, JSON.stringify(products,null,' '));
+        res.redirect('/productos/info/:id')
     },
 
     delete: (req,res) => {

@@ -2,6 +2,13 @@
     margin-top: 50px;
 }
 
+.editar_tituloInfo {
+    padding-left: 1.5%;
+}
+.editar_tituloPrincipal {
+    padding-left: 3.8%;
+}
+
 .main-general-bajo-header {
     width: 90%;
     margin: 0 auto;
@@ -28,6 +35,10 @@
     padding: 5px;
     border-radius: 5px;
     width: 380px;
+}
+
+.description-edit input, .description-edit textarea {
+    width: inherit;
 }
 
 .category-edit {
