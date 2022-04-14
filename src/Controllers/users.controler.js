@@ -1,6 +1,6 @@
 const controller = {
     login:(req,res,next) => {
-res.send('Aqui va el formulario')
+        res.render('login')
     },
 
     register:(req,res,next) => {
