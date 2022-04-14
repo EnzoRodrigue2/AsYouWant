@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <main class="main-login">
+        <div class="loginLeft">
+            <picture class="loginLogo">
+                <img src="/Images/Logo1.svg" class="loginLogo">
+            </picture>
+        </div>
+        <div class="loginRight">
+            <h1 class="loginTitle">
+                Registrate para comenzar a aprender
+            </h1>
+            <form method="POST" action="/login" class="login_form">
+                <div class="campoLogin">
+                    <label for="nombre" class="loginLabel">Nombre</label>
+                    <input type="text" class="imputLogin" placeholder="Ej:Juan" >
+                </div>
+                <div class="campoLogin">
+                    <label for="nombre" class="loginLabel">Apellido</label>
+                    <input type="text" class="imputLogin" placeholder="Ej:Perez" >
+                </div>
+                <div class="campoLogin">
+                    <label for="nombre" class="loginLabel">Email</label>
+                    <input type="text" class="imputLogin" placeholder="nombre@ejemplo.com" >
+                </div>
+                <div class="campoLogin">
+                    <label for="nombre" class="loginLabel">Contraseña</label>
+                    <input type="text" class="imputLogin" placeholder="Contraseña" >
+                </div>
+                <div class="loginButton">
+                    <input type="submit" value="Registrarme" class="loginBTN">
+                </div>
+            </form>
+        </div>
+    </main>
+</body>

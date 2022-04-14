@@ -10,6 +10,7 @@
 @import "/CSS/partials/editar.css";
 @import "/CSS/partials/register.css";
 @import "/CSS/partials/delete.css";
+@import "/CSS/partials/login.css";
 
 * {
     margin: 0px;

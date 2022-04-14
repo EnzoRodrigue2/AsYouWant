@@ -1,0 +1,69 @@
+
+ .main-login {
+    display: flex;
+    flex-direction: row;     
+ }
+
+ .loginLeft {
+    display: flex;
+    background-color: var(--celeste);
+    height: 100vh;
+    width: 50vw;
+    justify-content: center;
+}
+
+.loginLogo {
+    width: 100%;
+    height: 100%;
+}
+
+.loginRight {
+    padding: 50px 35px;
+    width: 50%;
+}
+.loginTitle {
+    font-size: 20px;
+}
+
+.campoLogin {
+    padding: 11px 0;
+}
+.loginLabel {
+    text-align: right;
+}
+
+.imputLogin {
+    background: var(--blanco);
+    border: 0;
+    color: inherit;
+    font: inherit;
+    font-size: var(--text);
+    line-height: normal;
+    width: 100%;
+    height: 30px;
+    overflow: visible;
+    padding: 5px 5px;
+    border-radius: 5px 0 0 5px;
+    background: #F7F7F7;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.loginButton {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.loginBTN {
+    font-size: var(--title);
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    background-color: var(--amarillo);
+    border: 0;
+    border-radius: 5px;
+    font-weight: normal;
+    padding: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
