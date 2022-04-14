@@ -5,57 +5,34 @@
         "categoria": "organizacion",
         "precio": 1500,
         "imagen_principal":"/images/imagenes/img-person.jpg",
-        "carrusel": {
-            "imagen-1": "imagen_2.jpg",
-            "imagen-2": "cursos-en-linea.jpg",
-            "imagen-3": "cursos-online.jpeg"
-        },
         "profesor": "Esteban Quito",
+        "imagen-1": "imagen_2.jpg",
+        "imagen-2": "cursos-en-linea.jpg",
+        "imagen-3": "cursos-online.jpeg",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "temario": {
-            "datos_generales": {
-                "modulos": 2,
-                "clases": 45,
-                "duracion_total":"3h 52m"
-            },
-            "introducion": {
-                "titulo_int-1": "conceptos generales",
-                "titulo_int-2": "conociendo herramientas principales",
-                "titulo_int-3": "Proyecto final"
-            },
-            "parte-1":{
-                "titulo_p1-1": "Lo que corresponda",
-                "titulo_p1-2": "Algo va aca",
-                "titulo_p1-3": "Aca tambien va algo"
-            },
-            "parte-2": {
-                "titulo_p2-1": "Avanzando",
-                "titulo_p2-2": "Avanzando con onda",
-                "titulo_p2-3": "Ya terminamos, vuelva prontos"
-            }
-        },
-        "Valoraciones": {
-            "alumnos": 500,
-            "comentarios": 100,
-            "positivas": 90 
-        },
-        "preguntas_frecuentes": {
-            "pregunta_1":{
-                "titulo":"Como se llama el profe?",
-                "respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            },
-            "pregunta-2":{
-                "titulo":"Como se va a dar clases",
-                "respuesta": "con toda la onda"
-            },
-            "pregunta-3": {
-                "titulo": "ya no se que mas poner",
-                "respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-
-            }
-        }
+        "temario_modulos": 2,
+        "temario_clases": 45,
+        "temario_duracion_total":"3h 52m",
+        "titulo_int-1": "conceptos generales",
+        "titulo_int-2": "conociendo herramientas principales",
+        "titulo_int-3": "Proyecto final",
+        "titulo_p1-1": "Lo que corresponda",
+        "titulo_p1-2": "Algo va aca",
+        "titulo_p1-3": "Aca tambien va algo",
+        "titulo_p2-1": "Avanzando",
+        "titulo_p2-2": "Avanzando con onda",
+        "titulo_p2-3": "Ya terminamos, vuelva prontos",
+        "alumnos": 500,
+        "comentarios": 100,
+        "positivas": 90,
+        "pregunta_1_titulo":"Como se llama el profe?",
+        "pregunta_1_respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "pregunta-2_titulo":"Como se va a dar clases",
+        "respuesta": "con toda la onda",
+        "pregunta-3_titulo": "ya no se que mas poner",
+        "pregunta-3_respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
         "id": 2,
@@ -63,115 +40,69 @@
         "categoria": "multimedia",
         "precio": 1500,
         "imagen_principal":"/images/camera.jpg",
-        "carrusel": {
-            "imagen-1": "imagen_2.jpg",
-            "imagen-2": "cursos-en-linea.jpg",
-            "imagen-3": "cursos-online.jpeg"
-        },
-        "profesor": "Cindy Nero",
+        "profesor": "Esteban Quito",
+        "imagen-1": "imagen_2.jpg",
+        "imagen-2": "cursos-en-linea.jpg",
+        "imagen-3": "cursos-online.jpeg",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "temario": {
-            "datos_generales": {
-                "modulos": 2,
-                "clases": 45,
-                "duracion_total":"3h 52m"
-            },
-            "introducion": {
-                "titulo_int-1": "conceptos generales",
-                "titulo_int-2": "conociendo herramientas principales",
-                "titulo_int-3": "Proyecto final"
-            },
-            "parte-1":{
-                "titulo_p1-1": "Lo que corresponda",
-                "titulo_p1-2": "Algo va aca",
-                "titulo_p1-3": "Aca tambien va algo"
-            },
-            "parte-2": {
-                "titulo_p2-1": "Avanzando",
-                "titulo_p2-2": "Avanzando con onda",
-                "titulo_p2-3": "Ya terminamos, vuelva prontos"
-            }
-        },
-        "Valoraciones": {
-            "alumnos": 500,
-            "comentarios": 100,
-            "positivas": 90 
-        },
-        "preguntas_frecuentes": {
-            "pregunta_1":{
-                "titulo":"Como se llama el profe?",
-                "respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            },
-            "pregunta-2":{
-                "titulo":"Como se va a dar clases",
-                "respuesta": "con toda la onda"
-            },
-            "pregunta-3": {
-                "titulo": "ya no se que mas poner",
-                "respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-
-            }
-        }
+        "temario_modulos": 2,
+        "temario_clases": 45,
+        "temario_duracion_total":"3h 52m",
+        "titulo_int-1": "conceptos generales",
+        "titulo_int-2": "conociendo herramientas principales",
+        "titulo_int-3": "Proyecto final",
+        "titulo_p1-1": "Lo que corresponda",
+        "titulo_p1-2": "Algo va aca",
+        "titulo_p1-3": "Aca tambien va algo",
+        "titulo_p2-1": "Avanzando",
+        "titulo_p2-2": "Avanzando con onda",
+        "titulo_p2-3": "Ya terminamos, vuelva prontos",
+        "alumnos": 500,
+        "comentarios": 100,
+        "positivas": 90,
+        "pregunta_1_titulo":"Como se llama el profe?",
+        "pregunta_1_respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "pregunta-2_titulo":"Como se va a dar clases",
+        "respuesta": "con toda la onda",
+        "pregunta-3_titulo": "ya no se que mas poner",
+        "pregunta-3_respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
         "id": 3,
         "titulo": "Bordado a mano nivel 1",
         "categoria": "manualidades",
         "precio": 1500,
-        "imagen_principal":"/images/bordado.jpg",
-        "carrusel": {
-            "imagen-1": "imagen_2.jpg",
-            "imagen-2": "cursos-en-linea.jpg",
-            "imagen-3": "cursos-online.jpeg"
-        },
         "profesor": "Jhony Laburo",
+        "imagen_principal":"/images/bordado.jpg",
+        "imagen-1": "imagen_2.jpg",
+        "imagen-2": "cursos-en-linea.jpg",
+        "imagen-3": "cursos-online.jpeg",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "temario": {
-            "datos_generales": {
-                "modulos": 2,
-                "clases": 45,
-                "duracion_total":"3h 52m"
-            },
-            "introducion": {
-                "titulo_int-1": "conceptos generales",
-                "titulo_int-2": "conociendo herramientas principales",
-                "titulo_int-3": "Proyecto final"
-            },
-            "parte-1":{
-                "titulo_p1-1": "Lo que corresponda",
-                "titulo_p1-2": "Algo va aca",
-                "titulo_p1-3": "Aca tambien va algo"
-            },
-            "parte-2": {
-                "titulo_p2-1": "Avanzando",
-                "titulo_p2-2": "Avanzando con onda",
-                "titulo_p2-3": "Ya terminamos, vuelva prontos"
-            }
-        },
-        "Valoraciones": {
-            "alumnos": 500,
-            "comentarios": 100,
-            "positivas": 90 
-        },
-        "preguntas_frecuentes": {
-            "pregunta_1":{
-                "titulo":"Como se llama el profe?",
-                "respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            },
-            "pregunta-2":{
-                "titulo":"Como se va a dar clases",
-                "respuesta": "con toda la onda"
-            },
-            "pregunta-3": {
-                "titulo": "ya no se que mas poner",
-                "respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-
-            }
-        }
+        "temario_modulos": 2,
+        "temario_clases": 45,
+        "temario_duracion_total":"3h 52m",
+        "titulo_int-1": "conceptos generales",
+        "titulo_int-2": "conociendo herramientas principales",
+        "titulo_int-3": "Proyecto final",
+        "titulo_p1-1": "Lo que corresponda",
+        "titulo_p1-2": "Algo va aca",
+        "titulo_p1-3": "Aca tambien va algo",
+        "titulo_p2-1": "Avanzando",
+        "titulo_p2-2": "Avanzando con onda",
+        "titulo_p2-3": "Ya terminamos, vuelva prontos",
+        "alumnos": 500,
+        "comentarios": 100,
+        "positivas": 90,
+        "pregunta_1_titulo":"Como se llama el profe?",
+        "pregunta_1_respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "pregunta-2_titulo":"Como se va a dar clases",
+        "respuesta": "con toda la onda",
+        "pregunta-3_titulo": "ya no se que mas poner",
+        "pregunta-3_respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
         "id": 4,
@@ -179,57 +110,34 @@
         "categoria": "alimentos",
         "precio": 1500,
         "imagen_principal":"/images/drink.jpg",
-        "carrusel": {
-            "imagen-1": "imagen_2.jpg",
-            "imagen-2": "cursos-en-linea.jpg",
-            "imagen-3": "cursos-online.jpeg"
-        },
         "profesor": "Lali Cuadora",
+        "imagen-1": "imagen_2.jpg",
+        "imagen-2": "cursos-en-linea.jpg",
+        "imagen-3": "cursos-online.jpeg",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "temario": {
-            "datos_generales": {
-                "modulos": 2,
-                "clases": 45,
-                "duracion_total":"3h 52m"
-            },
-            "introducion": {
-                "titulo_int-1": "conceptos generales",
-                "titulo_int-2": "conociendo herramientas principales",
-                "titulo_int-3": "Proyecto final"
-            },
-            "parte-1":{
-                "titulo_p1-1": "Lo que corresponda",
-                "titulo_p1-2": "Algo va aca",
-                "titulo_p1-3": "Aca tambien va algo"
-            },
-            "parte-2": {
-                "titulo_p2-1": "Avanzando",
-                "titulo_p2-2": "Avanzando con onda",
-                "titulo_p2-3": "Ya terminamos, vuelva prontos"
-            }
-        },
-        "Valoraciones": {
-            "alumnos": 500,
-            "comentarios": 100,
-            "positivas": 90 
-        },
-        "preguntas_frecuentes": {
-            "pregunta_1":{
-                "titulo":"Como se llama el profe?",
-                "respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            },
-            "pregunta-2":{
-                "titulo":"Como se va a dar clases",
-                "respuesta": "con toda la onda"
-            },
-            "pregunta-3": {
-                "titulo": "ya no se que mas poner",
-                "respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-
-            }
-        }
+        "temario_modulos": 2,
+        "temario_clases": 45,
+        "temario_duracion_total":"3h 52m",
+        "titulo_int-1": "conceptos generales",
+        "titulo_int-2": "conociendo herramientas principales",
+        "titulo_int-3": "Proyecto final",
+        "titulo_p1-1": "Lo que corresponda",
+        "titulo_p1-2": "Algo va aca",
+        "titulo_p1-3": "Aca tambien va algo",
+        "titulo_p2-1": "Avanzando",
+        "titulo_p2-2": "Avanzando con onda",
+        "titulo_p2-3": "Ya terminamos, vuelva prontos",
+        "alumnos": 500,
+        "comentarios": 100,
+        "positivas": 90,
+        "pregunta_1_titulo":"Como se llama el profe?",
+        "pregunta_1_respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "pregunta-2_titulo":"Como se va a dar clases",
+        "respuesta": "con toda la onda",
+        "pregunta-3_titulo": "ya no se que mas poner",
+        "pregunta-3_respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
         "id": 5,
@@ -237,57 +145,34 @@
         "categoria": "manualidades",
         "precio": 1500,
         "imagen_principal":"/images/costura.jpg",
-        "carrusel": {
-            "imagen-1": "imagen_2.jpg",
-            "imagen-2": "cursos-en-linea.jpg",
-            "imagen-3": "cursos-online.jpeg"
-        },
         "profesor": "Elsa Capuntas",
+        "imagen-1": "imagen_2.jpg",
+        "imagen-2": "cursos-en-linea.jpg",
+        "imagen-3": "cursos-online.jpeg",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "temario": {
-            "datos_generales": {
-                "modulos": 2,
-                "clases": 45,
-                "duracion_total":"3h 52m"
-            },
-            "introducion": {
-                "titulo_int-1": "conceptos generales",
-                "titulo_int-2": "conociendo herramientas principales",
-                "titulo_int-3": "Proyecto final"
-            },
-            "parte-1":{
-                "titulo_p1-1": "Lo que corresponda",
-                "titulo_p1-2": "Algo va aca",
-                "titulo_p1-3": "Aca tambien va algo"
-            },
-            "parte-2": {
-                "titulo_p2-1": "Avanzando",
-                "titulo_p2-2": "Avanzando con onda",
-                "titulo_p2-3": "Ya terminamos, vuelva prontos"
-            }
-        },
-        "Valoraciones": {
-            "alumnos": 500,
-            "comentarios": 100,
-            "positivas": 90 
-        },
-        "preguntas_frecuentes": {
-            "pregunta_1":{
-                "titulo":"Como se llama el profe?",
-                "respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            },
-            "pregunta-2":{
-                "titulo":"Como se va a dar clases",
-                "respuesta": "con toda la onda"
-            },
-            "pregunta-3": {
-                "titulo": "ya no se que mas poner",
-                "respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-
-            }
-        }
+        "temario_modulos": 2,
+        "temario_clases": 45,
+        "temario_duracion_total":"3h 52m",
+        "titulo_int-1": "conceptos generales",
+        "titulo_int-2": "conociendo herramientas principales",
+        "titulo_int-3": "Proyecto final",
+        "titulo_p1-1": "Lo que corresponda",
+        "titulo_p1-2": "Algo va aca",
+        "titulo_p1-3": "Aca tambien va algo",
+        "titulo_p2-1": "Avanzando",
+        "titulo_p2-2": "Avanzando con onda",
+        "titulo_p2-3": "Ya terminamos, vuelva prontos",
+        "alumnos": 500,
+        "comentarios": 100,
+        "positivas": 90,
+        "pregunta_1_titulo":"Como se llama el profe?",
+        "pregunta_1_respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "pregunta-2_titulo":"Como se va a dar clases",
+        "respuesta": "con toda la onda",
+        "pregunta-3_titulo": "ya no se que mas poner",
+        "pregunta-3_respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
         "id": 6,
@@ -295,57 +180,34 @@
         "categoria": "liderazgo",
         "precio": 1500,
         "imagen_principal":"/images/ted-talk.jpg",
-        "carrusel": {
-            "imagen-1": "imagen_2.jpg",
-            "imagen-2": "cursos-en-linea.jpg",
-            "imagen-3": "cursos-online.jpeg"
-        },
         "profesor": "Armando Paredes",
+        "imagen-1": "imagen_2.jpg",
+        "imagen-2": "cursos-en-linea.jpg",
+        "imagen-3": "cursos-online.jpeg",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "temario": {
-            "datos_generales": {
-                "modulos": 2,
-                "clases": 45,
-                "duracion_total":"3h 52m"
-            },
-            "introducion": {
-                "titulo_int-1": "conceptos generales",
-                "titulo_int-2": "conociendo herramientas principales",
-                "titulo_int-3": "Proyecto final"
-            },
-            "parte-1":{
-                "titulo_p1-1": "Lo que corresponda",
-                "titulo_p1-2": "Algo va aca",
-                "titulo_p1-3": "Aca tambien va algo"
-            },
-            "parte-2": {
-                "titulo_p2-1": "Avanzando",
-                "titulo_p2-2": "Avanzando con onda",
-                "titulo_p2-3": "Ya terminamos, vuelva prontos"
-            }
-        },
-        "Valoraciones": {
-            "alumnos": 500,
-            "comentarios": 100,
-            "positivas": 90 
-        },
-        "preguntas_frecuentes": {
-            "pregunta_1":{
-                "titulo":"Como se llama el profe?",
-                "respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            },
-            "pregunta-2":{
-                "titulo":"Como se va a dar clases",
-                "respuesta": "con toda la onda"
-            },
-            "pregunta-3": {
-                "titulo": "ya no se que mas poner",
-                "respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-
-            }
-        }
+        "temario_modulos": 2,
+        "temario_clases": 45,
+        "temario_duracion_total":"3h 52m",
+        "titulo_int-1": "conceptos generales",
+        "titulo_int-2": "conociendo herramientas principales",
+        "titulo_int-3": "Proyecto final",
+        "titulo_p1-1": "Lo que corresponda",
+        "titulo_p1-2": "Algo va aca",
+        "titulo_p1-3": "Aca tambien va algo",
+        "titulo_p2-1": "Avanzando",
+        "titulo_p2-2": "Avanzando con onda",
+        "titulo_p2-3": "Ya terminamos, vuelva prontos",
+        "alumnos": 500,
+        "comentarios": 100,
+        "positivas": 90,
+        "pregunta_1_titulo":"Como se llama el profe?",
+        "pregunta_1_respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "pregunta-2_titulo":"Como se va a dar clases",
+        "respuesta": "con toda la onda",
+        "pregunta-3_titulo": "ya no se que mas poner",
+        "pregunta-3_respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
         "id": 7,
@@ -353,57 +215,34 @@
         "categoria": "multimedia",
         "precio": 1500,
         "imagen_principal":"/images/virtualidad.jpg",
-        "carrusel": {
-            "imagen-1": "imagen_2.jpg",
-            "imagen-2": "cursos-en-linea.jpg",
-            "imagen-3": "cursos-online.jpeg"
-        },
         "profesor": "Carlitos Tado",
+        "imagen-1": "imagen_2.jpg",
+        "imagen-2": "cursos-en-linea.jpg",
+        "imagen-3": "cursos-online.jpeg",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "temario": {
-            "datos_generales": {
-                "modulos": 2,
-                "clases": 45,
-                "duracion_total":"3h 52m"
-            },
-            "introducion": {
-                "titulo_int-1": "conceptos generales",
-                "titulo_int-2": "conociendo herramientas principales",
-                "titulo_int-3": "Proyecto final"
-            },
-            "parte-1":{
-                "titulo_p1-1": "Lo que corresponda",
-                "titulo_p1-2": "Algo va aca",
-                "titulo_p1-3": "Aca tambien va algo"
-            },
-            "parte-2": {
-                "titulo_p2-1": "Avanzando",
-                "titulo_p2-2": "Avanzando con onda",
-                "titulo_p2-3": "Ya terminamos, vuelva prontos"
-            }
-        },
-        "Valoraciones": {
-            "alumnos": 500,
-            "comentarios": 100,
-            "positivas": 90 
-        },
-        "preguntas_frecuentes": {
-            "pregunta_1":{
-                "titulo":"Como se llama el profe?",
-                "respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            },
-            "pregunta-2":{
-                "titulo":"Como se va a dar clases",
-                "respuesta": "con toda la onda"
-            },
-            "pregunta-3": {
-                "titulo": "ya no se que mas poner",
-                "respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-
-            }
-        }
+        "temario_modulos": 2,
+        "temario_clases": 45,
+        "temario_duracion_total":"3h 52m",
+        "titulo_int-1": "conceptos generales",
+        "titulo_int-2": "conociendo herramientas principales",
+        "titulo_int-3": "Proyecto final",
+        "titulo_p1-1": "Lo que corresponda",
+        "titulo_p1-2": "Algo va aca",
+        "titulo_p1-3": "Aca tambien va algo",
+        "titulo_p2-1": "Avanzando",
+        "titulo_p2-2": "Avanzando con onda",
+        "titulo_p2-3": "Ya terminamos, vuelva prontos",
+        "alumnos": 500,
+        "comentarios": 100,
+        "positivas": 90,
+        "pregunta_1_titulo":"Como se llama el profe?",
+        "pregunta_1_respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "pregunta-2_titulo":"Como se va a dar clases",
+        "respuesta": "con toda la onda",
+        "pregunta-3_titulo": "ya no se que mas poner",
+        "pregunta-3_respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
         "id": 8,
@@ -411,57 +250,34 @@
         "categoria": "manualidades", 
         "precio": 1500,
         "imagen_principal":"/images/watercolor.jpg",
-        "carrusel": {
-            "imagen-1": "imagen_2.jpg",
-            "imagen-2": "cursos-en-linea.jpg",
-            "imagen-3": "cursos-online.jpeg"
-        },
         "profesor": "Elga Tito",
+        "imagen-1": "imagen_2.jpg",
+        "imagen-2": "cursos-en-linea.jpg",
+        "imagen-3": "cursos-online.jpeg",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "temario": {
-            "datos_generales": {
-                "modulos": 2,
-                "clases": 45,
-                "duracion_total":"3h 52m"
-            },
-            "introducion": {
-                "titulo_int-1": "conceptos generales",
-                "titulo_int-2": "conociendo herramientas principales",
-                "titulo_int-3": "Proyecto final"
-            },
-            "parte-1":{
-                "titulo_p1-1": "Lo que corresponda",
-                "titulo_p1-2": "Algo va aca",
-                "titulo_p1-3": "Aca tambien va algo"
-            },
-            "parte-2": {
-                "titulo_p2-1": "Avanzando",
-                "titulo_p2-2": "Avanzando con onda",
-                "titulo_p2-3": "Ya terminamos, vuelva prontos"
-            }
-        },
-        "Valoraciones": {
-            "alumnos": 500,
-            "comentarios": 100,
-            "positivas": 90 
-        },
-        "preguntas_frecuentes": {
-            "pregunta_1":{
-                "titulo":"Como se llama el profe?",
-                "respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            },
-            "pregunta-2":{
-                "titulo":"Como se va a dar clases",
-                "respuesta": "con toda la onda"
-            },
-            "pregunta-3": {
-                "titulo": "ya no se que mas poner",
-                "respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-
-            }
-        }
+        "temario_modulos": 2,
+        "temario_clases": 45,
+        "temario_duracion_total":"3h 52m",
+        "titulo_int-1": "conceptos generales",
+        "titulo_int-2": "conociendo herramientas principales",
+        "titulo_int-3": "Proyecto final",
+        "titulo_p1-1": "Lo que corresponda",
+        "titulo_p1-2": "Algo va aca",
+        "titulo_p1-3": "Aca tambien va algo",
+        "titulo_p2-1": "Avanzando",
+        "titulo_p2-2": "Avanzando con onda",
+        "titulo_p2-3": "Ya terminamos, vuelva prontos",
+        "alumnos": 500,
+        "comentarios": 100,
+        "positivas": 90,
+        "pregunta_1_titulo":"Como se llama el profe?",
+        "pregunta_1_respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "pregunta-2_titulo":"Como se va a dar clases",
+        "respuesta": "con toda la onda",
+        "pregunta-3_titulo": "ya no se que mas poner",
+        "pregunta-3_respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
         "id": 9,
@@ -469,56 +285,33 @@
         "categoria": "multimedia", 
         "precio": 1500,
         "imagen_principal":"/images/selfie.jpg",
-        "carrusel": {
-            "imagen-1": "imagen_2.jpg",
-            "imagen-2": "cursos-en-linea.jpg",
-            "imagen-3": "cursos-online.jpeg"
-        },
         "profesor": "Inés Tornudo",
+        "imagen-1": "imagen_2.jpg",
+        "imagen-2": "cursos-en-linea.jpg",
+        "imagen-3": "cursos-online.jpeg",
         "descripcion_corta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "titulo_2": "hola que hace",
         "descripcion_larga": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "temario": {
-            "datos_generales": {
-                "modulos": 2,
-                "clases": 45,
-                "duracion_total":"3h 52m"
-            },
-            "introducion": {
-                "titulo_int-1": "conceptos generales",
-                "titulo_int-2": "conociendo herramientas principales",
-                "titulo_int-3": "Proyecto final"
-            },
-            "parte-1":{
-                "titulo_p1-1": "Lo que corresponda",
-                "titulo_p1-2": "Algo va aca",
-                "titulo_p1-3": "Aca tambien va algo"
-            },
-            "parte-2": {
-                "titulo_p2-1": "Avanzando",
-                "titulo_p2-2": "Avanzando con onda",
-                "titulo_p2-3": "Ya terminamos, vuelva prontos"
-            }
-        },
-        "Valoraciones": {
-            "alumnos": 500,
-            "comentarios": 100,
-            "positivas": 90 
-        },
-        "preguntas_frecuentes": {
-            "pregunta-1":{
-                "titulo":"Como se llama el profe?",
-                "respuesta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            },
-            "pregunta-2":{
-                "titulo":"Como se va a dar clases",
-                "respuesta": "con toda la onda"
-            },
-            "pregunta-3": {
-                "titulo": "ya no se que mas poner",
-                "respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-
-            }
-        }
+        "temario_modulos": 2,
+        "temario_clases": 45,
+        "temario_duracion_total":"3h 52m",
+        "titulo_int-1": "conceptos generales",
+        "titulo_int-2": "conociendo herramientas principales",
+        "titulo_int-3": "Proyecto final",
+        "titulo_p1-1": "Lo que corresponda",
+        "titulo_p1-2": "Algo va aca",
+        "titulo_p1-3": "Aca tambien va algo",
+        "titulo_p2-1": "Avanzando",
+        "titulo_p2-2": "Avanzando con onda",
+        "titulo_p2-3": "Ya terminamos, vuelva prontos",
+        "alumnos": 500,
+        "comentarios": 100,
+        "positivas": 90,
+        "pregunta_1_titulo":"Como se llama el profe?",
+        "pregunta_1_respuesta-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "pregunta-2_titulo":"Como se va a dar clases",
+        "respuesta": "con toda la onda",
+        "pregunta-3_titulo": "ya no se que mas poner",
+        "pregunta-3_respuesta":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
 ]
