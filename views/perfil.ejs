@@ -3,12 +3,53 @@
     <%- include('./partials/head.ejs')%>
     <body>
         <%- include('./partials/header.ejs')%>
-        <main>
-            <div class="nombre-usuario">
-                <picture src="" alt="Tu foto de perfil"></picture>
-                <h1>Nombre y Apellido</h1>
+        <main class="mainPerfil">
+            <div class="topUsuario">
+                <img src="<%= findUser.imagen %>" alt="Tu foto de perfil" class="imagenPerfil" width="150px">
+                <div class="tituloUser">
+                    <h1>
+                        <%= findUser.nombre %> <%= findUser.apellido %>
+                    </h1>
+                    <h2>
+                        <%= findUser.categoria %>
+                    </h2>
+                </div>
             </div>
-
+            <div class="bottomUsuario">
+                <article class="infoUser">
+                    <div class="sobreUser">
+                        <h3>e-Mail</h3>
+                        <p>
+                            <%= findUser.email %>
+                        </p>
+                    </div>
+                    <div class="sobreUser">
+                        <h3>Sobre mi</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </article>
+                <article class="infoUser">
+                    <h3>Mis cursos</h3>
+                    <div class="cursosUser">
+                        <picture class="userMiniCurso">
+                            <img src="/Images/ted-talk.jpg" width="100px">
+                        </picture>
+                        <div class="infoMiniCurso">
+                            <p>Preparación de discursos y exposiciones</p>
+                            <p>Armando Paredes</p>
+                        </div>
+                    </div>
+                    <div class="cursosUser">
+                        <picture class="userMiniCurso">
+                            <img src="/Images/virtualidad.jpg" width="100px">
+                        </picture>
+                        <div class="infoMiniCurso">
+                            <p>Preparación de clases virtuales</p>
+                            <p>Carlitos Tado</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </main>
         <%- include('./partials/footer.ejs')%>
     </body>

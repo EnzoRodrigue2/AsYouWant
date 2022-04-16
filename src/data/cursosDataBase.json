@@ -5,6 +5,7 @@
         "categoria": "organizacion",
         "precio": 1500,
         "imagen_principal":"/images/imagenes/img-person.jpg",
+        "profesor": "Eddy Ficio",
         "imagen-1": "imagen_2.jpg",
         "imagen-2": "cursos-en-linea.jpg",
         "imagen-3": "cursos-online.jpeg",

@@ -16,6 +16,7 @@ footer .logo {
     width: 150px;
     padding: 0 5px ;
     background-color: var(--celeste);
+    border-radius: 10px;
 }
 
 .ending {

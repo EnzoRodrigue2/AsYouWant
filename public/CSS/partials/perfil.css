@@ -1,4 +1,54 @@
 
-main {
-    padding-top: 60px;
+.mainPerfil {
+    padding-top: 100px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.topUsuario {
+    display: flex;
+    flex-direction: row;
+    margin: 0 3rem;
+    padding: 0 3rem;
+}
+
+.imagenPerfil {
+    border: 1px solid var(--marron);
+    border-radius: 50%;
+    margin: 1rem;
+}
+
+.tituloUser {
+    padding-top: 3rem;
+    margin: 2rem;
+    padding: 1rem 6rem;
+}
+
+.bottomUsuario{
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+}
+
+.infoUser {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    padding: 1rem;
+    margin: 0.5rem;
+    box-shadow: -2px 13px 29px rgba(0, 0, 0, 0.25);
+}
+
+.sobreUser {
+    width: 100%;
+    margin: 0.5rem;
+}
+
+.cursosUser {
+    display: flex;
+    padding: 0.5rem;
+}
+
+.infoMiniCurso {
+    margin: 0.5rem;
 }
