@@ -36,7 +36,7 @@
                         Temario del curso
                     </h2>
                     <p>
-                        <%= productDetail.temario.datos_generales.modulos %> Módulos —45 Clases —2h 52m de duración total
+                        <%= productDetail.temario_modulos %> Módulos —45 Clases —2h 52m de duración total
                     </p>
                     <div class="tem-desplegable">
                         <ul>
@@ -66,7 +66,7 @@
                         <article class="conteiner-son" >
                             <picture class="icon-conteiner">
                                 <a href="/views/comment-curso"><img src="/Images/Iconos/iconosBlancos/bx-user 4.svg"></a>
-                                <h2 class="cifra-conteiner"><%= productDetail.Valoraciones.alumnos %></h2>
+                                <h2 class="cifra-conteiner"><%= productDetail.alumnos %></h2>
                             </picture>
                                 <p class="text-conteiner">
                                     Alumnos
@@ -75,7 +75,7 @@
                         <article class="conteiner-son">
                             <picture class="icon-conteiner">
                                 <a href="/views/comment-curso"><img src="/Images/Iconos/iconosBlancos/bx-comment 1.svg"></a>
-                                <h2 class="cifra-conteiner"><%= productDetail.Valoraciones.comentarios %></h2>
+                                <h2 class="cifra-conteiner"><%= productDetail.comentarios %></h2>
                             </picture>
                             <p class="text-conteiner">
                             Comentarios
@@ -84,7 +84,7 @@
                         <article class="conteiner-son">
                             <picture class="icon-conteiner">
                                 <a href="/views/comment-curso"><img src="/Images/Iconos/iconosBlancos/bxs-like 1.svg"></a>
-                                <h2 class="cifra-conteiner"><%= productDetail.Valoraciones.positivas %></h2>
+                                <h2 class="cifra-conteiner"><%= productDetail.positivas %></h2>
                             </picture>
                                 <p class="text-conteiner">
                                     Comentarios
