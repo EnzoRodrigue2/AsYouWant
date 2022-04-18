@@ -126,5 +126,13 @@
   "email": "gabrielgmail.com",
   "contraseña": "gabrielito123",
   "category": "profesor"
+ },
+ {
+  "id": 15,
+  "nombre": "Adriel",
+  "apellido": "Luna",
+  "email": "hector.colombo@aes.com",
+  "contraseña": "gabrielito123",
+  "category": "profesor"
  }
 ]
