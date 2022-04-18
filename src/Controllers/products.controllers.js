@@ -66,7 +66,7 @@ const controller = {
         }
         products.push(productoNuevo);
         fs.writeFileSync(productsFilePath, JSON.stringify(products,null,' '));
-        res.redirect('/productos/info/:id')
+        res.redirect('/')
     },
 
     delete: (req,res) => {

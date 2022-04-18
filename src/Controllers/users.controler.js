@@ -17,6 +17,15 @@ const controller = {
     register:(req,res,next) => {
         res.render('register')
     },
+    store: (req,res,next) => {
+        let usuarioNuevo = {
+            id: users[users.length -1].id+1,
+            ...req.body
+        }
+        users.push(usuarioNuevo);
+        fs.writeFileSync(usersPath, JSON.stringify(users,null,' '));
+        res.redirect('/')
+    },
 
     cuenta: {
 
