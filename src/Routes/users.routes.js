@@ -29,6 +29,6 @@ const upload = multer({storage})
 /* GET Formulario Login. */
 router.get('/login', usersController.login)
 router.get('/register', usersController.register)
-router.post('/register', validateRegisterForm, upload.single('imagen'), usersController.store)
+router.post('/register', upload.single('imagen'), validateRegisterForm, usersController.store)
 router.get('/perfil/:id', usersController.perfil)
 module.exports = router;

@@ -134,5 +134,31 @@
   "email": "hector.colombo@aes.com",
   "contraseña": "gabrielito123",
   "category": "profesor"
+ },
+ {
+  "id": 16,
+  "nombre": "Adriel",
+  "apellido": "Perez",
+  "email": "adrielcolombo23@gmail.com",
+  "contraseña": "pedro123",
+  "category": "alumno"
+ },
+ {
+  "id": 17,
+  "nombre": "Adriel",
+  "apellido": "Perez",
+  "email": "adrielcolombo23@gmail.com",
+  "contraseña": "pedro123",
+  "category": "alumno",
+  "image": "user-1650327115875.JPG"
+ },
+ {
+  "id": 18,
+  "nombre": "Adriel",
+  "apellido": "Perez",
+  "email": "adrielcolombo23@gmail.com",
+  "contraseña": "adriwl123",
+  "category": "alumno",
+  "image": "user-1650327163249.JPG"
  }
 ]

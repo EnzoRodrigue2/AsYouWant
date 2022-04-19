@@ -19,28 +19,29 @@ const controller = {
         res.render('register')
     },
     store: (req,res,next) => {
-        // let errors = validationResult(req);
-        // if (errors.isEmpty()) {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+        let usuarioNuevo = {
+            id: users[users.length -1].id+1,
+            ...req.body,
+            image: req.file.filename
+        }
+        users.push(usuarioNuevo);
+        fs.writeFileSync(usersPath, JSON.stringify(users,null,' '));
+        res.redirect('/usuario/perfil/' + usuarioNuevo.id)
+        } else {
+            res.render('register', { errors: errors.array(), old: req.body });
+            // res.send(errors);
+        }
+        
+
         // let usuarioNuevo = {
         //     id: users[users.length -1].id+1,
         //     ...req.body
         // }
         // users.push(usuarioNuevo);
         // fs.writeFileSync(usersPath, JSON.stringify(users,null,' '));
-        // res.redirect('/')
-        // } else {
-        //     res.render('register', { errors: errors.array(), old: req.body });
-        //     // res.send(errors);
-        // }
-        
-
-        let usuarioNuevo = {
-            id: users[users.length -1].id+1,
-            ...req.body
-        }
-        users.push(usuarioNuevo);
-        fs.writeFileSync(usersPath, JSON.stringify(users,null,' '));
-        res.redirect('/usuario/perfil/' + usuarioNuevo.id);
+        // res.redirect('/usuario/perfil/' + usuarioNuevo.id);
     },
 
     cuenta: {
