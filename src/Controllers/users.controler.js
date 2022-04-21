@@ -4,6 +4,7 @@ const { validationResult } = require('express-validator')
 
 const usersPath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+const bcrypt = require('bcrypt');
 
 const encontrarUser = (id) => {
     let usuario = users.filter(gente => gente.id == id);
@@ -31,20 +32,31 @@ const controller = {
         res.redirect('/usuario/perfil/' + usuarioNuevo.id)
         } else {
             res.render('register', { errors: errors.array(), old: req.body });
-            // res.send(errors);
         }
-        
-
-        // let usuarioNuevo = {
-        //     id: users[users.length -1].id+1,
-        //     ...req.body
-        // }
-        // users.push(usuarioNuevo);
-        // fs.writeFileSync(usersPath, JSON.stringify(users,null,' '));
-        // res.redirect('/usuario/perfil/' + usuarioNuevo.id);
     },
 
-    cuenta: {
+    cuenta: (req,res,next) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            for (let i =0; i < users.length; i++ ) {
+                if (users[i].email == req.body.email) {
+                    if (bcrypt.compareSync(req.body.contraseña, users[i].contraseña)) {
+                        let usuarioALoguearse = users[i];
+                        break;
+                    }
+                }
+            }
+            if (usuarioALoguearse == undefined) {
+                res.render ('login', {errors: [
+                    { msg: 'credenciales invalidas'}
+                ]})
+            }
+            req.session.usuarioLogueado = usuarioALoguearse
+            res.redirect('/usuario/perfil/' + usuarioALoguearse.id);
+        }
+        else {
+            return res.render('login', { errors: errors.array(), old: req.body })
+        }
 
     },
 

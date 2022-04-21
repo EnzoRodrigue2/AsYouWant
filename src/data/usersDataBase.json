@@ -160,5 +160,23 @@
   "contraseña": "adriwl123",
   "category": "alumno",
   "image": "user-1650327163249.JPG"
+ },
+ {
+  "id": 19,
+  "nombre": "Adriel",
+  "apellido": "Colombo",
+  "email": "adrielcolombo23@gmail.com",
+  "contraseña": "tarzan123",
+  "category": "profesor",
+  "image": "user-1650411949970.PNG"
+ },
+ {
+  "id": 20,
+  "nombre": "Adriel",
+  "apellido": "Colombo",
+  "email": "adrielcolombo23@gmail.com",
+  "contraseña": "hercules123",
+  "category": "profesor",
+  "image": "user-1650415650857.PNG"
  }
 ]

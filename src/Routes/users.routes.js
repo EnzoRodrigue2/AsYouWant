@@ -15,6 +15,12 @@ const validateRegisterForm = [
     body('contraseña').isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres')
 ];
 
+const validateLoginForm = [
+    body('nombre').notEmpty().withMessage('Debes colocar un nombre'),
+    body('apellido').notEmpty().withMessage('Debes colocar un apellido'),
+    body('email').isEmail().withMessage('Debes colocar un email de formato valido'),
+];
+
 const storage = multer.diskStorage({
     destination: (req,res,cb) => {
         cb(null,pathh.join(__dirname, '../../public/images/users'))
@@ -28,6 +34,7 @@ const upload = multer({storage})
 
 /* GET Formulario Login. */
 router.get('/login', usersController.login)
+router.post('/login',validateLoginForm, usersController.cuenta)
 router.get('/register', usersController.register)
 router.post('/register', upload.single('imagen'), validateRegisterForm, usersController.store)
 router.get('/perfil/:id', usersController.perfil)
