@@ -17,3 +17,7 @@
 08/4/2022 => Se conversó sobre como se armará la base de datos y sus tablas. Dudas sobre la cantidad de modelos a armar, que serán resueltas próximamente. Solo dos personas presentes.
 
 13/4/2022 => los profes nos dieron hasta el día 18/4 para finalizar el sprint. Conversamos sobre como venimos con las tareas, y muchas no se terminaron. Nos damos cuenta de que dividimos mal, así que nos reorganizaremos y seguiremos avanzando para poder llegar a terminar el sprint. 
+
+18/4/2022 => Se hizo una reunión con los profes por la participacion de uno de los integrantes en el proyecto. Se acordó que podía reintegrarse, y se pidió que fuera responsable, tanto con las tareas como con la comunicación respecto a las mismas. 
+
+20/4/2022 => Reunión de rutina para dividir las tareas del nuevo Sprint. Se fraccionaron de acuerdo a nuestros requerimientos. Se acordó una reunión al día siguiente para ver como encarar los modelos. 
