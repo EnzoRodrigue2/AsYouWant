@@ -22,14 +22,25 @@ const controller = {
     store: (req,res,next) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-        let usuarioNuevo = {
-            id: users[users.length -1].id+1,
-            ...req.body,
-            image: req.file.filename
-        }
-        users.push(usuarioNuevo);
-        fs.writeFileSync(usersPath, JSON.stringify(users,null,' '));
-        res.redirect('/usuario/perfil/' + usuarioNuevo.id)
+            if(req.file) {
+                let usuarioNuevo = {
+                    id: users[users.length -1].id+1,
+                    ...req.body,
+                    image: req.file.filename
+                }
+                users.push(usuarioNuevo);
+                fs.writeFileSync(usersPath, JSON.stringify(users,null,' '));
+                res.redirect('/usuario/perfil/' + usuarioNuevo.id)
+            } else {
+                let usuarioNuevo = {
+                    id: users[users.length -1].id+1,
+                    ...req.body,
+                    image: 'userDefault.jpg'
+                }
+                users.push(usuarioNuevo);
+                fs.writeFileSync(usersPath, JSON.stringify(users,null,' '));
+                res.redirect('/usuario/perfil/' + usuarioNuevo.id)
+            }
         } else {
             res.render('register', { errors: errors.array(), old: req.body });
         }
@@ -40,10 +51,13 @@ const controller = {
         if (errors.isEmpty()) {
             for (let i =0; i < users.length; i++ ) {
                 if (users[i].email == req.body.email) {
-                    if (bcrypt.compareSync(req.body.contraseña, users[i].contraseña)) {
-                        let usuarioALoguearse = users[i];
+                    if (users[i].contraseña == req.body.contraseña) {
+                        var usuarioALoguearse = users[i];
                         break;
                     }
+                    req.session.usuarioLogueado = usuarioALoguearse[0]
+                    console.log(usuarioALoguearse);
+                    res.redirect('/usuario/perfil/' + usuarioALoguearse[0].id, { findUser: usuarioALoguearse[0]} );
                 }
             }
             if (usuarioALoguearse == undefined) {
@@ -52,7 +66,7 @@ const controller = {
                 ]})
             }
             req.session.usuarioLogueado = usuarioALoguearse
-            res.redirect('/usuario/perfil/' + usuarioALoguearse.id);
+            res.redirect('/usuario/perfil/' + usuarioALoguearse.id, { findUser: usuarioALoguearse} );
         }
         else {
             return res.render('login', { errors: errors.array(), old: req.body })
