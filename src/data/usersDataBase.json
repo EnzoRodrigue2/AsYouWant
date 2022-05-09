@@ -4,7 +4,7 @@
   "nombre": "Ellene",
   "apellido": "Hazard",
   "email": "ehazard0@ifeng.com",
-  "contraseña": "yf3y3CZ1CHWm",
+  "password": "yf3y3CZ1CHWm",
   "categoria": "profesor",
   "imagen": "https://robohash.org/voluptasperspiciatisbeatae.png?size=50x50&set=set1"
  },
@@ -13,7 +13,7 @@
   "nombre": "Jerald",
   "apellido": "Behrens",
   "email": "jbehrens1@slate.com",
-  "contraseña": "3BYTPh347",
+  "password": "3BYTPh347",
   "categoria": "profesor",
   "imagen": "https://robohash.org/nequedoloresquo.png?size=50x50&set=set1"
  },
@@ -22,7 +22,7 @@
   "nombre": "Ulrika",
   "apellido": "Anderer",
   "email": "uanderer2@prlog.org",
-  "contraseña": "EXEBSK",
+  "password": "EXEBSK",
   "categoria": "administrador",
   "imagen": "https://robohash.org/quiaipsamdolor.png?size=50x50&set=set1"
  },
@@ -31,7 +31,7 @@
   "nombre": "Cyrus",
   "apellido": "Middlehurst",
   "email": "cmiddlehurst3@tumblr.com",
-  "contraseña": "b0YJOjrXE",
+  "password": "b0YJOjrXE",
   "categoria": "administrador",
   "imagen": "https://robohash.org/nostrumutqui.png?size=50x50&set=set1"
  },
@@ -40,7 +40,7 @@
   "nombre": "Shirlee",
   "apellido": "Blacklawe",
   "email": "sblacklawe4@msu.edu",
-  "contraseña": "aN3qCkjGpx",
+  "password": "aN3qCkjGpx",
   "categoria": "alumno",
   "imagen": "https://robohash.org/nesciuntvoluptatemesse.png?size=50x50&set=set1"
  },
@@ -49,7 +49,7 @@
   "nombre": "Teena",
   "apellido": "Bultitude",
   "email": "tbultitude5@biglobe.ne.jp",
-  "contraseña": "W9pyOnTaK4",
+  "password": "W9pyOnTaK4",
   "categoria": "alumno",
   "imagen": "https://robohash.org/consequaturtemporesed.png?size=50x50&set=set1"
  },
@@ -58,7 +58,7 @@
   "nombre": "Anne-marie",
   "apellido": "Luxon",
   "email": "aluxon6@123-reg.co.uk",
-  "contraseña": "lBJI175fqG",
+  "password": "lBJI175fqG",
   "categoria": "administrador",
   "imagen": "https://robohash.org/cumqueoptiovelit.png?size=50x50&set=set1"
  },
@@ -67,7 +67,7 @@
   "nombre": "Adelle",
   "apellido": "Firebrace",
   "email": "afirebrace7@ifeng.com",
-  "contraseña": "cyCDjD81e",
+  "password": "cyCDjD81e",
   "categoria": "administrador",
   "imagen": "https://robohash.org/inciduntporronesciunt.png?size=50x50&set=set1"
  },
@@ -76,7 +76,7 @@
   "nombre": "Perkin",
   "apellido": "Nutter",
   "email": "pnutter8@irs.gov",
-  "contraseña": "hJ3uXK3y",
+  "password": "hJ3uXK3y",
   "categoria": "administrador",
   "imagen": "https://robohash.org/quoddoloribusest.png?size=50x50&set=set1"
  },
@@ -85,7 +85,7 @@
   "nombre": "Coop",
   "apellido": "Batchellor",
   "email": "cbatchellor9@sun.com",
-  "contraseña": "y2PDIZ7o57",
+  "password": "y2PDIZ7o57",
   "categoria": "alumno",
   "imagen": "https://robohash.org/sedutsaepe.png?size=50x50&set=set1"
  },
@@ -94,89 +94,53 @@
   "nombre": "Pedro",
   "apellido": "Perez",
   "email": "feo@gmail",
-  "contraseña": [
-   "lilo123",
-   "lilo123"
-  ],
-  "category": "Profesor"
+  "password":"lilo123",
+  "categoria": "Profesor",
+  "image": "userDefault.jpg"
  },
  {
   "id": 12,
   "nombre": "Adriel",
   "apellido": "Colombo",
   "email": "adrielcolombo23@gmail.com",
-  "contraseña": [
-   "lolo123",
-   "lolo123"
-  ],
-  "category": "editor"
+  "password": "pepe123",
+  "categoria": "editor",
+  "image": "userDefault.jpg"
  },
  {
   "id": 13,
   "nombre": "Axel",
   "apellido": "Luna",
   "email": "axel@gmail.com",
-  "contraseña": "tarzan2323",
-  "category": "alumno"
+  "password": "tarzan2323",
+  "categoria": "alumno",
+  "image": "userDefault.jpg"
  },
  {
   "id": 14,
   "nombre": "Juan",
   "apellido": "Gabriel",
-  "email": "gabrielgmail.com",
-  "contraseña": "gabrielito123",
-  "category": "profesor"
+  "email": "gabriel@gmail.com",
+  "password": "gabrielito123",
+  "categoria": "profesor",
+  "image": "userDefault.jpg"
  },
  {
   "id": 15,
   "nombre": "Adriel",
   "apellido": "Luna",
   "email": "hector.colombo@aes.com",
-  "contraseña": "gabrielito123",
-  "category": "profesor"
+  "password": "gabrielito123",
+  "categoria": "profesor",
+  "image": "userDefault.jpg"
  },
  {
   "id": 16,
   "nombre": "Adriel",
-  "apellido": "Perez",
-  "email": "adrielcolombo23@gmail.com",
-  "contraseña": "pedro123",
-  "category": "alumno"
- },
- {
-  "id": 17,
-  "nombre": "Adriel",
-  "apellido": "Perez",
-  "email": "adrielcolombo23@gmail.com",
-  "contraseña": "pedro123",
-  "category": "alumno",
-  "image": "user-1650327115875.JPG"
- },
- {
-  "id": 18,
-  "nombre": "Adriel",
-  "apellido": "Perez",
-  "email": "adrielcolombo23@gmail.com",
-  "contraseña": "adriwl123",
-  "category": "alumno",
-  "image": "user-1650327163249.JPG"
- },
- {
-  "id": 19,
-  "nombre": "Adriel",
-  "apellido": "Colombo",
-  "email": "adrielcolombo23@gmail.com",
-  "contraseña": "tarzan123",
-  "category": "profesor",
-  "image": "user-1650411949970.PNG"
- },
- {
-  "id": 20,
-  "nombre": "Adriel",
   "apellido": "Colombo",
   "email": "agustincolombo918@gmail.com",
-  "contraseña": "pedrito123",
-  "category": "alumno",
+  "password": "pedrito123",
+  "categoria": "alumno",
   "image": "userDefault.jpg"
  }
 ]

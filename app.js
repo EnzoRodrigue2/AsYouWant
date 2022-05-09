@@ -22,7 +22,7 @@ app.use(methodOverride("_method"));
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: true,
 }))
 
 app.use(logger('dev'));

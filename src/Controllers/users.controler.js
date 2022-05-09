@@ -48,37 +48,41 @@ const controller = {
 
     cuenta: (req,res,next) => {
         let errors = validationResult(req);
+        let usuarioALoguearse = undefined
         if (errors.isEmpty()) {
-            for (let i =0; i < users.length; i++ ) {
-                if (users[i].email == req.body.email) {
-                    if (users[i].contraseña == req.body.contraseña) {
-                        var usuarioALoguearse = users[i];
-                        break;
+            console.log(req.body);
+            for (i=0; i < users.length; i++){
+                if (users[i].email === req.body.email){
+                    if (users[i].password === req.body.password) {
+                    usuarioALoguearse = users[i];
+                    break;
                     }
-                    req.session.usuarioLogueado = usuarioALoguearse[0]
-                    console.log(usuarioALoguearse);
-                    res.redirect('/usuario/perfil/' + usuarioALoguearse[0].id, { findUser: usuarioALoguearse[0]} );
-                }
+                };
             }
-            if (usuarioALoguearse == undefined) {
-                res.render ('login', {errors: [
-                    { msg: 'credenciales invalidas'}
-                ]})
-            }
-            req.session.usuarioLogueado = usuarioALoguearse
-            res.redirect('/usuario/perfil/' + usuarioALoguearse.id, { findUser: usuarioALoguearse} );
-        }
-        else {
-            return res.render('login', { errors: errors.array(), old: req.body })
-        }
+            req.session.usuarioLogueado = usuarioALoguearse;
+            let data = req.session.usuarioLogueado;
+            console.log(data);
 
+            if (usuarioALoguearse == undefined){
+                return res.render('login', { errors:[
+                    {msg:'Credenciales invalidas'}
+                ]});
+            } else {
+                return res.redirect('/usuario/perfil/'+usuarioALoguearse.id, { findUser:usuarioALoguearse});
+            }
+            
+        }
+        req.session.usuarioLogueado = usuarioALoguearse;
+        let data = req.session.usuarioLogueado;
+        console.log(data);
     },
 
     perfil:(req, res, next) => {
         let idUsuario = req.params.id;
-        let findUser = encontrarUser(idUsuario)
-        findUser = findUser[0]
-        res.render('perfil', {findUser})
+        let findUser = encontrarUser(idUsuario);
+        findUser = findUser[0];
+        let data = req.session.usuarioLogueado;
+        res.render('perfil', {findUser, data})
     }
 }
 
