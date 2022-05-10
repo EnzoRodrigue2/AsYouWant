@@ -67,9 +67,9 @@ const controller = {
                 return res.render('login', { errors:[
                     {msg:'Credenciales invalidas'}
                 ]});
-            } else {
-                return res.redirect('/usuario/perfil/'+usuarioALoguearse.id, { findUser:usuarioALoguearse});
-            }
+            } 
+            return res.redirect('/usuario/perfil/'+usuarioALoguearse.id, { findUser:usuarioALoguearse});
+            
             
         }
         req.session.usuarioLogueado = usuarioALoguearse;
