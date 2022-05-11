@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "titulo": "navidad",
+        "image":"/images/sale/navidad.jpg"
+    },
+    {
+        "id": 2,
+        "titulo": "blackFriday",
+        "image":"/images/sale/black_friday.jpg"
+    },
+    {
+        "id": 3,
+        "titulo": "otonio",
+        "image":"/images/sale/otonio.jpg"
+    }
+]

@@ -1,0 +1,202 @@
+/* general */
+
+.lista_courseConteiner a {
+    text-decoration: none;
+
+}  
+
+.listar_TotalGeneral {
+    padding-top: 55px;
+    
+}
+.listar_general {
+    display: flex;
+}
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+main section article {
+    background-color: var(--gris-claro);
+    width: 30%;
+    margin: 1.5rem 1rem;
+    padding: 1rem;
+}
+
+.listar_senalUbicacion {
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid var(--gris-claro)
+}
+
+.listar_senalUbicacion h3 {
+    color: var(--gris-oscuro);
+}
+
+/* Estilos categoriasBox */
+
+.listar_categoryBox {
+    padding: 20px 20px 30px 20px;
+    width: 20%;
+    /* max-width: 572px; */
+    background: #FFFFFF;
+    box-shadow: -2px 13px 29px rgba(0, 0, 0, 0.25);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 30%;
+    margin: 0 10px;
+}
+
+.listar_textoOpciones {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* .listar_cajaCategoriaTitulo {
+    
+} */
+.listar_categoryListMenu {
+    padding: 10px;
+    border-top: 1px solid var(--gris-claro);
+    border-bottom: 1px solid var(--gris-claro);
+}
+.listar_categoryListMenu h3 {
+    font-size:var(--text-lg);
+    font-weight:400;
+}
+
+.listar_categoryTittle {
+    font-size: xx-large;
+    font-weight: 500;
+    padding-left: 5px;
+    text-align: left;
+}
+
+
+
+.listar_categoryBox ul {
+    list-style: none;
+    font-size: var(--text-lg);
+    padding: 10px 0;
+}
+
+
+.listar_form {
+    display: flex;
+    width: 100%;
+}
+
+.listar_input {
+    background: var(--blanco);
+    border: 0;
+    color: inherit;
+    font: inherit;
+    font-size: var(--text);
+    line-height: normal;
+    overflow: visible;
+    padding: 5px 5px;
+    border-radius: 5px 0 0 5px;
+}
+
+.listar_submit {
+    background: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0
+}
+
+
+
+.listar_saleBox {
+    width: 100%;
+
+}
+.listar_saleBox img {
+    width: 100%;
+    height: 15%;
+    object-fit: cover;
+}
+
+.listar_rigth {
+    width: 80%;
+    padding-left: 10px;
+}
+
+/* Miniatura cursos */
+
+.listar_courseBox {
+    display: flex;
+    width: 100%;
+}
+
+.listar_lista{
+    list-style: none;
+}
+
+.lista_courseConteiner {
+    display: flex;
+    margin: 15px 0;
+    
+}
+
+.listar_miniatura-curso {
+    overflow: hidden;
+    width: 20%;
+}
+.listar_imagen-miniatura {
+    width: 100%;
+}
+
+.listar_detalles {
+    width: 60%; 
+    margin-left: 15px;
+}
+
+.listar_detalles_titulo1 {
+    font-size: var(--text-lg);
+    font-weight: bold;
+}
+
+.listar_detalle_puntuaciones {
+    display: flex;
+    align-self: center;
+    background-color: var(--gris-oscuro);
+    border-radius: 5px;
+    padding: inherit;
+    margin-top: 3%;
+}
+
+.listar_detalle_puntuaciones_alumnos {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 5px;
+    width: 15%;
+}
+
+.listar_detalle_puntuaciones_calificacion-box {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.listar_detalle_puntuaciones_alumnos_cifra {
+    margin-left: 5px;
+}
+
+.listar_detalle_puntuaciones_calificacion_cifra {
+    margin-left: 5px;
+}

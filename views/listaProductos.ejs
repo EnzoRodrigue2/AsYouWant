@@ -1,0 +1,85 @@
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <main class="listar_TotalGeneral">
+        <div class="listar_senalUbicacion">
+            <h3>
+                Cursos>
+            </h3>
+            <h3>
+                Cursos Online>
+            </h3>
+            <h3>
+                Todos los cursos>
+            </h3>
+        </div>
+        <div class="listar_general">
+            <div class="listar_categoryBox">
+                <div class="listar_textoOpciones">
+                    <div class="listar_cajaCategoriaTitulo">
+                        <h1 class="listar_categoryTittle">
+                            Categorias
+                        </h1>
+                    </div>
+                    <div>
+                        <ul>
+                            <% productos.forEach(el => { %>
+                            <li>
+                                <div class="listar_categoryListMenu">
+                                    <h3><%=el.categoria%></h3>
+                                </div>
+                            </li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                </div>
+                <form class="listar_form">
+                    <input type="text" class="listar_input" placeholder="Que vas a aprender hoy?">
+                    <button type="submit" class="listar_submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="listar_rigth">
+                <div class="listar_saleBox">
+                    <img src="/Images/sale/<%= saleNow %>">
+                </div>
+                <div class="listar_courseBox">
+                    <ul class="listar_lista">
+                        <% productos.forEach(el => { %>
+                        <li class="lista_courseConteiner">
+                            <a href="/productos/info/<%=el.id %>">
+                                <picture class="listar_miniatura-curso">
+                                    <img  class="listar_imagen-miniatura" src="<%=el.imagen_principal %>">
+                                </picture>
+                                <div class="recomendacion-detalles">
+                                    <div class="listar_detalles_titulos">
+                                        <h2 class="listar_detalles_titulo1">
+                                            <%= el.titulo %>
+                                        </h2>
+                                        <p>
+                                            <%= productos.descripcion_corta %>
+                                        </p>
+                                    </div>
+                                    <div class="listar_detalle_puntuaciones">
+                                        <div class="listar_detalle_puntuaciones_alumnos">
+                                            <i class="fas fa-user"></i>
+                                            <h4 class="listar_detalle_puntuaciones_alumnos_cifra">1.500</h4>
+                                        </div>
+                                        <div class="listar_detalle_puntuaciones_calificacion-box">
+                                            <i class="fas fa-star"></i>
+                                            <h4 class="listar_detalle_puntuaciones_calificacion_cifra">4.5/</h4> <h4 class="recomendacion-detalle_puntuaciones_calificacion_cifra">1.500</h4> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <% }) %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>

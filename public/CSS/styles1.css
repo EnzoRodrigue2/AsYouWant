@@ -12,6 +12,7 @@
 @import "/CSS/partials/delete.css";
 @import "/CSS/partials/login.css";
 @import "/CSS/partials/perfil.css";
+@import "/CSS/partials/listar.css";
 
 * {
     margin: 0px;

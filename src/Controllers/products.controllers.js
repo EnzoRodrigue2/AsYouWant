@@ -8,12 +8,35 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/cursosDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const saleFilePath = path.join(__dirname, '../data/saleDataBase.json');
+const sale = JSON.parse(fs.readFileSync(saleFilePath, 'utf-8'));
+
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const searchForId = (id) => { 
     let productos = products.filter(products => products.id == id);
     return productos
 };
+//Variables de fechas para ofertas
+let meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+let fecha = new Date;
+let hoy = fecha.getMonth();
+var mesActual =meses[hoy];
+
+var temporadaSale = {
+    tipo: 'saleOffer.png',
+    noviembre: 'navidad.jpg',
+    diciembre: 'navidad.jpg',
+    marzo: 'black_friday.jpg',
+    abril: 'black_friday.jpg',
+    mayo: 'black_friday.jpg',
+    junio: 'otonio.jpg',
+    julio: 'otonio.jpg',
+    agosto: 'otonio.jpg',
+}
+
+
+
 
 const searchForSimilar = (thisCategoria) => {
     let productosSugeridos = []
@@ -25,11 +48,18 @@ const searchForSimilar = (thisCategoria) => {
     return productosSugeridos;
 };
 
-
 const controller = {
     // index: {
 
     // },
+    list: (req, res) => {
+        console.log(hoy, mesActual);
+        let saleNow = temporadaSale[mesActual] || temporadaSale[tipo];
+        // let saleNow = temporadaSale['diciembre'];
+        // let saleNow = temporadaSale['junio'];
+        res.render('listaProductos',{ productos: products , saleNow: saleNow} );
+    },
+
 
     detalle: (req, res) => {
         let idProducto = req.params.id;
@@ -43,11 +73,6 @@ const controller = {
         
     },
     
-
-    
-    list: (req, res) => {
-        res.render('info-producto-2' );
-    },
     edit: (req,res) => {
         let idProducto = req.params.id;
         let productEditar = searchForId(idProducto)
