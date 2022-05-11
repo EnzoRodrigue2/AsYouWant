@@ -1,6 +1,7 @@
 function userMiddleware (req, res, next) {
-    if (req.session.usuarioALoguearse){
-        return res.redirect('/usuario/perfil/' + usuarioALoguearse.id)
+    if (req.session.usuarioLogueado){
+        let usuarioLogueado = req.session.usuarioLogueado;
+        return res.redirect('/usuario/perfil/' + usuarioLogueado.id)
     }
     next();
 }

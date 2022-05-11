@@ -6,6 +6,7 @@ const multer = require('multer');
 const { path } = require('../../app');
 // const path = require('path');
 const pathh = require('path');
+const userMiddleware = require('../middlewares/userMiddleware');
 
 //validaciones
 const validateRegisterForm = [
@@ -33,7 +34,7 @@ const storage = multer.diskStorage({
 const upload = multer({storage})
 
 /* GET Formulario Login. */
-router.get('/login', usersController.login)
+router.get('/login', userMiddleware, usersController.login)
 router.post('/login', usersController.cuenta)
 router.get('/register', usersController.register)
 router.post('/register', upload.single('imagen'), validateRegisterForm, usersController.store)
