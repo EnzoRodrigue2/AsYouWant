@@ -1,6 +1,22 @@
 var express = require("express");
 var router = express.Router();
+const { body } = require('express-validator');
 const productController = require("../Controllers/products.controllers");
+const multer = require('multer');
+const { path } = require('../../app');
+// const path = require('path');
+const pathh = require('path');
+
+const storage = multer.diskStorage({
+    destination: (req,res,cb) => {
+        cb(null,pathh.join(__dirname, '../../public/images/users'))
+    },
+    filename: (req,file,cb) => {
+        const newFileName = 'user-'+ Date.now() + pathh.extname(file.originalname);
+        cb(null, newFileName);
+    }
+})
+const upload = multer({storage});
 
 /* GET Listado de productos. */
 router.get("/", productController.list);
@@ -12,7 +28,7 @@ router.get("/info", productController.list);
 
 /*Crear producto nuevo.*/
 router.get("/crear", productController.crear);
-/* router.post("/", productController.list); no estoy segura si está correcta
+router.post("/crear-producto", productController.agregar); 
 
 /* Editar productos */ 
 router.get("/:id/edit",productController.edit);

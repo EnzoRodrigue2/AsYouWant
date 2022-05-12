@@ -6,13 +6,20 @@
     <main class="main_crear">
         <div class="top-crear">
             <h1>Creación de cursos</h1>
-            <form action="/crear-producto" method="post" class="crear_form">
+            <% if (locals.errors) { 
+                errors.forEach(error => { %>
+                <div class="login_errores">
+                    <ul></ul>
+                </div>
+            <% });
+            } %>
+            <form action="/productos/crear-producto" method="post" class="crear_form">
                 <div>
                     <h3 class="editar_tituloInfo">Información básica</h3>
                 <div class="description-edit">
-                    <input type="text" name="titulo"  placeholder="Nombre de curso"><br>
-                    <input type="textarea" name="description_corta"  placeholder="Descripcion del curso"><br>
-                    <textarea type="text" name="descripcion_larga" placeholder="Descripcion mas detallada del curso"  rows="5" cols="60" class="editar_textArea"></textarea>
+                    <input type="text" class="titulo" name="titulo" value="<%= locals.old && old.titulo ? old.titulo :'' %>" placeholder="Nombre de curso"><br>
+                    <input type="textarea" name="description_corta"  class="curso_descripcionCorta" value="<%= locals.old && old.descripcion_corta ? old.descripcion_corta :'' %>" placeholder="Descripcion del curso"><br>
+                    <textarea type="text" name="descripcion_larga" value="<%= locals.old && old.descripcion_larga ? old.descripcion_larga:'' %>" placeholder="Descripcion mas detallada del curso"  rows="5" cols="60" class="editar_textArea"></textarea>
                 </div>
                 <h3 class="editar_tituloInfo">Categoría</h3>
                 <div class="category-edit">
@@ -24,7 +31,7 @@
                 </div>
                 <h3 class="editar_tituloInfo">Cover del curso</h3>
                 <div class="foto">
-                    <input type="file" name="imagen_principal" id="imagen_principal"><br>
+                    <input type="file" class="curso_imagen" name="imagen_principal" id="imagen_principal"><br>
                 </div>
                 <h3 class="editar_tituloInfo">Opciones de material</h3>
                 <div class="multimedia-edit">
@@ -40,7 +47,7 @@
                 </div>
                 <h3 class="editar_tituloInfo">Precio</h3>
                 <div class="price-edit">
-                    <input type="number" name="precio" placeholder="Precio"><br>
+                    <input type="number" class="curso_precio" name="precio" value="<%= locals.old && old.precio ? old.precio :'' %>" placeholder="Precio"><br>
                 </div>
                 <div class="editBtn">
                     <input type="submit" value="Crear" class="button">
@@ -51,5 +58,6 @@
         </div>
     </main>
     <%- include('./partials/footer') %>
+    <script src="../src/Js/validacionFormLogin.js"></script>
 </body>
 </html>

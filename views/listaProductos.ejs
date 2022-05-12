@@ -47,7 +47,7 @@
                     <ul class="listar_lista">
                         <% productos.forEach(el => { %>
                         <li class="lista_courseConteiner">
-                            <a href="/productos/info/<%=el.id %>">
+                            <link href="/productos/info/<%=el.id %>">
                                 <picture class="listar_miniatura-curso">
                                     <img  class="listar_imagen-miniatura" src="<%=el.imagen_principal %>">
                                 </picture>
@@ -71,7 +71,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                            </link>
                         </li>
                         <% }) %>
                     </ul>

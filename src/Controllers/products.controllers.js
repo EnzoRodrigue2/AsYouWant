@@ -3,6 +3,7 @@ const { json } = require('express/lib/response');
 const res = require('express/lib/response');
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator')
 
 
 const productsFilePath = path.join(__dirname, '../data/cursosDataBase.json');
@@ -85,13 +86,29 @@ const controller = {
     },
 
     agregar: (req,res) => {
-        let productoNuevo = {
-            id: products[products.length -1].id+1,
-            ...req.body
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            if(req.file) {
+                let productoNuevo = {
+                    id: products[products.length -1].id+1,
+                    ...req.body
+                }
+                products.push(productoNuevo);
+                fs.writeFileSync(productsFilePath, JSON.stringify(products,null,' '));
+                res.redirect('/')
+            } else {
+                let productoNuevo = {
+                    id: products[products.length -1].id+1,
+                    ...req.body,
+                    image: 'courseDefault.jpg'
+                }
+                products.push(productoNuevo);
+                fs.writeFileSync(productsFilePath, JSON.stringify(products,null,' '));
+                res.redirect('/productos/info/' + productoNuevo.id)
+            }
+        } else {
+            res.render('crear-producto', { errors: errors.array(), old: req.body });
         }
-        products.push(productoNuevo);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products,null,' '));
-        res.redirect('/')
     },
 
     delete: (req,res) => {

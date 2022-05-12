@@ -68,7 +68,7 @@ const controller = {
                     {msg:'Credenciales invalidas'}
                 ]});
             } 
-            return res.redirect('/usuario/perfil/'+usuarioALoguearse.id, { findUser:usuarioALoguearse});
+            res.redirect('/usuario/perfil/'+usuarioALoguearse.id, { findUser:usuarioALoguearse});
             
             
         }

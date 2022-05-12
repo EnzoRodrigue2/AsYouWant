@@ -17,14 +17,27 @@
                 <p class="register_errores"><%= error.msg %></p>
             <% });
             } %>
+            <% if (locals.errors) { 
+                errors.forEach(error => { %>
+                <div class="login_errores">
+                    <ul>
+                        
+                    </ul>
+                </div>
+            <% });
+            } %>
             <form method="POST" action="/usuario/login" class="login_form">
                 <div class="campoLogin">
+                    <label for="nombre" class="loginLabel">Nombre</label>
+                    <input type="nombre" class="imputLogin nombre" name="nombre" value="<%= locals.old && old.nombre ? old.nombre :'' %>" placeholder="nombre de usuario" >
+                </div>
+                <div class="campoLogin">
                     <label for="nombre" class="loginLabel">Email</label>
-                    <input type="email" class="imputLogin" name="email" value="<%= locals.old && old.email ? old.email :'' %>" placeholder="nombre@ejemplo.com" >
+                    <input type="email" class="imputLogin email" name="email" value="<%= locals.old && old.email ? old.email :'' %>" placeholder="nombre@ejemplo.com" >
                 </div>
                 <div class="campoLogin">
                     <label for="nombre" class="loginLabel">Contraseña</label>
-                    <input type="password" class="imputLogin" name="password" placeholder="contraseña" >
+                    <input type="password" class="imputLogin password" name="password" placeholder="contraseña" >
                 </div>
                 
                 <!-- <div class="campoLogin">
@@ -40,4 +53,5 @@
             </form>
         </div>
     </main>
+    <script src="/Js/validacionFormLogin.js"></script>
 </body>
