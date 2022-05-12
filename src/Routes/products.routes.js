@@ -6,6 +6,7 @@ const multer = require('multer');
 const { path } = require('../../app');
 // const path = require('path');
 const pathh = require('path');
+const validateCreate = require('../middlewares/validateCreate')
 
 const storage = multer.diskStorage({
     destination: (req,res,cb) => {
@@ -28,7 +29,7 @@ router.get("/info", productController.list);
 
 /*Crear producto nuevo.*/
 router.get("/crear", productController.crear);
-router.post("/crear-producto", productController.agregar); 
+router.post("/crear-producto", validateCreate, productController.agregar); 
 
 /* Editar productos */ 
 router.get("/:id/edit",productController.edit);
