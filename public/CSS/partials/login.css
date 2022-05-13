@@ -67,3 +67,14 @@
     padding: 10px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
+.login_iconContein {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 250px;
+}
+
+.login_icon {
+    font-size: 50px;
+    color: var(--gris-oscuro);
+}

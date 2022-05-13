@@ -47,17 +47,17 @@
                     <ul class="listar_lista">
                         <% productos.forEach(el => { %>
                         <li class="lista_courseConteiner">
-                            <link href="/productos/info/<%=el.id %>">
+                            <a href="/productos/info/<%=el.id %>">
                                 <picture class="listar_miniatura-curso">
                                     <img  class="listar_imagen-miniatura" src="<%=el.imagen_principal %>">
                                 </picture>
-                                <div class="recomendacion-detalles">
+                                <div class="listar_detalles">
                                     <div class="listar_detalles_titulos">
                                         <h2 class="listar_detalles_titulo1">
                                             <%= el.titulo %>
                                         </h2>
                                         <p>
-                                            <%= productos.descripcion_corta %>
+                                            <%= el.descripcion_corta %>
                                         </p>
                                     </div>
                                     <div class="listar_detalle_puntuaciones">
@@ -71,7 +71,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </link>
+                            </a>
                         </li>
                         <% }) %>
                     </ul>

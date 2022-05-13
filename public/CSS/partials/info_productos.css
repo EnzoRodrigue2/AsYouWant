@@ -137,8 +137,13 @@ a {
 
 }
 
+.product-main h1 {
+    text-align: left;
+}
+
 /* Estilos caja de comentarios */
 .comentarios-box {
+    margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
@@ -185,6 +190,9 @@ a {
 }
 
 .recomendacion-detalles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 60%; 
     margin-left: 15px;
 }
@@ -195,6 +203,7 @@ a {
 }
 
 .recomendacion-detalle_puntuaciones {
+    width: 100%;
     display: flex;
     align-self: center;
     background-color: var(--gris-oscuro);

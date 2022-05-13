@@ -50,7 +50,7 @@
 .register_sec-botones {
     display: flex;
     justify-content: space-between;
-    padding-top: 30px;
+    padding-top: 15px;
 }
 
 .register_boton-register{
@@ -81,4 +81,15 @@
 
 .register_errores {
     color: var(--rojo);
+}
+
+.register_iconContein {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 20px;
+}
+
+.register_icon {
+    font-size: 40px;
+    color: var(--gris-oscuro);
 }

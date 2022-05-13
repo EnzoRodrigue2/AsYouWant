@@ -53,3 +53,5 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+{/* <a href="<%= req.session.usuarioLogueado? 'homeUser' : '/' %>"><img class="lgo-simple" src="/Images/lgo_simple.svg" alt="Logo de marca"></a> */}

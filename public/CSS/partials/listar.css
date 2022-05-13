@@ -161,6 +161,9 @@ main section article {
 }
 
 .listar_detalles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 60%; 
     margin-left: 15px;
 }
@@ -171,6 +174,7 @@ main section article {
 }
 
 .listar_detalle_puntuaciones {
+    width: 100%;
     display: flex;
     align-self: center;
     background-color: var(--gris-oscuro);

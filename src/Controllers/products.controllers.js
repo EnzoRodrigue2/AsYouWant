@@ -18,6 +18,17 @@ const searchForId = (id) => {
     let productos = products.filter(products => products.id == id);
     return productos
 };
+
+const searchForSimilar = (thisCategoria) => {
+    let productosSugeridos = []
+    for(var i=0; i < products.length; i++) {
+        if (products[i].categoria == thisCategoria) {
+            productosSugeridos.push(products[i])
+        };
+    }
+    return productosSugeridos;
+};
+
 //Variables de fechas para ofertas
 let meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
 let fecha = new Date;
@@ -34,20 +45,8 @@ var temporadaSale = {
     junio: 'otonio.jpg',
     julio: 'otonio.jpg',
     agosto: 'otonio.jpg',
-}
-
-
-
-
-const searchForSimilar = (thisCategoria) => {
-    let productosSugeridos = []
-    for(var i=0; i < products.length; i++) {
-        if (products[i].categoria.includes(thisCategoria)) {
-            productosSugeridos.push(products[i])
-        };
-    }
-    return productosSugeridos;
 };
+
 
 const controller = {
     // index: {
