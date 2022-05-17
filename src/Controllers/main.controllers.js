@@ -5,6 +5,7 @@ const { Console } = require('console');
 const cursosPath = path.join(__dirname, '../data/cursosDataBase.json');
 const cursos = JSON.parse(fs.readFileSync(cursosPath, 'utf-8'));
 
+
 var cursosFotos = cursos.filter(el=> el.categoria === "multimedia");
 var cursosArt = cursos.filter(el => el.categoria === "manualidades");
 //var cursosOrg = cursos.filter(el => el.categoria === "organizacion");
