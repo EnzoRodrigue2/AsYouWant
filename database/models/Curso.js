@@ -1,4 +1,4 @@
-/*
+
 const Sequelize = require('sequelize');
 const sequelize = require('../database');
 
@@ -27,13 +27,13 @@ module.exports = (sequelize,DataTypes) => {
                 type: DataTypes.STRING(50)
             },
             audio: {
-                type: DataTypes.BOOLEAN
+                type: DataTypes.TINYINTEGER
             },
             video: {
-                type: DataTypes.BOOLEAN
+                type: DataTypes.TINYINTEGER
             },
             lectura: {
-                type: DataTypes.BOOLEAN
+                type: DataTypes.TINYINTEGER
             },
             clases: {
                 type: DataTypes.INTEGER
@@ -59,4 +59,3 @@ module.exports = (sequelize,DataTypes) => {
     return Curso
 }
 
-*/

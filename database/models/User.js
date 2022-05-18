@@ -1,4 +1,4 @@
-/*
+
 const Sequelize = require('sequelize');
 const sequelize = require('../database');
 
@@ -18,16 +18,17 @@ module.exports = (sequelize,DataTypes) => {
                 type: DataTypes.STRING(50)
             },
             email: {
-                type: DataTypes.STRING(50)
-            },
-            password: {
-                type: DataTypes.STRING(50)
+                type: DataTypes.STRING(100),
+                unique: true
             },
             administrador: {
-                type: DataTypes.BOOLEAN
+                type: DataTypes.INTEGER
             },
             membresias_ID: {
                 type: DataTypes.INTEGER
+            },
+            password: {
+                type: DataTypes.STRING(200)
             }
         },
         {
@@ -37,4 +38,3 @@ module.exports = (sequelize,DataTypes) => {
     );
     return User
 }
-*/

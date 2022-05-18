@@ -3,8 +3,8 @@ const Sequelize = require('sequelize');
 const sequelize = require('../database');
 
 module.exports = (sequelize,DataTypes) => {
-    const Membresia = sequelize.define(
-        'cursos',
+    const CategoriaCursos = sequelize.define(
+        'categoriaCursos',
         {
             id: {
                 type: DataTypes.INTEGER,
@@ -14,20 +14,14 @@ module.exports = (sequelize,DataTypes) => {
             nombre: {
                 type: DataTypes.STRING(50)
             },
-            meses: {
-                type: DataTypes.INTEGER
-            },
-            precio: {
-                type: DataTypes.INTEGER
-            },
-            acceso: {
-                type: DataTypes.INTEGER
-            },
+            descripcion: {
+                type: DataTypes.STRING(500)
+            }
         },
         {
-            tablename: 'Membresias',
+            tablename: 'Categoria',
             timestamps: false
         }
     );
-    return Membresia
+    return CategoriaCursos
 }
