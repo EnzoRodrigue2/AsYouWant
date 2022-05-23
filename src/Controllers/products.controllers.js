@@ -3,7 +3,9 @@ const { json } = require('express/lib/response');
 const res = require('express/lib/response');
 const fs = require('fs');
 const path = require('path');
-const { validationResult } = require('express-validator')
+const { validationResult } = require('express-validator');
+// const db = require('../database/models/Curso.js');
+const Cursos = require('../database/models/Curso.js');
 
 
 const productsFilePath = path.join(__dirname, '../data/cursosDataBase.json');
@@ -58,6 +60,12 @@ const controller = {
         // let saleNow = temporadaSale['diciembre'];
         // let saleNow = temporadaSale['junio'];
         res.render('listaProductos',{ productos: products , saleNow: saleNow} );
+
+        // // let saleNow = temporadaSale[mesActual] || temporadaSale[tipo];
+        // Cursos.findAll()
+        //     .then(function(cursos) {
+        //         res.render('listaProductos', {productos:cursos, saleNow: saleNow})
+        //     })
     },
 
 
