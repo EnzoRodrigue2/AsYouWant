@@ -4,8 +4,15 @@ const res = require('express/lib/response');
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
-// const db = require('../database/models/Curso.js');
-const Cursos = require('../database/models/Curso.js');
+
+///////////////////////////////////////////////////////////////////////
+// Esta linea es la que falla, se rompe al querer encontrar esa direccion
+const db = require('../database/models/index.js');
+/////////////////////////////////////////////////////////////////////
+///////////////////////
+
+
+// const Cursos = require('../database/models/Curso.js');
 
 
 const productsFilePath = path.join(__dirname, '../data/cursosDataBase.json');
@@ -55,17 +62,17 @@ const controller = {
 
     // },
     list: (req, res) => {
-        console.log(hoy, mesActual);
-        let saleNow = temporadaSale[mesActual] || temporadaSale[tipo];
-        // let saleNow = temporadaSale['diciembre'];
-        // let saleNow = temporadaSale['junio'];
-        res.render('listaProductos',{ productos: products , saleNow: saleNow} );
+        // console.log(hoy, mesActual);
+        // let saleNow = temporadaSale[mesActual] || temporadaSale[tipo];
+        // // let saleNow = temporadaSale['diciembre'];
+        // // let saleNow = temporadaSale['junio'];
+        // res.render('listaProductos',{ productos: products , saleNow: saleNow} );
 
-        // // let saleNow = temporadaSale[mesActual] || temporadaSale[tipo];
-        // Cursos.findAll()
-        //     .then(function(cursos) {
-        //         res.render('listaProductos', {productos:cursos, saleNow: saleNow})
-        //     })
+        let saleNow = temporadaSale[mesActual] || temporadaSale[tipo];
+        Cursos.findAll()
+            .then(function(cursos) {
+                res.render('listaProductos', {productos:cursos, saleNow: saleNow})
+            })
     },
 
 

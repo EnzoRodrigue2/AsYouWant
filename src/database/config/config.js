@@ -3,10 +3,10 @@ module.exports = {
     "username": "root",
     "password": null,
     "database": "asyouwant",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
-}
+};
   // "test": {
   //   "username": "root",
   //   "password": null,

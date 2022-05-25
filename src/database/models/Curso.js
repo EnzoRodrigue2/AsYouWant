@@ -54,8 +54,7 @@ module.exports = (sequelize,DataTypes) => {
         {
             tablename: 'Cursos',
             timestamps: false
-        }
-    );
-    return Curso
-}
+        });
+    return Curso;
+};
 
