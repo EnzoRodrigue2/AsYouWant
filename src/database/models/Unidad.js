@@ -1,7 +1,4 @@
 
-const Sequelize = require('sequelize');
-const sequelize = require('../database');
-
 module.exports = (sequelize,DataTypes) => {
     const Unidad = sequelize.define(
         'unidades',

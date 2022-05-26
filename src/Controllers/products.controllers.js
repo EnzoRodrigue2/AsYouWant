@@ -1,4 +1,3 @@
-const { log } = require('console');
 const { json } = require('express/lib/response');
 const res = require('express/lib/response');
 const fs = require('fs');
@@ -69,10 +68,10 @@ const controller = {
         // res.render('listaProductos',{ productos: products , saleNow: saleNow} );
 
         let saleNow = temporadaSale[mesActual] || temporadaSale[tipo];
-        Cursos.findAll()
-            .then(function(cursos) {
-                res.render('listaProductos', {productos:cursos, saleNow: saleNow})
-            })
+        db.Curso.findAll()
+        .then((resultado) => {
+            res.render('listaProductos', {productos:resultado, saleNow: saleNow})
+        })
     },
 
 

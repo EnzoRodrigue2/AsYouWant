@@ -1,7 +1,4 @@
 
-const Sequelize = require('sequelize');
-const sequelize = require('../database');
-
 module.exports = (sequelize,DataTypes) => {
     const Membresia = sequelize.define(
         'cursos',
@@ -12,7 +9,7 @@ module.exports = (sequelize,DataTypes) => {
                 autoIncrement: true
             },
             nombre: {
-                type: DataTypes.STRING(50)
+                type: DataTypes.STRING
             },
             meses: {
                 type: DataTypes.INTEGER
