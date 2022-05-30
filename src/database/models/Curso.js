@@ -1,7 +1,7 @@
 
 module.exports = (sequelize,DataTypes) => {
     const Curso = sequelize.define(
-        'cursos',
+        'Curso',
         {
             id: {
                 type: DataTypes.INTEGER,
@@ -38,7 +38,7 @@ module.exports = (sequelize,DataTypes) => {
             duracion: {
                 type: DataTypes.INTEGER
             },
-            categoria_ID: {
+            categoriaCursos_ID: {
                 type: DataTypes.INTEGER
             },
             profesor_ID: {
@@ -49,7 +49,7 @@ module.exports = (sequelize,DataTypes) => {
             }
         },
         {
-            tablename: 'Cursos',
+            tablename: 'cursos',
             timestamps: false
         });
     return Curso;

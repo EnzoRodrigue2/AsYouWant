@@ -6,7 +6,7 @@ const { validationResult } = require('express-validator');
 
 ///////////////////////////////////////////////////////////////////////
 // Esta linea es la que falla, se rompe al querer encontrar esa direccion
-const db = require('../database/models/index.js');
+const db = require('../database/models');
 /////////////////////////////////////////////////////////////////////
 ///////////////////////
 
