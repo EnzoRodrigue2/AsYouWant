@@ -21,7 +21,7 @@
 .tituloUser {
     padding-top: 3rem;
     margin: 2rem;
-    padding: 1rem 6rem;
+    padding: 1rem 5rem;
 }
 
 .bottomUsuario{
@@ -51,4 +51,20 @@
 
 .infoMiniCurso {
     margin: 0.5rem;
+}
+
+.editContainer {
+    padding-top: 3rem;
+    margin: 2rem;
+    width: 50px;
+    position: relative;
+    right: 50px;
+    top: 35px
+    
+    
+}
+
+.editarPerfil {
+    font-size: 35px;
+    color: var(--gris-oscuro);
 }

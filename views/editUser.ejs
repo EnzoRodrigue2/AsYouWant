@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <main class="editUserMain">
+        <div class="editUserLeft">
+            <picture class="editLogo">
+                <img src="/Images/Logo1.svg" class="register_logo">
+            </picture>
+        </div>
+        <div class="editUserRight">
+            <h1 class="editUserTitle">
+                Editá tu perfil
+            </h1>
+
+            <form method="POST" action="/usuario/editar?_method=PUT">
+                <div class="editUserCampo">
+                    <label for="nombre" class="editUserLabel">Nombre</label>
+                    <input type="text" class="editUserInput" name="nombre" value="<%= locals.old && old.nombre ? old.nombre :'' %>" placeholder="Ej:Juan" >
+                </div>
+                <div class="editUserCampo">
+                    <label for="nombre" class="editUserLabel">Apellido</label>
+                    <input type="text" class="editUserInput" value="<%= locals.old && old.apellido ? old.apellido :'' %>" name="apellido" placeholder="Ej:Perez" >
+                </div>
+                <div class="editUserCampo">
+                    <label for="nombre" class="editUserLabel">Email</label>
+                    <input type="text" class="editUserInput" name="email" value="<%= locals.old && old.email ? old.email :'' %>" placeholder="nombre@ejemplo.com" >
+                </div>
+                <div class="editUserCampo">
+                    <label for="nombre" class="editUserLabel">Contraseña</label>
+                    <input type="password" class="editUserInput" value="<%= locals.old && old.contraseña ? old.contraseña :'' %>" name="contraseña" placeholder="Contraseña" >
+                </div>
+                <div class="editUserCampo">
+                    <label for="nombre" class="editUserLabel">Confirmar
+                        contraseña</label>
+                    <input type="password" class="editUserInput" value="<%= locals.old && old.contraseña ? old.contraseña :'' %>" placeholder="Contraseña" >
+                </div>
+                <div class="editUserCampo">
+                    <label for="nombre" class="editUserLabel">Categoria</label>
+                    <div class="category-crear">
+                        <label for="category-crear"><input type="radio" name="categoria" value="alumno" id="Alumno">Alumno</label><br>
+                        <label for="category-crear"><input type="radio" name="categoria" value="profesor" id="Profesor">Profesor</label><br>
+                        <label for="category-crear"><input type="radio" name="categoria" value="editor" id="Editor">Editor</label><br>
+                        <label for="category-crear"><input type="radio" name="categoria" value="administrador" id="Administradors">Administrador</label><br>
+                    </div>
+                </div>
+                <div class="editUserCampo">
+                    <label for="nombre" class="editUserLabel">Foto perfil</label>
+                    <input type="file"  placeholder="Archivo" name="imagen" id="imagen" >
+                </div>
+                <div class="editUserBTNS">
+                    <input type="submit" value="Actualizar" class="editUserBTNActualizar">
+                    <input type="reset" value="Borrar" class="editUserBTNBorrar">
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

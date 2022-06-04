@@ -1,0 +1,80 @@
+.editUserMain {
+    display: flex;
+    flex-direction: row;
+}
+
+.editUserLeft {
+    display: flex;
+    background-color: var(--celeste);
+    height: 100vh;
+    width: 50vw;
+    justify-content: center;
+}
+.editLogo {
+    width: 100%;
+    height: 100%;
+}
+
+.editUserRight {
+    padding: 50px 35px;
+    width: 50%;
+}
+.editUserTitle {
+    font-size: 20px;
+}
+
+.editUserCampo {
+    padding: 11px 0;
+}
+.editUserLabel {
+    text-align: right;
+}
+
+.editUserInput {
+    background: var(--blanco);
+    border: 0;
+    color: inherit;
+    font: inherit;
+    font-size: var(--text);
+    line-height: normal;
+    width: 100%;
+    height: 30px;
+    overflow: visible;
+    padding: 5px 5px;
+    border-radius: 5px 0 0 5px;
+    background: #F7F7F7;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.editUserBTNS {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.editUserBTNActualizar{
+    font-size: var(--title);
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    background-color: var(--amarillo);
+    border: 0;
+    border-radius: 5px;
+    font-weight: normal;
+    padding: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.editUserBTNBorrar{
+    font-size: var(--title);
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    background-color: var(--rojo);
+    border: 0;
+    border-radius: 5px;
+    font-weight: normal;
+    padding: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}

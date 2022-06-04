@@ -83,7 +83,14 @@ const controller = {
         findUser = findUser[0];
         let data = req.session.usuarioLogueado;
         res.render('perfil', {findUser, data})
-    }
+    },
+
+     edit: (req, res, next) => {
+        let idUsuario = req.params.id;
+        let findUser = encontrarUser(idUsuario);
+        findUser = findUser[0];
+        res.render('editUser', {findUser})
+     }
 }
 
 module.exports = controller;

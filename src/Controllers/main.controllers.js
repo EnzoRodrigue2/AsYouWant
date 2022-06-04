@@ -2,6 +2,9 @@ const path = require('path');
 const fs = require('fs');
 const { Console } = require('console');
 
+// const db = require('../database/models');
+// const sequelize = db.sequelize;
+
 const cursosPath = path.join(__dirname, '../data/cursosDataBase.json');
 const cursos = JSON.parse(fs.readFileSync(cursosPath, 'utf-8'));
 
@@ -16,6 +19,11 @@ var cursosFood = cursos.filter(el => el.categoria === "alimentos");
 
 const controller = {
     home :  function(req, res, next) {
+      // db.Curso.findAll()
+      // .then((courses)=> {
+      //   console.log(courses);
+      //   res.render('index', {courses});
+      // });
       res.render('index', { cursos: cursos });
     },
     carrito : function(req, res, next) {
