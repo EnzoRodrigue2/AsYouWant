@@ -91,6 +91,15 @@ const controller = {
         findUser = findUser[0];
         res.render('editUser', {findUser})
      }
+     
+    //  list: (req,res) => {
+    //     db.Usuario.findAll()
+    //     // .then((resultado) => {
+    //     // // console.log({usuarios: resultado})
+    //     // });
+    //     // Prueba para lograr vincular los usuarios == success <3
+    //  }
+     
 }
 
 module.exports = controller;

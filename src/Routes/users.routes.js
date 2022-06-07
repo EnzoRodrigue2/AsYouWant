@@ -40,4 +40,5 @@ router.get('/register', usersController.register)
 router.post('/register', upload.single('imagen'), validateRegisterForm, usersController.store)
 router.get('/perfil/:id', usersController.perfil)
 router.get('/:id/editUser', usersController.edit)
+// router.get('/list', usersController.list)
 module.exports = router;
