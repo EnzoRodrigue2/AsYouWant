@@ -37,6 +37,7 @@ div .top-curso {
 
 .detalles-curso {
     display: flex;
+    justify-content: space-between;
     margin-top: 10px;
 }
 
@@ -240,6 +241,7 @@ a {
 /* Estilos seccion de costos */
 
 .detalles-costos {
+    align-self: flex-end;
     padding: 10px 10px 30px 10px;
     width: 100%;
     max-width: 572px;

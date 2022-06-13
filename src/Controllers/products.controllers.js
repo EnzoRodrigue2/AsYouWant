@@ -37,6 +37,9 @@ const searchForSimilar = (thisCategoria) => {
     return productosSugeridos;
 };
 
+
+
+
 //Variables de fechas para ofertas
 let meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
 let fecha = new Date;
@@ -61,67 +64,208 @@ const controller = {
 
     // },
     list: (req, res) => {
-        // console.log(hoy, mesActual);
-        // let saleNow = temporadaSale[mesActual] || temporadaSale[tipo];
-        // // let saleNow = temporadaSale['diciembre'];
-        // // let saleNow = temporadaSale['junio'];
-        // res.render('listaProductos',{ productos: products , saleNow: saleNow} );
+    //     // console.log(hoy, mesActual);
+    //     // let saleNow = temporadaSale[mesActual] || temporadaSale[tipo];
+    //     // // let saleNow = temporadaSale['diciembre'];
+    //     // // let saleNow = temporadaSale['junio'];
+    //     // res.render('listaProductos',{ productos: products , saleNow: saleNow} );
 
         let saleNow = temporadaSale[mesActual] || temporadaSale[tipo];
-        db.Curso.findAll()
-        .then((resultado) => {
-            res.render('listaProductos', {productos:resultado, saleNow: saleNow})
+
+        db.categoriaCursos.findAll()
+        .then(function(categorias) {
+            let categoriasBase = categorias;
+            db.Curso.findAll()
+            .then((resultado) => {
+                res.render('listaProductos', {productos:resultado, saleNow: saleNow, categorias: categoriasBase})
+            })
         })
+
+        // db.Curso.findAll()
+        // .then((resultado) => {
+        //     res.render('listaProductos', {productos:resultado, saleNow: saleNow, categorias: categorias})
+        // })
     },
 
 
     detalle: (req, res) => {
         let idProducto = req.params.id;
-        let productDetail = searchForId(idProducto)
-        productDetail = productDetail[0]
+        db.Curso.findByPk(idProducto)
+        .then(function(producto) {
+            let curso = producto;
+            db.Curso.findAll({
+                where:{
+                    categoriaCursos_ID: curso.categoriaCursos_ID
+                }
+            })
+            .then(function(cursosPCategoria){
+                // let thiscategoria= curso.categoria;
+                // let sugerencias = searchForSimilarDB(cursosPCategoria, )
 
-        let thisCategoria = productDetail.categoria;
-        let sugerencias= searchForSimilar(thisCategoria);
-        console.log(sugerencias);
-        res.render('info-producto-2',{productDetail,sugerencias} );
+                res.render('info-producto-2',{productDetail:curso,sugerencias:cursosPCategoria})
+            })
+        }
+        )
+
+        // CONTROLADOR CON JSON
+
+        // let productDetail = searchForId(idProducto)
+        // productDetail = productDetail[0]
+
+        // let thisCategoria = productDetail.categoria;
+        // let sugerencias= searchForSimilar(thisCategoria);
+        // console.log(sugerencias);
+        // res.render('info-producto-2',{productDetail,sugerencias} );
         
     },
     
     edit: (req,res) => {
         let idProducto = req.params.id;
-        let productEditar = searchForId(idProducto)
-        productEditar = productEditar[0]
-        res.render('editar-producto', {productEditar})
+        // let productEditar = searchForId(idProducto)
+        // productEditar = productEditar[0]
+        db.Curso.findAll({
+            where: {
+                id: idProducto
+            }
+        })
+        .then(function(curso){
+            let productEditar = curso[0];
+            console.log(productEditar)
+            res.render('editar-producto', {productEditar})
+        })
 
     },
     crear: (req,res) => {
-        res.render('crear-producto')
+        db.categoriaCursos.findAll()
+        .then(function(categorias) {
+            return res.render('crear-producto', { categorias:categorias })
+        })
     },
 
     agregar: (req,res) => {
-        let errors = validationResult(req);
-        if (errors.isEmpty()) {
-            if(req.file) {
-                let productoNuevo = {
-                    id: products[products.length -1].id+1,
-                    ...req.body
-                }
-                products.push(productoNuevo);
-                fs.writeFileSync(productsFilePath, JSON.stringify(products,null,' '));
-                res.redirect('/')
-            } else {
-                let productoNuevo = {
-                    id: products[products.length -1].id+1,
-                    ...req.body,
-                    image: 'courseDefault.jpg'
-                }
-                products.push(productoNuevo);
-                fs.writeFileSync(productsFilePath, JSON.stringify(products,null,' '));
-                res.redirect('/productos/info/' + productoNuevo.id)
-            }
+        let tieneAudio = (req.body.audio == true) ? 1 : 0;
+        let tieneVideo = (req.body.video == true) ? 1 : 0;
+        let tieneLectura = (req.body.lectura == true) ? 1 : 0;
+        let profesorID = "";
+        if(req.session.usuarioLogueado){
+            profesorID = req.session.usuarioLogueado
         } else {
-            res.render('crear-producto', { errors: errors.array(), old: req.body });
-        }
+            profesorID = null;
+        };
+        console.log(req.body);
+        console.log(req.file);
+        db.Curso.create({
+            titulo: req.body.titulo,
+            descripcion: req.body.descripcion_larga,
+            escripcion_corta: req.body.descripcion_corta,
+            precio: req.body.precio,
+            audio: tieneAudio,
+            video: tieneVideo,
+            lectura: tieneLectura,
+            categoriaCursos_ID: req.body.categoria,
+            profesor_ID: profesorID,
+            unidades_ID: null,
+            // imagen: req.file.filename
+        })
+        res.redirect('/productos');
+        // let errors = validationResult(req);
+        //     if (errors.isEmpty()) {
+        //         if(req.file) {
+        //             let tieneAudio = (req.body.audio == true) ? 1 : 0;
+        //             let tieneVideo = (req.body.video == true) ? 1 : 0;
+        //             let tieneLectura = (req.body.lectura == true) ? 1 : 0;
+        //             let profesorID = "";
+        //             if(req.session.usuarioLogueado){
+        //                 profesorID = req.session.usuarioLogueado
+        //             } else {
+        //                 profesorID = null;
+        //             };
+
+        //             let categoriaID = "";
+        //             db.Curso.create({
+        //                 titulo: req.body.titulo,
+        //                 descripcion: req.body.descripcion_larga,
+        //                 descripcion_corta: req.body.descripcion_corta,
+        //                 precio: req.body.precio,
+        //                 audio: tieneAudio,
+        //                 video: tieneVideo,
+        //                 lectura: tieneLectura,
+        //                 categoriaCursos_ID: req.body.categoria,
+        //                 profesor_ID: profesorID,
+        //                 imagen: req.file.filename
+        //             })
+        //             res.redirect('/productos');
+
+        //         }
+        //     } else {
+        //         res.redirect('/productos/info/' + productoNuevo.id)
+        //     }
+
+            // if(req.file) {
+            //     let tieneAudio = (req.body.audio == true) ? 1 : 0;
+            //     let tieneVideo = (req.body.video == true) ? 1 : 0;
+            //     let tieneLectura = (req.body.lectura == true) ? 1 : 0;
+            //     let profesorID = "";
+            //     if(req.session.usuarioLogueado){
+            //         profesorID = req.session.usuarioLogueado
+            //     } else {
+            //         profesorID = null;
+            //     };
+            //     db.Curso.create({
+            //         titulo: req.body.titulo,
+            //         descripcion: req.body.descripcion_larga,
+            //         descripcion_corta: req.body.descripcion_corta,
+            //         precio: req.body.precio,
+            //         audio: tieneAudio,
+            //         video: tieneVideo,
+            //         lectura: tieneLectura,
+            //         categoriaCursos_ID: req.body.categoria,
+            //         profesor_ID: profesorID,
+            //         unidades_ID: null,
+            //         imagen: req.file.filename
+            //     })
+            //     res.redirect('/productos');
+
+            // } 
+        // db.categoriaCursos.findAll()
+        // .then( (categorias) => {
+        //     for(i=0; i<categorias.length; i ++) {
+        //         if(categorias[i].titulo == req.body.categorias){
+        //             categoriaID = categorias[i].id;
+        //         }
+        //     };
+        //     let errors = validationResult(req);
+        //     if (errors.isEmpty()) {
+        //         if(req.file) {
+        //             db.Curso.create({
+        //                 titulo: req.body.titulo,
+        //                 descripcion: req.body.descripcion_larga,
+        //                 descripcion_corta: req.body.descripcion_corta,
+        //                 precio: req.body.precio,
+        //                 audio: tieneAudio,
+        //                 video: tieneVideo,
+        //                 lectura: tieneLectura,
+        //                 categoriaCursos_ID: req.body.categoria,
+        //                 profesor_ID: profesorID,
+        //                 imagen: req.file.filename
+        //             })
+        //             res.redirect("/productos");
+
+        //         }
+        //     } else {
+        //         res.redirect('/productos/info/' + productoNuevo.id)
+        //     }
+        // }
+        //     );
+
+       
+        //         res.redirect('/productos/info/' + productoNuevo.id)
+
+        //     }
+        // } else {
+        //     res.render('crear-producto', { errors: errors.array(), old: req.body });
+        // }
+        //     });
     },
 
     delete: (req,res) => {

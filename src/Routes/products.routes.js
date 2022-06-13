@@ -10,10 +10,10 @@ const validateCreate = require('../middlewares/validateCreate')
 
 const storage = multer.diskStorage({
     destination: (req,res,cb) => {
-        cb(null,pathh.join(__dirname, '../../public/images/users'))
+        cb(null,pathh.join(__dirname, '../../public/images/imagenes'))
     },
     filename: (req,file,cb) => {
-        const newFileName = 'user-'+ Date.now() + pathh.extname(file.originalname);
+        const newFileName = 'curso-'+ Date.now() + pathh.extname(file.originalname);
         cb(null, newFileName);
     }
 })
@@ -29,7 +29,7 @@ router.get("/info/:id", productController.detalle);
 
 /*Crear producto nuevo.*/
 router.get("/crear", productController.crear);
-router.post("/crear-producto", validateCreate, productController.agregar); 
+router.post("/crear-producto",  upload.single('imagen'), validateCreate, productController.agregar); 
 
 /* Editar productos */ 
 router.get("/:id/edit",productController.edit);
