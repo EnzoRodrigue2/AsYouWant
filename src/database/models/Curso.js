@@ -47,9 +47,9 @@ module.exports = (sequelize,DataTypes) => {
             unidades_ID: {
                 type: DataTypes.INTEGER
             },
-            imagen: {
-                type: DataTypes.STRING(1000)
-            }
+            // imagen: {
+            //     type: DataTypes.STRING(1000)
+            // }
         },
         {
             tablename: 'cursos',

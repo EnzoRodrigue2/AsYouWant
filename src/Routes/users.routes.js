@@ -72,6 +72,6 @@ router.post('/register', upload.single('imagen'), validateRegisterForm, usersCon
 router.get('/perfil/:id', usersController.perfil);
 /* Editar usuario. */
 router.get('/:id/editUser', usersController.editView);
-router.post('/:id/editUser', validateUpdateUser, usersController.edit);
+router.put('/:id/editUser', validateUpdateUser, usersController.edit);
 // router.get('/list', usersController.list)
 module.exports = router;
