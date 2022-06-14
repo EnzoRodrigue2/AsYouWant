@@ -1,7 +1,7 @@
 
 module.exports = (sequelize,DataTypes) => {
     const Membresia = sequelize.define(
-        'cursos',
+        'Membresia',
         {
             id: {
                 type: DataTypes.INTEGER,
@@ -22,9 +22,17 @@ module.exports = (sequelize,DataTypes) => {
             },
         },
         {
-            tablename: 'Membresias',
+            tablename: 'membresia',
             timestamps: false
         }
     );
+
+    // Membresia.associate = function(models) {
+    //     Membresia.hasMany(models.Usuarios, {
+    //         as: 'usuarios',
+    //         foreignKey: 'membresia_ID'
+    //     });
+    // }
+
     return Membresia
 }

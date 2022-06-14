@@ -6,6 +6,12 @@
     <main class="main_crear">
         <div class="top-crear">
             <h1>Creación de cursos</h1>
+            <% if(locals.errors) {
+                errors.forEach(error => { %>
+                    <p class="erroresCreate"><%= error.msg %></p>
+            <% });
+            } %>
+
             <% if (locals.errors) { 
                 errors.forEach(error => { %>
                 <div class="login_errores">

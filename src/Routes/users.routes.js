@@ -10,16 +10,45 @@ const userMiddleware = require('../middlewares/userMiddleware');
 
 //validaciones
 const validateRegisterForm = [
-    body('nombre').notEmpty().withMessage('Debes colocar un nombre'),
-    body('apellido').notEmpty().withMessage('Debes colocar un apellido'),
-    body('email').isEmail().withMessage('Debes colocar un email de formato valido'),
-    body('contraseña').isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres')
+    body('nombre')
+        .notEmpty().withMessage('Debes colocar un nombre')
+        .isLength({min: 2}).withMessage('El nombre debe tener al menos 2 caracteres'),
+    body('apellido')
+        .notEmpty().withMessage('Debes colocar un apellido')
+        .isLength({min: 2}).withMessage('El apellido debe tener al menos 2 caracteres'),
+    body('email')
+        .notEmpty().withMessage('Debes colocar un email')
+        .isEmail().withMessage('El email debe ser válido'),
+    body('contraseña')
+        .notEmpty().withMessage('Debes colocar una contraseña')
+        .isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres')
 ];
 
 const validateLoginForm = [
-    body('nombre').notEmpty().withMessage('Debes colocar un nombre'),
-    body('apellido').notEmpty().withMessage('Debes colocar un apellido'),
-    body('email').isEmail().withMessage('Debes colocar un email de formato valido'),
+    body('nombre')
+        .notEmpty().withMessage('Debes colocar un nombre')
+        .isLength({min: 2}).withMessage('El nombre debe tener al menos 2 caracteres'),
+    body('email')
+        .notEmpty().withMessage('Debes colocar un email')
+        .isEmail().withMessage('Debes colocar un email de formato valido'),
+    body('contraseña')
+        .notEmpty().withMessage('Debes colocar una contraseña')
+        .isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres')
+];
+
+const validateUpdateUser = [
+    body('nombre')
+        .notEmpty().withMessage('Debes colocar un nombre')
+        .isLength({min: 2}).withMessage('El nombre debe tener al menos 2 caracteres'),
+    body('apellido')
+        .notEmpty().withMessage('Debes colocar un apellido')
+        .isLength({min: 2}).withMessage('El apellido debe tener al menos 2 caracteres'),
+    body('email')
+        .notEmpty().withMessage('Debes colocar un email')
+        .isEmail().withMessage('El email debe ser válido'),
+    body('contraseña')
+        .notEmpty().withMessage('Debes colocar una contraseña')
+        .isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres')
 ];
 
 const storage = multer.diskStorage({
@@ -33,12 +62,16 @@ const storage = multer.diskStorage({
 })
 const upload = multer({storage})
 
-/* GET Formulario Login. */
-router.get('/login', userMiddleware, usersController.login)
-router.post('/login', usersController.cuenta)
-router.get('/register', usersController.register)
-router.post('/register', upload.single('imagen'), validateRegisterForm, usersController.store)
-router.get('/perfil/:id', usersController.perfil)
-router.get('/:id/editUser', usersController.edit)
+/* Formulario Login. */
+router.get('/login', userMiddleware, usersController.login);
+router.post('/login', usersController.cuenta, validateLoginForm);
+/* Formulario register. */
+router.get('/register', usersController.register);
+router.post('/register', upload.single('imagen'), validateRegisterForm, usersController.store);
+/* Perfil de usuario. */
+router.get('/perfil/:id', usersController.perfil);
+/* Editar usuario. */
+router.get('/:id/editUser', usersController.editView);
+router.post('/:id/editUser', validateUpdateUser, usersController.edit);
 // router.get('/list', usersController.list)
 module.exports = router;

@@ -17,7 +17,6 @@
                 <p class="register_errores"><%= error.msg %></p>
             <% });
             } %>
-
             <form method="POST" action="/usuario/register" class="register_form" enctype="multipart/form-data">
                 <div class="register_form-campo">
                     <label for="nombre" class="register_label">Nombre</label>
@@ -43,10 +42,13 @@
                 <div class="register_form-campo">
                     <label for="nombre" class="register_label">Categoria</label>
                     <div class="category-crear">
-                        <label for="category-crear"><input type="radio" name="categoria" value="alumno" id="Alumno">Alumno</label><br>
-                        <label for="category-crear"><input type="radio" name="categoria" value="profesor" id="Profesor">Profesor</label><br>
-                        <label for="category-crear"><input type="radio" name="categoria" value="editor" id="Editor">Editor</label><br>
-                        <label for="category-crear"><input type="radio" name="categoria" value="administrador" id="Administradors">Administrador</label><br>
+                        <ul>
+                            <% categorias.forEach(el => { %>
+                             <li class="li_crear">
+                                <label for="category-crear"><input type="radio" name="categoria" value="<%= el.id %>"><%= el.nombre %></label><br>
+                             </li>
+                            <% }) %>
+                        </ul>
                     </div>
                 </div>
                 <div class="register_form-campo">

@@ -67,6 +67,7 @@ main section ul {
     width: 30%;
     margin: 1.5rem 1rem;
     padding: 1rem;
+    list-style: none;
 }
 
 .li-curso:hover {
