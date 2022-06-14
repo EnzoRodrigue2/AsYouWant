@@ -13,7 +13,7 @@
                 </div>
             <% });
             } %>
-            <form name="crearForm" action="/productos/crear-producto" method="POST" class="crear_form">
+            <form name="crearForm" action="/productos/crear-producto" method="POST" class="crear_form" enctype="multipart/form-data">
                 <div>
                     <h3 class="editar_tituloInfo">Información básica</h3>
                 <div class="description-edit">
@@ -29,7 +29,7 @@
                 </div>
                 <h3 class="editar_tituloInfo">Cover del curso</h3>
                 <div class="foto">
-                    <input type="file" class="curso_imagen" name="imagen" id="imagen"><br>
+                    <input type="file" class="curso_imagen" name="imagen" id="imagen">
                 </div>
                 <h3 class="editar_tituloInfo">Opciones de material</h3>
                 <div class="multimedia-edit">

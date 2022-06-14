@@ -143,9 +143,9 @@ const controller = {
     },
 
     agregar: (req,res) => {
-        let tieneAudio = (req.body.audio == true) ? 1 : 0;
-        let tieneVideo = (req.body.video == true) ? 1 : 0;
-        let tieneLectura = (req.body.lectura == true) ? 1 : 0;
+        let tieneAudio = (req.body.audio) ? 1 : 0;
+        let tieneVideo = (req.body.video) ? 1 : 0;
+        let tieneLectura = (req.body.lectura) ? 1 : 0;
         let profesorID = "";
         if(req.session.usuarioLogueado){
             profesorID = req.session.usuarioLogueado
@@ -154,20 +154,42 @@ const controller = {
         };
         console.log(req.body);
         console.log(req.file);
-        db.Curso.create({
-            titulo: req.body.titulo,
-            descripcion: req.body.descripcion_larga,
-            escripcion_corta: req.body.descripcion_corta,
-            precio: req.body.precio,
-            audio: tieneAudio,
-            video: tieneVideo,
-            lectura: tieneLectura,
-            categoriaCursos_ID: req.body.categoria,
-            profesor_ID: profesorID,
-            unidades_ID: null,
-            // imagen: req.file.filename
+        db.categoriaCursos.findAll({
+            where:{
+                nombre:req.body.categorias
+            }
         })
-        res.redirect('/productos');
+        .then(function(resultado){
+
+            db.Curso.create({
+                titulo: req.body.titulo,
+                descripcion: req.body.descripcion_larga,
+                descripcion_corta: req.body.description_corta,
+                precio: req.body.precio,
+                audio: tieneAudio,
+                video: tieneVideo,
+                lectura: tieneLectura,
+                categoriaCursos_ID: resultado[0].id,
+                profesor_ID: profesorID,
+                unidades_ID: null,
+                imagen: "/images/imagenes/" + req.file.filename
+            })
+            res.redirect('/productos');
+        })
+        // db.Curso.create({
+        //     titulo: req.body.titulo,
+        //     descripcion: req.body.descripcion_larga,
+        //     descripcion_corta: req.body.description_corta,
+        //     precio: req.body.precio,
+        //     audio: tieneAudio,
+        //     video: tieneVideo,
+        //     lectura: tieneLectura,
+        //     categoriaCursos_ID: req.body.categoria.id,
+        //     profesor_ID: profesorID,
+        //     unidades_ID: null,
+        //     imagen: "/images/imagenes/" + req.file.filename
+        // })
+        // res.redirect('/productos');
         // let errors = validationResult(req);
         //     if (errors.isEmpty()) {
         //         if(req.file) {
