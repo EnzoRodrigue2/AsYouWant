@@ -37,6 +37,6 @@ router.post("/:id",productController.edit);
 
 /* Borrar producto */
 router.get("/:id/delete", productController.delete);
-router.delete('/producto', productController.delete);
+router.post('/:id/destroyed', productController.destroyed);
 
 module.exports = router;

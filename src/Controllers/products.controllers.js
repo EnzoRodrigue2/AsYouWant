@@ -285,9 +285,24 @@ const controller = {
 
     delete: (req,res) => {
         let idProducto = req.params.id;
-        let productDelete = searchForId(idProducto)
-        productDelete = productDelete[0]
-        res.render('borrarProducto', {productDelete} )
+        
+        db.Curso.findByPk(idProducto)
+        .then(function(curso){
+            productDelete = curso
+            res.render('borrarProducto', {productDelete} )
+        })
+    },
+    destroyed: (req,res) => {
+        let idProducto = req.params.id;
+        db.Curso.destroy({
+            where: {
+                id: idProducto
+            }
+        })
+        .then(function(){
+            res.redirect("/")
+        })
+        
     }
 };
 

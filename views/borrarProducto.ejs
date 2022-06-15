@@ -14,7 +14,7 @@
             </h1>
             <div class="delete-indiv">
                 <picture class="miniatura-curso">
-                    <img  class="imagen-miniatura" src="<%=productDelete.imagen_principal %>">
+                    <img  class="imagen-miniatura" src="<%=productDelete.imagen %>">
                 </picture>
                 <div class="delete-detalles">
                     <div class="delete-detalles_titulos">
@@ -28,7 +28,7 @@
                     <div class="delete-detalle_puntuaciones">
                         <div class="delete-detalle_puntuaciones_alumnos">
                             <i class="fas fa-user"></i>
-                            <h4 class="delete-detalle_puntuaciones_alumnos_cifra">1.500</h4>
+                            <h4 class="delete-detalle_puntuaciones_alumnos_cifra"><%= productDelete.precio %></h4>
                         </div>
                         <div class="delete-detalle_puntuaciones_calificacion-box">
                             <i class="fas fa-star"></i>
@@ -37,12 +37,18 @@
                     </div>
                 </div>
             </div>
-            <form method="POST" action="/delete?method=DELETE" class="delete_form">
-                <div class="delete_sec-botones">
-                    <input type="submit" value="Volver" class="delete_boton-delete">
-                    <input type="reset" value="Borrar" class="delete_boton-borrar">
-                </div>
-            </form>
+            <div class="delete_ctn-botones">
+                <form method="GET" action="/productos/info/<%=productDelete.id %>" class="delete_form">
+                    <div class="delete_sec-botones">
+                        <input type="submit" value="Volver" class="delete_boton-delete">
+                    </div>
+                </form>
+                <form method="POST" action="/productos/<%=productDelete.id %>/destroyed" class="delete_form">
+                    <div class="delete_sec-botones">
+                        <input type="submit" id="<%=productDelete.id %>" name="id" value="Borrar" class="delete_boton-borrar">
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
 </body>
