@@ -87,7 +87,6 @@ const controller = {
         // })
     },
 
-
     detalle: (req, res) => {
         let idProducto = req.params.id;
         db.Curso.findByPk(idProducto)
@@ -99,8 +98,6 @@ const controller = {
                 }
             })
             .then(function(cursosPCategoria){
-                // let thiscategoria= curso.categoria;
-                // let sugerencias = searchForSimilarDB(cursosPCategoria, )
 
                 res.render('info-producto-2',{productDetail:curso,sugerencias:cursosPCategoria})
             })
@@ -121,8 +118,6 @@ const controller = {
     
     edit: (req,res) => {
         let idProducto = req.params.id;
-        // let productEditar = searchForId(idProducto)
-        // productEditar = productEditar[0]
         db.Curso.findAll({
             where: {
                 id: idProducto
@@ -152,8 +147,6 @@ const controller = {
         } else {
             profesorID = null;
         };
-        console.log(req.body);
-        console.log(req.file);
         db.categoriaCursos.findAll({
             where:{
                 nombre:req.body.categorias

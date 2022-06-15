@@ -8,5 +8,6 @@ const homeUserMiddleware = require('../middlewares/homeUserLogMiddleware');
 router.get('/',homeUserMiddleware , mainController.home);
 router.get('/carrito', mainController.carrito);
 router.get('/homeUser', userIsLogged, mainController.homeUser);
+router.get('/buscar',mainController.buscar);
 
 module.exports = router;
