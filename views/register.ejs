@@ -17,6 +17,15 @@
                 <p class="register_errores"><%= error.msg %></p>
             <% });
             } %>
+            <% if (locals.errors) { 
+                errors.forEach(error => { %>
+                <div class="login_errores">
+                    <ul>
+                        
+                    </ul>
+                </div>
+            <% });
+            } %>
             <form method="POST" action="/usuario/register" class="register_form" enctype="multipart/form-data">
                 <div class="register_form-campo">
                     <label for="nombre" class="register_label">Nombre</label>
@@ -29,6 +38,10 @@
                 <div class="register_form-campo">
                     <label for="nombre" class="register_label">Email</label>
                     <input type="text" class="register_input" name="email" value="<%= locals.old && old.email ? old.email :'' %>" placeholder="nombre@ejemplo.com" >
+                </div>
+                <div class="editUserCampo">
+                    <label for="nombre" class="editUserLabel">Descripción</label>
+                    <input type="textarea" class="editUserInput" name="descripcion" value="<%= locals.old && old.descripcion ? old.descripcion :'' %>" placeholder="Contanos sobre vos!" >
                 </div>
                 <div class="register_form-campo">
                     <label for="nombre" class="register_label">Contraseña</label>

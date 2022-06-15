@@ -15,7 +15,7 @@
                             <li class="li-curso">
                                 <a href="/productos/info/<%=el.id %>">
                                     <article class="container-curso" >
-                                    <img src="<%=el.imagen_principal %>" width="100%">
+                                    <img src="<%=el.imagen %>" width="100%">
                                     <div class="course-card">
                                         <h3><%=el.titulo %></h3>
                                         <div>
@@ -48,7 +48,41 @@
                             <li class="li-curso">
                                 <a href="/productos/info/<%=el.id %>">
                                     <article class="container-curso" >
-                                    <img src="<%=el.imagen_principal %>" width="100%">
+                                    <img src="<%=el.imagen %>" width="100%">
+                                    <div class="course-card">
+                                        <h3><%=el.titulo %></h3>
+                                        <div>
+                                            <p><%=el.profesor %></p>
+                                            <div class="media">
+                                                <i class="fas fa-file-alt"></i>
+                                                <i class="fas fa-headphones"></i>
+                                                <i class="fas fa-video"></i>
+                                            </div>
+                                        </div>
+                                        <p><%=el.precio %></p>
+                                    </div>
+                                    <div class="buttons">
+                                        <button class="add"><i class="fas fa-cart-plus"></i></button>
+                                        <button class="buy">Comprar</button>
+                                    </div>
+                                </article>                        
+                                </a>
+                            </li>
+                        <% }) %>
+                </ul>
+                
+            </div>
+        </section>
+        
+        <section>
+            <h2>Cursos sobre Organización</h2>
+            <div class="cursitosCategory">
+                <ul>
+                        <% cursosOrg.forEach(el =>{ %>
+                            <li class="li-curso">
+                                <a href="/productos/info/<%=el.id %>">
+                                    <article class="container-curso" >
+                                    <img src="<%=el.imagen %>" width="100%">
                                     <div class="course-card">
                                         <h3><%=el.titulo %></h3>
                                         <div>
@@ -81,7 +115,7 @@
                             <li class="li-curso">
                                 <a href="/productos/info/<%=el.id %>">
                                     <article class="container-curso" >
-                                    <img src="<%=el.imagen_principal %>" width="100%">
+                                    <img src="<%=el.imagen %>" width="100%">
                                     <div class="course-card">
                                         <h3><%=el.titulo %></h3>
                                         <div>
@@ -114,7 +148,7 @@
                             <li class="li-curso">
                                 <a href="/productos/info/<%=el.id %>">
                                     <article class="container-curso" >
-                                    <img src="<%=el.imagen_principal %>" width="100%">
+                                    <img src="<%=el.imagen %>" width="100%">
                                     <div class="course-card">
                                         <h3><%=el.titulo %></h3>
                                         <div>

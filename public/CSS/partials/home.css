@@ -56,6 +56,15 @@ main section {
     flex-direction: row;
 }
 
+.indexUser section {
+    display: flex;
+    flex-direction: column
+}
+
+main section h2 {
+    margin: 0 3rem
+}
+
 main section ul {
     width: 100%;
     display: flex;
@@ -104,6 +113,11 @@ main section ul {
 
 .course-card .media:hover {
     color: var(--celeste);
+}
+
+.cursitosCategory {
+    width: 100%;
+    display: flex;
 }
 
 /*BOTONES*/

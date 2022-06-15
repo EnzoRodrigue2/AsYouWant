@@ -13,7 +13,7 @@ window.addEventListener("load", function() {
         errors.push("El nombre debe tener al menos 2 caracteres");
     };
 
-    let campoApellido = this.document.querySelector('input.apellido');
+    let campoApellido = this.document.querySelector('input.apellidos');
     if(campoApellido.value === ""){
         errors.push("Este campo no debe estar vacío");
     }else if(campoApellido.value < 2){
