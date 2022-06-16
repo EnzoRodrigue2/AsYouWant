@@ -22,6 +22,9 @@ const upload = multer({storage});
 /* GET Listado de productos. */
 router.get("/", productController.list);
 
+/* GET Listado de productos segun categoria */
+router.get("/:categoria", productController.categoriaCursos);
+
 /* GET Info producto especifico. */
 router.get("/info/:id", productController.detalle);
 //router.get("/info/:id", productController.) // http://localhost:4000/productos/info/2

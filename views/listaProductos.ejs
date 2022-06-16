@@ -26,9 +26,11 @@
                         <ul>
                             <% categorias.forEach(el => { %>
                             <li>
-                                <div class="listar_categoryListMenu">
-                                    <h3><%=el.nombre%></h3>
-                                </div>
+                                <a href="/productos/<%=el.nombre%>">
+                                    <div class="listar_categoryListMenu">
+                                        <h3><%=el.nombre%></h3>
+                                    </div>
+                                </a>
                             </li>
                             <% }) %>
                         </ul>

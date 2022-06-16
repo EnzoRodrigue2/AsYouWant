@@ -87,6 +87,35 @@ const controller = {
         // })
     },
 
+    categoriaCursos: (req,res) => {
+        let categoriaBuscada = req.params.categoria;
+        let saleNow = temporadaSale[mesActual] || temporadaSale[tipo];
+
+
+        db.categoriaCursos.findAll()
+        .then(function(resultado) {
+            console.log(resultado);
+            let categoriaFiltro = "";
+            for(i=0;i<resultado.length;i++){
+                if(resultado[i].nombre == categoriaBuscada ){
+                    categoriaFiltro = resultado[i];
+                    break;
+                }
+            }
+
+            let categorias = resultado
+            db.Curso.findAll({
+                where:{
+                    categoriaCursos_ID: categoriaFiltro.id
+                }
+            })
+            .then(function(cursosFiltrados) {
+                console.log(cursosFiltrados);
+                res.render("listaProductos", {productos:cursosFiltrados,saleNow: saleNow, categorias: resultado})
+            })
+        })
+    },
+
     detalle: (req, res) => {
         let idProducto = req.params.id;
         db.Curso.findByPk(idProducto)
