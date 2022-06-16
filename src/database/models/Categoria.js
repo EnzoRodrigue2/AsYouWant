@@ -1,7 +1,7 @@
 
 module.exports = (sequelize,DataTypes) => {
     const Categoria = sequelize.define(
-        'categoria',
+        'Categoria',
         {
             id: {
                 type: DataTypes.INTEGER,
@@ -16,9 +16,17 @@ module.exports = (sequelize,DataTypes) => {
             }
         },
         {
-            tablename: 'Categoria',
+            tablename: 'categoria',
             timestamps: false
         }
     );
+
+    Categoria.associate = function(models) {
+        Categoria.hasMany(models.Usuario, {
+            as: "usuarios",
+            foreignKey: "categoria_ID"
+        });
+    }
+
     return Categoria
 }

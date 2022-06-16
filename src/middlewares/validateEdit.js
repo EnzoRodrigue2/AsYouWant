@@ -1,5 +1,5 @@
 const {check} = require('express-validator');
-let validateCreate = [
+let validateEdit = [
     check('titulo')
     .notEmpty().withMessage('El curso debe tener título')
     .isLength({ min: 5}).withMessage('El título debe tener al menos 5 caracteres'),
@@ -13,4 +13,4 @@ let validateCreate = [
     check('precio')
     .notEmpty().withMessage('El curso debe tener un precio').bail().isInt().withMessage('El precio debe ser escrito en números')
 ];
-module.exports = validateCreate
+module.exports = validateEdit

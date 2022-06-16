@@ -6,6 +6,11 @@
     <main class="main-general-bajo-header">
         <div class="top-editar">
             <h1 class="editar_tituloPrincipal">Edición de cursos</h1>
+            <% if(locals.errors) {
+                errors.forEach(error => { %>
+                    <p class="erroresEdit"><%= error.msg %></p>
+            <% });
+            } %>
             <form action="/productos/<%= productEditar.id %>/guardar?_method=PUT" method="POST">
                 <div>
                     <h3 class="editar_tituloInfo">Información básica</h3>

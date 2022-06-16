@@ -26,6 +26,12 @@ module.exports = (sequelize,DataTypes) => {
             },
             password: {
                 type: DataTypes.STRING(200)
+            },
+            imagen: {
+                type: DataTypes.STRING(1000)
+            },
+            descripcion: {
+                type: DataTypes.STRING(500)
             }
         },
         {
@@ -33,5 +39,17 @@ module.exports = (sequelize,DataTypes) => {
             timestamps: false
         }
     );
+
+    Usuario.associate = function(models) {
+        Usuario.belongsTo(models.Categoria, {
+            as: 'categoria',
+            foreignKey: 'categoria_ID'
+        });
+        // Usuario.belongsTo(models.Membresia, {
+        //     as: 'membresia',
+        //     foreignKey: 'membresia_ID'
+        // });
+    }
+
     return Usuario
 }

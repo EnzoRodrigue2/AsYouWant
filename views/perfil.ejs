@@ -5,20 +5,28 @@
         <%- include('./partials/header.ejs')%>
         <main class="mainPerfil">
             <div class="topUsuario">
-                <img src="/Images/users/<%= findUser.image %>" alt="Tu foto de perfil" class="imagenPerfil" width="150px">             
+                <img src="/Images/users/<%= findUser.imagen %>" alt="Tu foto de perfil" class="imagenPerfil" width="150px">
+                <i class="membresia fa-solid fa-bookmark"></i>
+                <div class="tituloUser">
+                    <h1>
+                        <%= findUser.nombre %> 
+                        <%= findUser.apellidos %>
+                    </h1>
+                    <% if (findUser.categoria_ID == 1) { %>
+                        <h2>Alumno</h2>
+                    <% } else if (findUser.categoria_ID == 2) { %>
+                        <h2>Profesor</h2>
+                    <% } else if (findUser.categoria_ID == 3) { %>
+                        <h2>Editor</h2>
+                    <% } else { %>
+                        <h2>Administrador</h2>
+                    <% }%>
+                </div>             
                 <a href="/usuario/<%= findUser.id%>/editUser">
                     <div class="editContainer">
                         <i class="editarPerfil fa-solid fa-square-pen"></i>
                     </div>
                 </a>
-                <div class="tituloUser">
-                    <h1>
-                        <%= findUser.nombre %> <%= findUser.apellido %>
-                    </h1>
-                    <h2>
-                        <%= findUser.categoria %>
-                    </h2>
-                </div>
             </div>
             <div class="bottomUsuario">
                 <article class="infoUser">
@@ -30,7 +38,9 @@
                     </div>
                     <div class="sobreUser">
                         <h3>Sobre mi</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>
+                            <%= findUser.descripcion %>
+                        </p>
                     </div>
                 </article>
                 <article class="infoUser">

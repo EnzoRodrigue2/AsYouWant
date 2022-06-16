@@ -4,41 +4,45 @@ window.addEventListener("load", function() {
 
     formulario.addEventListener("submit", function(e) {});
     
-    let errores = [];
+    let errors = [];
 
     let campoNombre = this.document.querySelector('input.nombre');
     if(campoNombre.value === ""){
-        errores.push("Este campo no debe estar vacío");
+        errors.push("Este campo no debe estar vacío");
     }else if(campoNombre.value < 2){
-        errores.push("El nombre debe tener al menos 2 caracteres");
+        errors.push("El nombre debe tener al menos 2 caracteres");
     };
 
-    let campoApellido = this.document.querySelector('input.apellido');
+    let campoApellido = this.document.querySelector('input.apellidos');
     if(campoApellido.value === ""){
-        errores.push("Este campo no debe estar vacío");
+        errors.push("Este campo no debe estar vacío");
     }else if(campoApellido.value < 2){
-        errores.push("El apellido debe tener al menos 2 caracteres");
+        errors.push("El apellido debe tener al menos 2 caracteres");
     };
 
     let campoEmail = this.document.querySelector('input.email');
     if(campoEmail.value === ""){
-        errores.push("Este campo no debe estar vacío");
+        errors.push("Este campo no debe estar vacío");
     };
 
     let campopassword = this.document.querySelector('input.contraseña');
     if(campopassword.value === ""){
-        errores.push("Este campo no debe estar vacío");
+        errors.push("Este campo no debe estar vacío");
     }else if(campopassword.value < 8){
-        errores.push("La contraseña debe tener al menos 8 caracteres");
+        errors.push("La contraseña debe tener al menos 8 caracteres");
     };
 
     // let inputImagen = this.document.querySelector('input.imagen');
     // if(inputImagen){
-    //     errores.push("La imagen debe ser un archivo válido")
+    //     errors.push("La imagen debe ser un archivo válido")
     // };
     
-    if(errores.length > 0) {
+    if(errors.length > 0) {
         e.preventDefault();
+        let listaErrors = this.document.querySelector('div.errorsRegister ul');
+        for(i=0; i<errors.length; i++){
+            listaErrors.innerHTML = "<li> + errors[i] + </li>";
+        }
     }
 
 });

@@ -96,6 +96,10 @@
     background-color: var(--amarillo);
 }
 
+.erroresEdit {
+    color: red;
+}
+
 @media (max-width: 760px) {
     .description-edit input, .price-edit input, .button {
         width: 360px;

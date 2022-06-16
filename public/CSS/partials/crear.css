@@ -82,6 +82,10 @@
     background-color: var(--amarillo);
 }
 
+.erroresCreate {
+    color: red;
+}
+
 @media (max-width: 760px) {
     .description-crear input, .price-crear input, .button {
         width: 360px;

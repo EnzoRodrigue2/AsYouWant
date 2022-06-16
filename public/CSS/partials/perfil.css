@@ -24,6 +24,10 @@
     padding: 1rem 5rem;
 }
 
+.membresia{
+    font-size: 2rem; 
+}
+
 .bottomUsuario{
     display: flex;
     flex-direction: row;
@@ -58,8 +62,8 @@
     margin: 2rem;
     width: 50px;
     position: relative;
-    right: 50px;
-    top: 35px
+    right: 6rem;
+    top: -2.5rem
     
     
 }

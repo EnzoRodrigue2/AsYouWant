@@ -50,7 +50,19 @@ const controller = {
       res.render('carrito');
     },
     homeUser :  function(req, res, next) {
-      res.render('indexUser', { cursosFotos, cursosArt, cursosLead, cursosFood });
+      let findCursosFotos = db.Curso.findAll({where: {categoriaCursos_ID: 2}});
+      let findCursosArt = db.Curso.findAll({where: {categoriaCursos_ID: 3}});
+      let findCursosOrg = db.Curso.findAll({where: {categoriaCursos_ID: 1}});
+      let findCursosLead = db.Curso.findAll({where: {categoriaCursos_ID: 5}});
+      let findCursosFood = db.Curso.findAll({where: {categoriaCursos_ID: 4}});
+      Promise.all([ findCursosFotos, findCursosArt, findCursosOrg, findCursosLead, findCursosFood ])
+        .then(([ cursosFotos, cursosArt, cursosOrg, cursosLead, cursosFood ])=> {
+          res.render('indexUser', { cursosFotos, cursosArt, cursosOrg, cursosLead, cursosFood });
+        })
+        .catch((error)=>{
+          console.log(error);
+        })
+      
     },
     buscar: (req,res) => {
       let buscado = req.query.palabraBuscada

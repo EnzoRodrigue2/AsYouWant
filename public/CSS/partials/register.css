@@ -93,3 +93,13 @@
     font-size: 40px;
     color: var(--gris-oscuro);
 }
+
+.category-crear ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.li_crear{
+    margin: 1rem;
+    list-style: none;
+}
