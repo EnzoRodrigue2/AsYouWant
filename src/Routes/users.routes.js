@@ -73,5 +73,7 @@ router.get('/perfil/:id', usersController.perfil);
 /* Editar usuario. */
 router.get('/:id/editUser', usersController.editView);
 router.put('/:id/editUser', validateUpdateUser, usersController.edit);
-// router.get('/list', usersController.list)
+
+router.get('/', usersController.list);
+router.get('/detail/:id', usersController.detail);
 module.exports = router;

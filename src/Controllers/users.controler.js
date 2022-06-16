@@ -198,8 +198,10 @@ const controller = {
                     where: {
                         id: req.params.id
                     }
-                });
-                res.redirect('/usuario/perfil/' + req.params.id);
+                })
+                    .then(()=> {
+                        res.redirect('/usuario/perfil/' + req.params.id);
+                    });
             } else {
                 db.Usuario.update({
                 nombre: req.body.nombre,
@@ -212,8 +214,10 @@ const controller = {
                     where: {
                         id: req.params.id
                     }
-                });
-                res.redirect('/usuario/perfil/' + req.params.id);
+                })
+                    .then(()=> {
+                        res.redirect('/usuario/perfil/' + req.params.id);
+                    });
             }
         } else {
             
@@ -224,15 +228,33 @@ const controller = {
                 res.render('editUser', {findUser, categorias, errors: errors.array(), old: req.body});
             })
         }
-     }
+     },
      
-    //  list: (req,res) => {
-    //     db.Usuario.findAll()
-    //     .then((resultado) => {
-    //     // console.log({usuarios: resultado})
-    //     });
-    //     // Prueba para lograr vincular los usuarios == success <3
-    //  }
+     list: (req,res) => {
+        db.Usuario.findAll({attributes: ['id', 'nombre', 'apellidos', 'email']})
+        .then(usuarios => {
+            let response = {
+                count: usuarios.length,
+                users: usuarios
+            };
+            res.json(response)
+        }); 
+        
+     },
+
+     detail: (req, res) => {
+        db.Usuario.findByPk(req.params.id)
+        .then(user => {
+            let response = {
+                nombre: user.nombre,
+                apellidos: user.apellidos,
+                email: user.email,
+                descripcion: user.descripcion,
+                imagen: '/Images/users/' + user.imagen
+            };
+            res.json(response)
+        });
+     }
      
 }
 

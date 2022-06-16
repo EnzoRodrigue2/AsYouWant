@@ -18,7 +18,7 @@
             <% });
             } %>
 
-            <form method="POST" action="/usuario/:id/editar?_method=PUT">
+            <form action="/usuario/<%= findUser.id %>/editar?_method=PUT" method="POST">
                 <div class="editUserCampo">
                     <label for="nombre" class="editUserLabel">Nombre</label>
                     <input type="text" class="editUserInput" name="nombre" value="<%= findUser.nombre %>" placeholder="Ej:Juan" >
