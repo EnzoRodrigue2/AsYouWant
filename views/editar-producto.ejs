@@ -6,7 +6,7 @@
     <main class="main-general-bajo-header">
         <div class="top-editar">
             <h1 class="editar_tituloPrincipal">Edición de cursos</h1>
-            <form action="/producto/editar?_method=PUT" method="POST">
+            <form action="/productos/<%= productEditar.id %>/guardar?_method=PUT" method="POST">
                 <div>
                     <h3 class="editar_tituloInfo">Información básica</h3>
                 <div class="description-edit">
@@ -16,15 +16,21 @@
                 </div>
                 <h3 class="editar_tituloInfo">Categoría</h3>
                 <div class="category-edit">
-                    <label for="category-edit"><input type="radio" name="categoria" value="fotografia" id="fotografia" >Fotografía</label><br>
-                    <label for="category-edit"><input type="radio" name="categoria" value="habilidades-blandas" id="habilidades-blandas" >Habilidades blandas</label><br>
-                    <label for="category-edit"><input type="radio" name="categoria" value="dibujo-pintura" id="dibujo-pintura">Dibujo y pintura</label><br>
-                    <label for="category-edit"><input type="radio" name="categoria" value="manualidades" id="manualidades">Manualidades</label><br>
-                    <label for="category-edit"><input type="radio" name="categoria" value="cocina-cocteleria" id="cocina-cocteleria">Cocina y coctelería</label><br>
+                    <label for="category-edit"><input type="radio" name="categorias" value="fotografia" id="fotografia" >Fotografía</label><br>
+                    <label for="category-edit"><input type="radio" name="categorias" value="habilidades-blandas" id="habilidades-blandas" >Habilidades blandas</label><br>
+                    <label for="category-edit"><input type="radio" name="categorias" value="dibujo-pintura" id="dibujo-pintura">Dibujo y pintura</label><br>
+                    <label for="category-edit"><input type="radio" name="categorias" value="manualidades" id="manualidades">Manualidades</label><br>
+                    <label for="category-edit"><input type="radio" name="categorias" value="cocina-cocteleria" id="cocina-cocteleria">Cocina y coctelería</label><br>
                 </div>
                 <h3 class="editar_tituloInfo">Cover del curso</h3>
                 <div class="foto">
-                    <input type="file" name="imagen_principal" id="imagen_principal"><br>
+                    <% if(productEditar.imagen){ %>
+                        <img class="editar_imagenPrevia" src="<%= productEditar.imagen %>" alt="imagen de curso">
+                        <input type="file" name="imagen_principal" value="<%= productEditar.imagen %>" id="imagen_principal"><br>
+                        <input type="text" class="editar_tituloImagenP" name="imagenPrevia" value="<%= productEditar.imagen %>"><br>
+                    <% } else { %>
+                        <input type="file" name="imagen_principal"  id="imagen_principal"><br>
+                    <% } %>
                 </div>
                 <h3 class="editar_tituloInfo">Opciones de material</h3>
                 <div class="multimedia-edit">

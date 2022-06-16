@@ -33,7 +33,7 @@ router.post("/crear-producto",  upload.single('imagen'), validateCreate, product
 
 /* Editar productos */ 
 router.get("/:id/edit",productController.edit);
-router.post("/:id",productController.edit);
+router.put("/:id/guardar",productController.guardarCambios);
 
 /* Borrar producto */
 router.get("/:id/delete", productController.delete);

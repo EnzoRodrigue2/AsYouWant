@@ -130,6 +130,53 @@ const controller = {
         })
 
     },
+
+    guardarCambios: (req,res) => {
+        let idProducto = req.params.id;
+        let tieneAudio = (req.body.audio) ? 1 : 0;
+        let tieneVideo = (req.body.video) ? 1 : 0;
+        let tieneLectura = (req.body.lectura) ? 1 : 0;
+        let profesorID = "";
+        if(req.session.usuarioLogueado){
+            profesorID = req.session.usuarioLogueado
+        } else {
+            profesorID = null;
+        };
+        console.log(req.body);
+        let imagenCurso = ""
+        if (req.file !== undefined) {
+            imagenCurso = req.file.filename;
+        } else {
+            imagenCurso = req.body.imagenPrevia
+        }
+        db.categoriaCursos.findAll({
+            where:{
+                nombre:req.body.categorias
+            }
+        })
+        .then(function(resultado){
+            console.log(resultado);
+            db.Curso.update({
+                titulo: req.body.titulo,
+                descripcion: req.body.descripcion_larga,
+                descripcion_corta: req.body.description_corta,
+                precio: req.body.precio,
+                audio: tieneAudio,
+                video: tieneVideo,
+                lectura: tieneLectura,
+                categoriaCursos_ID: resultado.id,
+                profesor_ID: profesorID,
+                unidades_ID: null,
+                imagen: imagenCurso
+            }, {
+                where: {
+                    id: idProducto
+                }
+            })
+            res.redirect('/productos');
+        })
+    },
+
     crear: (req,res) => {
         db.categoriaCursos.findAll()
         .then(function(categorias) {

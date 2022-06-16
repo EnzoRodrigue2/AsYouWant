@@ -41,6 +41,16 @@
     width: inherit;
 }
 
+.editar_imagenPrevia {
+    width: 20%;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.editar_tituloImagenP {
+    display: none;
+}
+
 .category-edit {
     display: flex;
     flex-wrap: wrap;
