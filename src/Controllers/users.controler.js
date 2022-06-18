@@ -105,6 +105,13 @@ const controller = {
                     imagen: req.file.filename
                 })
                 .then(usuario => {
+                    db.Usuario.update({
+                        detail: '/usuario/' + usuario.id
+                    }, {
+                        where: {
+                            id: usuario.id
+                        }
+                    });
                     res.redirect('/usuario/perfil/' + usuario.id);
                 })
                 .catch(err => {
@@ -231,7 +238,7 @@ const controller = {
      },
      
      list: (req,res) => {
-        db.Usuario.findAll({attributes: ['id', 'nombre', 'apellidos', 'email']})
+        db.Usuario.findAll({attributes: ['id', 'nombre', 'apellidos', 'email', 'detail']})
         .then(usuarios => {
             let response = {
                 count: usuarios.length,
