@@ -46,25 +46,21 @@
                 </div>
                 <div class="editUserCampo">
                     <label for="nombre" class="editUserLabel">Categoria</label>
-                    <div class="category-crear">
-                        <ul>
-                            <% categorias.forEach(el => { %>
-                                <% if (el.id == findUser.categoria_ID) { %>   
-                                    <li class="li_crear">
-                                        <label for="category-crear"><input type="radio" name="categoria" value="<%= el.id %>" aria-selected="true"><%= el.nombre %></label><br>
-                                    </li>                                 
-                                <% } else { %>
-                                    <li class="li_crear">
-                                        <label for="category-crear"><input type="radio" name="categoria" value="<%= el.id %>"><%= el.nombre %></label><br>
-                                    </li>
-                                <% } %>
-                            <% }) %>
-                        </ul>
+                    <div class="category-crear">   
+                        <label for="category-crear"><input type="radio" name="categoria" value="Alumno" id="Alumno">Alumno</label><br>
+                        <label for="category-crear"><input type="radio" name="categoria" value="Profesor" id="Profesor">Profesor</label><br>
+                        <label for="category-crear"><input type="radio" name="categoria" value="Editor" id="Editor">Editor</label><br>
+                        <label for="category-crear"><input type="radio" name="categoria" value="Administrador" id="Administrador">Administrador</label><br>
                     </div>
                 </div>
-                <div class="editUserCampo">
-                    <label for="nombre" class="editUserLabel">Foto perfil</label>
-                    <input type="file"  placeholder="Archivo" name="imagen" id="imagen" value="<%= findUser.imagen %> ">
+                    <div class="editUserCampo">
+                    <% if(findUser.imagen){ %>
+                        <img class="imagenAnterior" src="<%= findUser.imagen %>" alt="Tu foto de perfil">
+                        <input type="file" name="imagenUsuario" value="<%= findUser.imagen %>" id="imagenUsuario"><br>
+                        <input type="text" class="editarUserFoto" name="imagenAnterior" value="<%= findUser.imagen %>"><br>
+                    <% } else { %>
+                        <input type="file" name="imagenUsuario"  id="imagenUsuario"><br>
+                    <% } %>
                 </div>
                 <div class="editUserBTNS">
                     <input type="submit" value="Actualizar" class="editUserBTNActualizar">

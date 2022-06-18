@@ -84,18 +84,25 @@ const controller = {
                 res.render('register', {categorias})
             })
     },
+
     store: (req,res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            if(req.file){
+            db.Categoria.findAll({
+                where: {
+                    nombre: req.body.categoria
+                }
+            })
+            .then( function(result) {
+                if(req.file){
                 db.Usuario.create({
-                nombre: req.body.nombre,
-                apellidos: req.body.apellido,
-                email: req.body.email,
-                descripcion: req.body.descripcion,
-                categoria_ID: req.body.categoria,
-                password: req.body.contraseña,
-                imagen: req.file.filename
+                    nombre: req.body.nombre,
+                    apellidos: req.body.apellido,
+                    email: req.body.email,
+                    descripcion: req.body.descripcion,
+                    categoria_ID: result[0].id,
+                    password: req.body.contraseña,
+                    imagen: req.file.filename
                 })
                 .then(usuario => {
                     res.redirect('/usuario/perfil/' + usuario.id);
@@ -104,15 +111,15 @@ const controller = {
                     res.send(err)
                 });
                 
-            } else {
+                } else {
                 db.Usuario.create({
-                nombre: req.body.nombre,
-                apellidos: req.body.apellido,
-                email: req.body.email,
-                descripcion: req.body.descripcion,
-                categoria_ID: req.body.categoria,
-                password: req.body.contraseña,
-                imagen: 'userDefault.jpg'
+                    nombre: req.body.nombre,
+                    apellidos: req.body.apellido,
+                    email: req.body.email,
+                    descripcion: req.body.descripcion,
+                    categoria_ID: result[0].id,
+                    password: req.body.contraseña,
+                    imagen: 'userDefault.jpg'
                 })
                 .then(usuario => {
                     res.redirect('/usuario/perfil/' + usuario.id);
@@ -122,6 +129,8 @@ const controller = {
                 });
                 
             }
+            })
+            
             // });
             // if(req.file) {
             //     let usuarioNuevo = {
@@ -151,81 +160,72 @@ const controller = {
     },
 
     perfil:(req, res, next) => {
+        db.Usuario.findByPk(req.params.id)
+            .then((findUser)=> {
+                res.render('perfil', {findUser})
+            })
         // let idUsuario = req.params.id;
         // let findUser = encontrarUser(idUsuario);
         // findUser = findUser[0];
         // let data = req.session.usuarioLogueado;
         // res.render('perfil', {findUser, data})
-
-        db.Usuario.findByPk(req.params.id)
-            .then((findUser)=> {
-                res.render('perfil', {findUser})
-            })
     },
 
-     editView: (req, res, next) => {
-        let pedidoUser = db.Usuario.findByPk(req.params.id)
-        let pedidoCategoria = db.Categoria.findAll()
-        Promise.all([pedidoUser, pedidoCategoria])
-            .then(([findUser, categorias])=> {
-                res.render('editUser', {findUser, categorias});
+     editView: (req, res, next) => {           
+        let idUsuario = req.params.id; 
+        db.Usuario.findByPk(idUsuario)
+            .then((findUser)=> {
+                res.render('editUser', {findUser})
             })
             .catch((err)=>{
                 console.log(err);
             })
-        // db.Usuario.findByPk(req.params.id)
-        // .then((findUser)=> {
-        //     res.render('editUser', {findUser})
-        // })
+        
         // let idUsuario = req.params.id;
         // let findUser = encontrarUser(idUsuario);
         // findUser = findUser[0];
         // res.render('editUser', {findUser})
      },
+     
      edit: (req, res)=> {
+        let idUsuario = req.params.id;
+        let imagenUser = "";
+        if (req.file !== undefined) {
+            imagenUser = req.file.filename;
+        } else {
+            imagenUser = req.body.imagenAnterior
+        }
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            if(req.file){
-                db.Usuario.update({
-                    nombre: req.body.nombre,
-                    apellidos: req.body.apellido,
-                    email: req.body.email,
-                    descripcion: req.body.descripcion,
-                    categoria_ID: req.body.categoria,
-                    password: req.body.contraseña,
-                    imagen: req.file.filename
-                }, {
-                    where: {
-                        id: req.params.id
-                    }
-                })
-                    .then(()=> {
-                        res.redirect('/usuario/perfil/' + req.params.id);
-                    });
-            } else {
+            db.Categoria.findAll({
+                where: {
+                    nombre: req.body.categoria
+                }
+            })
+            .then(function(result){
+                console.log(result)
                 db.Usuario.update({
                 nombre: req.body.nombre,
                 apellidos: req.body.apellido,
                 email: req.body.email,
                 descripcion: req.body.descripcion,
-                categoria_ID: req.body.categoria,
-                password: req.body.contraseña
+                categoria_ID: result.id,
+                password: req.body.contraseña,
+                imagen: imagenUser
                 }, {
                     where: {
-                        id: req.params.id
+                        id: idUsuario
                     }
                 })
-                    .then(()=> {
-                        res.redirect('/usuario/perfil/' + req.params.id);
-                    });
-            }
+                res.redirect('/usuario/perfil/' + idUsuario);
+            })
         } else {
-            
-        let pedidoUser = db.Usuario.findByPk(req.params.id)
-        let pedidoCategoria = db.Categoria.findAll()
-        Promise.all([pedidoUser, pedidoCategoria])
-            .then(([findUser, categorias])=> {
-                res.render('editUser', {findUser, categorias, errors: errors.array(), old: req.body});
+            db.Usuario.findByPk(idUsuario)
+            .then((findUser)=> {
+                res.render('editUser', {findUser})
+            })
+            .catch((err)=>{
+                console.log(err);
             })
         }
      },
@@ -239,7 +239,6 @@ const controller = {
             };
             res.json(response)
         }); 
-        
      },
 
      detail: (req, res) => {

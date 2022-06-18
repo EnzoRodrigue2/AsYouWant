@@ -54,14 +54,11 @@
                 </div>
                 <div class="register_form-campo">
                     <label for="nombre" class="register_label">Categoria</label>
-                    <div class="category-crear">
-                        <ul>
-                            <% categorias.forEach(el => { %>
-                             <li class="li_crear">
-                                <label for="category-crear"><input type="radio" name="categoria" value="<%= el.id %>"><%= el.nombre %></label><br>
-                             </li>
-                            <% }) %>
-                        </ul>
+                    <div class="category-crear">  
+                        <label for="category-crear"><input type="radio" name="categoria" value="Alumno" id="Alumno">Alumno</label><br>
+                        <label for="category-crear"><input type="radio" name="categoria" value="Profesor" id="Profesor">Profesor</label><br>
+                        <label for="category-crear"><input type="radio" name="categoria" value="Editor" id="Editor">Editor</label><br>
+                        <label for="category-crear"><input type="radio" name="categoria" value="Administrador" id="Administrador">Administrador</label><br>
                     </div>
                 </div>
                 <div class="register_form-campo">

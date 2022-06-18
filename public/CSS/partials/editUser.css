@@ -47,6 +47,17 @@
     border-radius: 5px;
 }
 
+.imagenAnterior {
+    width: 20%;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.editarUserFoto {
+    display: none;
+}
+
+
 .editUserBTNS {
     display: flex;
     justify-content: space-between;

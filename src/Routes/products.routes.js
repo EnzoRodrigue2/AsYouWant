@@ -38,7 +38,7 @@ router.post("/crear-producto",  upload.single('imagen'), validateCreate, product
 /* Editar productos */ 
 router.get("/:id/edit",productController.edit);
 
-router.put("/:id/guardar",productController.guardarCambios);
+router.put("/:id/guardar", validateEdit, productController.guardarCambios);
 
 /* Borrar producto */
 router.get("/:id/delete", productController.delete);

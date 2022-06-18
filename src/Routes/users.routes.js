@@ -64,7 +64,7 @@ const upload = multer({storage})
 
 /* Formulario Login. */
 router.get('/login', userMiddleware, usersController.login);
-router.post('/login', usersController.cuenta, validateLoginForm);
+router.post('/login', validateLoginForm, usersController.cuenta);
 /* Formulario register. */
 router.get('/register', usersController.register);
 router.post('/register', upload.single('imagen'), validateRegisterForm, usersController.store);
@@ -73,7 +73,7 @@ router.get('/perfil/:id', usersController.perfil);
 /* Editar usuario. */
 router.get('/:id/editUser', usersController.editView);
 router.put('/:id/editUser', validateUpdateUser, usersController.edit);
-
+/*Probando API*/
 router.get('/', usersController.list);
-router.get('/detail/:id', usersController.detail);
+router.get('/:id', usersController.detail);
 module.exports = router;
