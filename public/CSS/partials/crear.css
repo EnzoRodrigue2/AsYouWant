@@ -82,8 +82,13 @@
     background-color: var(--amarillo);
 }
 
-.erroresCreate {
+.erroresCreate .crear-errorList {
     color: red;
+}
+.crear_errores {
+    color: var(--rojo);
+    list-style: none;
+    padding-left: 20px !important;
 }
 
 @media (max-width: 760px) {

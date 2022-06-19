@@ -12,14 +12,16 @@
             <% });
             } %>
 
-            <% if (locals.errors) { 
-                errors.forEach(error => { %>
-                <div class="login_errores">
-                    <ul></ul>
-                </div>
-            <% });
-            } %>
             <form name="crearForm" action="/productos/crear-producto" method="POST" class="crear_form" enctype="multipart/form-data">
+                <div class="crear_errores" id="crear-errorList">
+                    <ul id="crear-errorList">
+                    </ul>
+                    <!-- <% if(locals.errors) {
+                        errors.forEach(error => { %>
+                            <li class="crear-errorList" id="errorList"><%= error.msg %></li>
+                    <% })
+                    }; %> -->
+                </div>
                 <div>
                     <h3 class="editar_tituloInfo">Información básica</h3>
                 <div class="description-edit">
@@ -66,6 +68,5 @@
         </div>
     </main>
     <%- include('./partials/footer') %>
-    <script src="../src/Js/validacionFormLogin.js"></script>
-</body>
+    <script src="/Js/validacionFormCreacionProduct.js"></script>
 </html>
