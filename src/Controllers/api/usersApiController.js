@@ -1,6 +1,7 @@
 
 const db = require('../../database/models');
 const sequelize = db.sequelize;
+const Op = sequelize.Op;
 
 const usersController = {
 

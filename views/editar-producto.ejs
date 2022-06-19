@@ -11,7 +11,11 @@
                     <p class="erroresEdit"><%= error.msg %></p>
             <% });
             } %>
-            <form action="/productos/<%= productEditar.id %>/guardar?_method=PUT" method="POST">
+            <form action="/productos/<%= productEditar.id %>/guardar?_method=PUT" method="POST" class="editar_form">
+                <div class="editar_errores" id="editar-errorList">
+                    <ul id="editar-errorList">
+                    </ul>
+                </div>
                 <div>
                     <h3 class="editar_tituloInfo">Información básica</h3>
                 <div class="description-edit">
@@ -62,5 +66,6 @@
         </div>
     </main>
     <%- include('./partials/footer') %>
+    <script src="/Js/validacionFormEditarProducto.js"></script>
 </body>
 </html>
