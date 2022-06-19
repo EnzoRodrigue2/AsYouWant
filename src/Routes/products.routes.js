@@ -23,14 +23,6 @@ const upload = multer({storage});
 /* GET Listado de productos. */
 router.get("/", productController.list);
 
-/* GET Listado de productos segun categoria */
-router.get("/:categoria", productController.categoriaCursos);
-
-/* GET Info producto especifico. */
-router.get("/info/:id", productController.detalle);
-//router.get("/info/:id", productController.) // http://localhost:4000/productos/info/2
-// router.get("/info", productController.list);
-
 /*Crear producto nuevo.*/
 router.get("/crear", productController.crear);
 router.post("/crear-producto",  upload.single('imagen'), validateCreate, productController.agregar); 
@@ -43,5 +35,14 @@ router.put("/:id/guardar", validateEdit, productController.guardarCambios);
 /* Borrar producto */
 router.get("/:id/delete", productController.delete);
 router.post('/:id/destroyed', productController.destroyed);
+
+/* GET Listado de productos segun categoria */
+router.get("/:categoria", productController.categoriaCursos);
+
+/* GET Info producto especifico. */
+router.get("/info/:id", productController.detalle);
+//router.get("/info/:id", productController.) // http://localhost:4000/productos/info/2
+// router.get("/info", productController.list);
+
 
 module.exports = router;
