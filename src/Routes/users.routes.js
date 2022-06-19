@@ -11,44 +11,46 @@ const userMiddleware = require('../middlewares/userMiddleware');
 //validaciones
 const validateRegisterForm = [
     body('nombre')
-        .notEmpty().withMessage('Debes colocar un nombre')
+        .notEmpty().withMessage('Debes colocar un nombre').bail()
         .isLength({min: 2}).withMessage('El nombre debe tener al menos 2 caracteres'),
     body('apellido')
-        .notEmpty().withMessage('Debes colocar un apellido')
+        .notEmpty().withMessage('Debes colocar un apellido').bail()
         .isLength({min: 2}).withMessage('El apellido debe tener al menos 2 caracteres'),
     body('email')
-        .notEmpty().withMessage('Debes colocar un email')
+        .notEmpty().withMessage('Debes colocar un email').bail()
         .isEmail().withMessage('El email debe ser válido'),
     body('contraseña')
-        .notEmpty().withMessage('Debes colocar una contraseña')
+        .notEmpty().withMessage('Debes colocar una contraseña').bail()
         .isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres')
 ];
 
 const validateLoginForm = [
     body('nombre')
-        .notEmpty().withMessage('Debes colocar un nombre')
+        .notEmpty().withMessage('Debes colocar un nombre').bail()
         .isLength({min: 2}).withMessage('El nombre debe tener al menos 2 caracteres'),
     body('email')
-        .notEmpty().withMessage('Debes colocar un email')
+        .notEmpty().withMessage('Debes colocar un email').bail()
         .isEmail().withMessage('Debes colocar un email de formato valido'),
     body('contraseña')
-        .notEmpty().withMessage('Debes colocar una contraseña')
+        .notEmpty().withMessage('Debes colocar una contraseña').bail()
         .isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres')
 ];
 
 const validateUpdateUser = [
     body('nombre')
-        .notEmpty().withMessage('Debes colocar un nombre')
+        .notEmpty().withMessage('Debes colocar un nombre').bail()
         .isLength({min: 2}).withMessage('El nombre debe tener al menos 2 caracteres'),
     body('apellido')
-        .notEmpty().withMessage('Debes colocar un apellido')
+        .notEmpty().withMessage('Debes colocar un apellido').bail()
         .isLength({min: 2}).withMessage('El apellido debe tener al menos 2 caracteres'),
     body('email')
-        .notEmpty().withMessage('Debes colocar un email')
+        .notEmpty().withMessage('Debes colocar un email').bail()
         .isEmail().withMessage('El email debe ser válido'),
     body('contraseña')
-        .notEmpty().withMessage('Debes colocar una contraseña')
-        .isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres')
+        .notEmpty().withMessage('Debes colocar una contraseña').bail()
+        .isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres'),
+    body('recontraseña')
+        .notEmpty().withMessage('Debes repetir tu contraseña').bail()
 ];
 
 const storage = multer.diskStorage({

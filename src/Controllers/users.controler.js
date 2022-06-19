@@ -117,7 +117,6 @@ const controller = {
                 .catch(err => {
                     res.send(err)
                 });
-                
                 } else {
                 db.Usuario.create({
                     nombre: req.body.nombre,
@@ -196,12 +195,6 @@ const controller = {
      
      edit: (req, res)=> {
         let idUsuario = req.params.id;
-        let imagenUser = "";
-        if (req.file !== undefined) {
-            imagenUser = req.file.filename;
-        } else {
-            imagenUser = req.body.imagenAnterior
-        }
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             db.Categoria.findAll({
@@ -210,15 +203,21 @@ const controller = {
                 }
             })
             .then(function(result){
-                console.log(result)
+                let fotoPerfil = ""
+                if (req.file !== undefined) {
+                    fotoPerfil = req.file.filename
+                } else {
+                    fotoPerfil = req.body.imagenAnterior
+                };
+                console.log(result);
                 db.Usuario.update({
                 nombre: req.body.nombre,
                 apellidos: req.body.apellido,
                 email: req.body.email,
                 descripcion: req.body.descripcion,
                 categoria_ID: result.id,
-                password: req.body.contraseña,
-                imagen: imagenUser
+                imagen: fotoPerfil,
+                password: req.body.contraseña
                 }, {
                     where: {
                         id: idUsuario
@@ -229,7 +228,7 @@ const controller = {
         } else {
             db.Usuario.findByPk(idUsuario)
             .then((findUser)=> {
-                res.render('editUser', {findUser})
+                res.render('editUser', {findUser, errors: errors.array(), old: req.body })
             })
             .catch((err)=>{
                 console.log(err);
