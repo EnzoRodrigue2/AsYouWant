@@ -9,8 +9,6 @@ const bcrypt = require('bcrypt');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 
-// const valPass = bcrypt.compareSync(req.body.contraseña, Usuario.password)
-
 // const encontrarUser = (id) => {
 //     let usuario = users.filter(gente => gente.id == id);
 //     return usuario
@@ -32,16 +30,10 @@ const controller = {
                     password: req.body.contraseña
                 }
             }).then((usuarioALoguearse) =>{
-                // if(bcrypt.compareSync(req.body.contraseña, usuarioALoguearse.password) == true){
                 req.session.usuarioLogueado = usuarioALoguearse;
                 let data = req.session.usuarioLogueado;
                 console.log(data);
                 res.redirect('/usuario/perfil/' + usuarioALoguearse.id);
-                // } else{
-                //     res.render('login', { errors:[
-                //         {msg:'Credenciales invalidas'}
-                //     ]});
-                // }
             })
             .catch(err => {
                 console.log(err);
@@ -106,7 +98,7 @@ const controller = {
                 })
                 .then(usuario => {
                     db.Usuario.update({
-                        detail: '/usuario/' + usuario.id
+                        detail: '/api/users/' + usuario.id
                     }, {
                         where: {
                             id: usuario.id
@@ -128,6 +120,13 @@ const controller = {
                     imagen: 'userDefault.jpg'
                 })
                 .then(usuario => {
+                    db.Usuario.update({
+                        detail: '/api/users/' + usuario.id
+                    }, {
+                        where: {
+                            id: usuario.id
+                        }
+                    });
                     res.redirect('/usuario/perfil/' + usuario.id);
                 })
                 .catch(err => {
