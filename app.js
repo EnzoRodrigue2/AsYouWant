@@ -11,6 +11,8 @@ const session = require('express-session');
 var mainRouter = require('./src/routes/main.routes');
 var usersRouter = require('./src/routes/users.routes');
 var productsRouter = require("./src/routes/products.routes");
+var usersApiRouter = require('./src/Routes/api/usersApiRoutes');
+var productsApiRouter = require('./src/Routes/api/productsApiRoutes');
 
 var app = express();
 
@@ -35,6 +37,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', mainRouter);
 app.use("/productos", productsRouter);
 app.use('/usuario', usersRouter);
+app.use('/api/users', usersApiRouter);
+app.use('/api/products', productsApiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
