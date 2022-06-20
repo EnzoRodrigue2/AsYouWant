@@ -3,26 +3,19 @@ import React, { Component} from "react";
 
 class ListaProductos extends Component {
 
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
         this.state = {
-            curso: ""
+            curso: []
         }
     }
 
-    apiCall(url, consecuencia){
-        fetch(url)
-            .then(response => response.json())
-            .then(data => consecuencia(data))
-            .catch(error => console.log(error))
-    }
-
-    mostrarProductos = (data) => {
-        console.log(data)
-    }
 
     componentDidMount(){
-        this.apiCall('http://localhost:3000/api/users/13', this.mostrarProductos)        
+        fetch("/api/products/")
+            .then(res => res.json())
+            .then(res => {console.log(res)})
+            .catch(error => {console.log(error)})
     }
 
 
