@@ -7,6 +7,7 @@ const { validationResult } = require('express-validator');
 ///////////////////////////////////////////////////////////////////////
 // Esta linea es la que falla, se rompe al querer encontrar esa direccion
 const db = require('../database/models');
+const { log } = require('console');
 /////////////////////////////////////////////////////////////////////
 ///////////////////////
 
@@ -71,6 +72,7 @@ const controller = {
     //     // res.render('listaProductos',{ productos: products , saleNow: saleNow} );
 
         let saleNow = temporadaSale[mesActual] || temporadaSale[tipo];
+        console.log(products)
 
         db.categoriaCursos.findAll()
         .then(function(categorias) {
