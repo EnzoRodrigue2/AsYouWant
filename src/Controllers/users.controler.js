@@ -89,22 +89,25 @@ const controller = {
                 if(req.file){
                 db.Usuario.create({
                     nombre: req.body.nombre,
-                    apellidos: req.body.apellido,
+                    apellido: req.body.apellido,
                     email: req.body.email,
                     descripcion: req.body.descripcion,
                     categoria_ID: result[0].id,
                     password: req.body.contraseña,
                     imagen: req.file.filename
                 })
-                .then(usuario => {
-                    db.Usuario.update({
-                        detail: '/api/users/' + usuario.id
-                    }, {
-                        where: {
-                            id: usuario.id
-                        }
-                    });
-                    res.redirect('/usuario/perfil/' + usuario.id);
+                // .then(usuario => {
+                //     db.Usuario.update({
+                //         detail: '/api/users/' + usuario.id
+                //     }, {
+                //         where: {
+                //             id: usuario.id
+                //         }
+                //     });
+                //     res.redirect('/usuario/perfil/' + usuario.id);
+                // })
+                .then(user=>{
+                    res.redirect('/usuario/perfil/' + user.id)
                 })
                 .catch(err => {
                     res.send(err)
@@ -112,22 +115,25 @@ const controller = {
                 } else {
                 db.Usuario.create({
                     nombre: req.body.nombre,
-                    apellidos: req.body.apellido,
+                    apellido: req.body.apellido,
                     email: req.body.email,
                     descripcion: req.body.descripcion,
                     categoria_ID: result[0].id,
                     password: req.body.contraseña,
                     imagen: 'userDefault.jpg'
                 })
-                .then(usuario => {
-                    db.Usuario.update({
-                        detail: '/api/users/' + usuario.id
-                    }, {
-                        where: {
-                            id: usuario.id
-                        }
-                    });
-                    res.redirect('/usuario/perfil/' + usuario.id);
+                // .then(usuario => {
+                //     db.Usuario.update({
+                //         detail: '/api/users/' + usuario.id
+                //     }, {
+                //         where: {
+                //             id: usuario.id
+                //         }
+                //     });
+                //     res.redirect('/usuario/perfil/' + usuario.id);
+                // })
+                .then(user=>{
+                    res.redirect('/usuario/perfil/' + user.id)
                 })
                 .catch(err => {
                     res.send(err)
