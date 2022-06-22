@@ -96,19 +96,19 @@ const controller = {
                     password: req.body.contraseña,
                     imagen: req.file.filename
                 })
-                // .then(usuario => {
-                //     db.Usuario.update({
-                //         detail: '/api/users/' + usuario.id
-                //     }, {
-                //         where: {
-                //             id: usuario.id
-                //         }
-                //     });
-                //     res.redirect('/usuario/perfil/' + usuario.id);
-                // })
-                .then(user=>{
-                    res.redirect('/usuario/perfil/' + user.id)
+                .then(usuario => {
+                    res.redirect('/usuario/perfil/' + usuario.id);
+                    db.Usuario.update({
+                        detail: '/api/users/' + usuario.id
+                    }, {
+                        where: {
+                            id: usuario.id
+                        }
+                    });
                 })
+                // .then(user=>{
+                //     res.redirect('/usuario/perfil/' + user.id)
+                // })
                 .catch(err => {
                     res.send(err)
                 });
@@ -122,19 +122,19 @@ const controller = {
                     password: req.body.contraseña,
                     imagen: 'userDefault.jpg'
                 })
-                // .then(usuario => {
-                //     db.Usuario.update({
-                //         detail: '/api/users/' + usuario.id
-                //     }, {
-                //         where: {
-                //             id: usuario.id
-                //         }
-                //     });
-                //     res.redirect('/usuario/perfil/' + usuario.id);
-                // })
-                .then(user=>{
-                    res.redirect('/usuario/perfil/' + user.id)
+                .then(usuario => {
+                    res.redirect('/usuario/perfil/' + usuario.id);
+                    db.Usuario.update({
+                        detail: '/api/users/' + usuario.id
+                    }, {
+                        where: {
+                            id: usuario.id
+                        }
+                    });
                 })
+                // .then(user=>{
+                //     res.redirect('/usuario/perfil/' + user.id)
+                // })
                 .catch(err => {
                     res.send(err)
                 });
@@ -208,27 +208,42 @@ const controller = {
                 }
             })
             .then(function(result){
-                let fotoPerfil = ""
-                if (req.file !== undefined) {
-                    fotoPerfil = req.file.filename
-                } else {
-                    fotoPerfil = req.body.imagenAnterior
-                };
+                if (req.file) {
                 console.log(result);
                 db.Usuario.update({
                 nombre: req.body.nombre,
-                apellidos: req.body.apellido,
+                apellido: req.body.apellido,
                 email: req.body.email,
                 descripcion: req.body.descripcion,
                 categoria_ID: result.id,
-                imagen: fotoPerfil,
+                imagen: req.file.filename,
                 password: req.body.contraseña
                 }, {
                     where: {
                         id: idUsuario
                     }
                 })
-                res.redirect('/usuario/perfil/' + idUsuario);
+                .then(()=> {
+                    res.redirect('/usuario/perfil/' + idUsuario);
+                })
+            } else{
+                console.log(result);
+                db.Usuario.update({
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                email: req.body.email,
+                descripcion: req.body.descripcion,
+                categoria_ID: result.id,
+                password: req.body.contraseña
+                }, {
+                    where: {
+                        id: idUsuario
+                    }
+                })
+                .then(()=> {
+                    res.redirect('/usuario/perfil/' + idUsuario);
+                })
+            }
             })
         } else {
             db.Usuario.findByPk(idUsuario)
