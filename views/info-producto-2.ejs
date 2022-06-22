@@ -154,7 +154,7 @@
                     <div class="recomendacione-box">
                         <ul class="lista-recomendaciones">
                             <% sugerencias.forEach(el => { %>
-                            <a href="/productos/info/<%=el.id %>">
+                            <a href="/productos/info/<%= el.id %>">
                                 <li class="recomendacion-indiv">
                                     <picture class="miniatura-curso">
                                         <img  class="imagen-miniatura" src="<%=el.imagen %>">
@@ -200,9 +200,11 @@
                     </div>
                     <div class="boton-compra">
                         <img src="/Images/Iconos/bx-cart.svg">
-                        <h2 class="boton-accion">
-                            comprar
-                        </h2>
+                        <a href="/carrito/<%=productDetail.id %>">
+                            <h2 class="boton-accion">
+                                comprar
+                            </h2>
+                        </a>
                     </div>
                     <ul><h4>Informacion del curso</h4>
                         <li>

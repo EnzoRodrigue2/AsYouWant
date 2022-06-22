@@ -8,36 +8,22 @@
         <h1>Tu carrito</h1>
         <section>
             <div class="contenido-carrito">
-                <article>
-                    <img src="/Images/camera.jpg" height="100px" alt="Fotografía">
-                    <div class="inf-btn">
-                    <div class="info">
-                        <h3>Fotografía profesional</h3>
-                        <p>Precio</p>
-                    </div>
-                    <button type="reset"><i class="fas fa-trash-alt"></i></button>
-                </div>
-                </article>
-                <article>
-                    <img src="/Images/virtualidad.jpg" height="100px" alt="Virtualidad">
-                    <div class="inf-btn">
-                        <div class="info">
-                            <h3>Preparación de clases virtuales</h3>
-                            <p>Precio</p>
+                <% for(i=0;i < 3; i++) { %>
+                    <a href="/productos/info/<%=compras[i].id%>" class="carrito-contenedor">
+                        <div class="carrito-foto-info">
+                            <picture class="carrito-miniatura-curso">
+                                <img src="<%=compras[i].imagen %>" class="carrito-imagen-miniatura" height="100px" alt="Fotografía">
+                            </picture>
+                            <div class="carrito-info">
+                                <div class="info">
+                                    <h3><%=compras[i].titulo %></h3>
+                                    <p><%=compras[i].precio %></p>
+                                </div>
+                            </div>
                         </div>
                         <button type="reset"><i class="fas fa-trash-alt"></i></button>
-                    </div>
-                </article>
-                <article>
-                    <img src="/Images/costura.jpg" height="100px" alt="Costura">
-                    <div class="inf-btn">
-                    <div class="info">
-                        <h3>Costura nivel 1</h3>
-                        <p>Precio</p>
-                    </div>
-                    <button type="reset"><i class="fas fa-trash-alt"></i></button>
-                </div>
-                </article>
+                    </a> 
+                <% } %>
             </div>
             <div class="resumen">
                 <h2>Resumen</h2>
@@ -49,7 +35,7 @@
                 <button type="submit">Comprar ahora</button>
             </div>
         </section>
-        <section>
+        <section class="carrito-recom">
             <h2>Podría interesarte</h2>
             <div class="cursos2">
                 <article>

@@ -10,6 +10,7 @@ const session = require('express-session');
 
 var mainRouter = require('./src/routes/main.routes');
 var usersRouter = require('./src/routes/users.routes');
+// var carritoRouter = require("./src/routes/carrito.routes");
 var productsRouter = require("./src/routes/products.routes");
 var usersApiRouter = require('./src/Routes/api/usersApiRoutes');
 var productsApiRouter = require('./src/Routes/api/productsApiRoutes');
@@ -36,6 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', mainRouter);
 app.use("/productos", productsRouter);
+// app.use("/carrito", carritoRouter);
 app.use('/usuario', usersRouter);
 app.use('/api/users', usersApiRouter);
 app.use('/api/products', productsApiRouter);

@@ -18,6 +18,9 @@
     flex-direction: column;
     justify-content: space-between;
     width: 60%;
+    box-shadow: -2px 13px 29px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    margin: 10px;
 }
 
 .contenido-carrito article {
@@ -115,6 +118,37 @@
     padding: 0.5rem;
     font-size: var(--text-md);
     color: var(--marron)
+}
+
+.carrito-contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.carrito-miniatura-curso {
+    overflow: hidden;
+    width: 200px;
+    padding-right: 15px;
+}
+
+.carrito-imagen-miniatura {
+    width: 100%;
+}
+
+.carrito-indiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.carrito-foto-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.carrito-recom {
+    margin-left: 50px;
 }
 
 /*RESPONSIVE*/

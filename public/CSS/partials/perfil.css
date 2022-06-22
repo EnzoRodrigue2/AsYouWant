@@ -72,3 +72,17 @@
     font-size: 35px;
     color: var(--gris-oscuro);
 }
+
+.perfil-boton-crear {
+    
+    display: flex;
+    justify-content: center;
+    background-color: var(--amarillo);
+    border-radius: 5px;
+    font-weight: normal;
+    padding: 10px;
+    font-size: var(--title);
+    font-weight: 500;
+    margin: 30px;
+    
+}

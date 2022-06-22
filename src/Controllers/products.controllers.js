@@ -220,11 +220,11 @@ const controller = {
         let tieneVideo = (req.body.video) ? 1 : 0;
         let tieneLectura = (req.body.lectura) ? 1 : 0;
         let profesorID = "";
-        if(req.session.usuarioLogueado){
-            profesorID = req.session.usuarioLogueado
-        } else {
-            profesorID = null;
-        };
+        // if(req.session.usuarioLogueado){
+        //     profesorID = req.session.usuarioLogueado
+        // } else {
+        //     profesorID = null;
+        // };
         db.categoriaCursos.findAll({
             where:{
                 nombre:req.body.categorias
@@ -382,6 +382,7 @@ const controller = {
         })
         
     }
+    
 };
 
 module.exports = controller;

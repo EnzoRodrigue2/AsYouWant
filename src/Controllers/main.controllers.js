@@ -46,9 +46,7 @@ const controller = {
       });
       // res.render('index', { cursos: cursos });
     },
-    carrito : function(req, res, next) {
-      res.render('carrito');
-    },
+
     homeUser :  function(req, res, next) {
       let findCursosFotos = db.Curso.findAll({where: {categoriaCursos_ID: 2}});
       let findCursosArt = db.Curso.findAll({where: {categoriaCursos_ID: 3}});
@@ -83,6 +81,15 @@ const controller = {
             res.render("listaProductos", {productos:resultado,saleNow: saleNow, categorias: categorias})
           })
         })
+    },
+    carrito : function(req, res, next) {
+      let cursosParaCompra;
+      db.Curso.findAll()
+      .then ((cursos) => {
+        cursosParaCompra = cursos;
+        res.render('carrito', {compras: cursosParaCompra});
+      }
+      )
     }
 };
 
