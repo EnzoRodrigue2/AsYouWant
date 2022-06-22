@@ -55,7 +55,7 @@ const productsController = {
      detail: (req, res) => {
         db.Curso.findByPk(req.params.id)
         .then(curso => {
-            if (curso.length > 0 ) {
+            if (curso != "" ) {
                 let response = {
                     titulo: curso.titulo,
                     descripcion: curso.descripcion,
