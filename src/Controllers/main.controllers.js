@@ -13,7 +13,6 @@ const cursos = JSON.parse(fs.readFileSync(cursosPath, 'utf-8'));
 
 var cursosFotos = cursos.filter(el=> el.categoria === "multimedia");
 var cursosArt = cursos.filter(el => el.categoria === "manualidades");
-// var cursosOrg = cursos.filter(el => el.categoria === "organizacion");
 var cursosLead = cursos.filter(el => el.categoria === "liderazgo");
 var cursosFood = cursos.filter(el => el.categoria === "alimentos");
 
@@ -41,10 +40,8 @@ const controller = {
     home :  function(req, res, next) {
       db.Curso.findAll()
       .then((cursos)=> {
-        // console.log(cursos);
         res.render('index', {cursos});
       });
-      // res.render('index', { cursos: cursos });
     },
 
     homeUser :  function(req, res, next) {
@@ -72,13 +69,10 @@ const controller = {
               titulo: {
                 [Op.like]: '%'+buscado+'%'
               },
-              // descripcion: {
-              //   [Op.like]: buscado +'%'
-              // }
             }
           })
           .then(function(resultado){
-            res.render("listaProductos", {productos:resultado,saleNow: saleNow, categorias: categorias})
+            res.render("listaProductos", {productos:resultado,saleNow: saleNow, categorias: categorias, categoriaBuscada: ""})
           })
         })
     },

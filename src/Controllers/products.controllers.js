@@ -4,13 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
 
-///////////////////////////////////////////////////////////////////////
-// Esta linea es la que falla, se rompe al querer encontrar esa direccion
 const db = require('../database/models');
 const { log } = require('console');
-/////////////////////////////////////////////////////////////////////
-///////////////////////
-
 
 // const Cursos = require('../database/models/Curso.js');
 
@@ -38,9 +33,6 @@ const searchForSimilar = (thisCategoria) => {
     return productosSugeridos;
 };
 
-
-
-
 //Variables de fechas para ofertas
 let meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
 let fecha = new Date;
@@ -61,16 +53,7 @@ var temporadaSale = {
 
 
 const controller = {
-    // index: {
-
-    // },
     list: (req, res) => {
-    //     // console.log(hoy, mesActual);
-    //     // let saleNow = temporadaSale[mesActual] || temporadaSale[tipo];
-    //     // // let saleNow = temporadaSale['diciembre'];
-    //     // // let saleNow = temporadaSale['junio'];
-    //     // res.render('listaProductos',{ productos: products , saleNow: saleNow} );
-
         let saleNow = temporadaSale[mesActual] || temporadaSale[tipo];
         console.log(products)
 
@@ -79,14 +62,9 @@ const controller = {
             let categoriasBase = categorias;
             db.Curso.findAll()
             .then((resultado) => {
-                res.render('listaProductos', {productos:resultado, saleNow: saleNow, categorias: categoriasBase})
+                res.render('listaProductos', {productos:resultado, saleNow: saleNow, categorias: categoriasBase, categoriaBuscada: ""})
             })
         })
-
-        // db.Curso.findAll()
-        // .then((resultado) => {
-        //     res.render('listaProductos', {productos:resultado, saleNow: saleNow, categorias: categorias})
-        // })
     },
 
     categoriaCursos: (req,res) => {
@@ -113,7 +91,7 @@ const controller = {
             })
             .then(function(cursosFiltrados) {
                 console.log(cursosFiltrados);
-                res.render("listaProductos", {productos:cursosFiltrados,saleNow: saleNow, categorias: resultado})
+                res.render("listaProductos", {productos:cursosFiltrados,saleNow: saleNow, categorias: resultado, categoriaBuscada: categoriaBuscada})
             })
         })
     },
@@ -134,17 +112,6 @@ const controller = {
             })
         }
         )
-
-        // CONTROLADOR CON JSON
-
-        // let productDetail = searchForId(idProducto)
-        // productDetail = productDetail[0]
-
-        // let thisCategoria = productDetail.categoria;
-        // let sugerencias= searchForSimilar(thisCategoria);
-        // console.log(sugerencias);
-        // res.render('info-producto-2',{productDetail,sugerencias} );
-        
     },
     
     edit: (req,res) => {
@@ -247,118 +214,6 @@ const controller = {
             })
             res.redirect('/productos');
         })
-        // db.Curso.create({
-        //     titulo: req.body.titulo,
-        //     descripcion: req.body.descripcion_larga,
-        //     descripcion_corta: req.body.description_corta,
-        //     precio: req.body.precio,
-        //     audio: tieneAudio,
-        //     video: tieneVideo,
-        //     lectura: tieneLectura,
-        //     categoriaCursos_ID: req.body.categoria.id,
-        //     profesor_ID: profesorID,
-        //     unidades_ID: null,
-        //     imagen: "/images/imagenes/" + req.file.filename
-        // })
-        // res.redirect('/productos');
-        // let errors = validationResult(req);
-        //     if (errors.isEmpty()) {
-        //         if(req.file) {
-        //             let tieneAudio = (req.body.audio == true) ? 1 : 0;
-        //             let tieneVideo = (req.body.video == true) ? 1 : 0;
-        //             let tieneLectura = (req.body.lectura == true) ? 1 : 0;
-        //             let profesorID = "";
-        //             if(req.session.usuarioLogueado){
-        //                 profesorID = req.session.usuarioLogueado
-        //             } else {
-        //                 profesorID = null;
-        //             };
-
-        //             let categoriaID = "";
-        //             db.Curso.create({
-        //                 titulo: req.body.titulo,
-        //                 descripcion: req.body.descripcion_larga,
-        //                 descripcion_corta: req.body.descripcion_corta,
-        //                 precio: req.body.precio,
-        //                 audio: tieneAudio,
-        //                 video: tieneVideo,
-        //                 lectura: tieneLectura,
-        //                 categoriaCursos_ID: req.body.categoria,
-        //                 profesor_ID: profesorID,
-        //                 imagen: req.file.filename
-        //             })
-        //             res.redirect('/productos');
-
-        //         }
-        //     } else {
-        //         res.redirect('/productos/info/' + productoNuevo.id)
-        //     }
-
-            // if(req.file) {
-            //     let tieneAudio = (req.body.audio == true) ? 1 : 0;
-            //     let tieneVideo = (req.body.video == true) ? 1 : 0;
-            //     let tieneLectura = (req.body.lectura == true) ? 1 : 0;
-            //     let profesorID = "";
-            //     if(req.session.usuarioLogueado){
-            //         profesorID = req.session.usuarioLogueado
-            //     } else {
-            //         profesorID = null;
-            //     };
-            //     db.Curso.create({
-            //         titulo: req.body.titulo,
-            //         descripcion: req.body.descripcion_larga,
-            //         descripcion_corta: req.body.descripcion_corta,
-            //         precio: req.body.precio,
-            //         audio: tieneAudio,
-            //         video: tieneVideo,
-            //         lectura: tieneLectura,
-            //         categoriaCursos_ID: req.body.categoria,
-            //         profesor_ID: profesorID,
-            //         unidades_ID: null,
-            //         imagen: req.file.filename
-            //     })
-            //     res.redirect('/productos');
-
-            // } 
-        // db.categoriaCursos.findAll()
-        // .then( (categorias) => {
-        //     for(i=0; i<categorias.length; i ++) {
-        //         if(categorias[i].titulo == req.body.categorias){
-        //             categoriaID = categorias[i].id;
-        //         }
-        //     };
-        //     let errors = validationResult(req);
-        //     if (errors.isEmpty()) {
-        //         if(req.file) {
-        //             db.Curso.create({
-        //                 titulo: req.body.titulo,
-        //                 descripcion: req.body.descripcion_larga,
-        //                 descripcion_corta: req.body.descripcion_corta,
-        //                 precio: req.body.precio,
-        //                 audio: tieneAudio,
-        //                 video: tieneVideo,
-        //                 lectura: tieneLectura,
-        //                 categoriaCursos_ID: req.body.categoria,
-        //                 profesor_ID: profesorID,
-        //                 imagen: req.file.filename
-        //             })
-        //             res.redirect("/productos");
-
-        //         }
-        //     } else {
-        //         res.redirect('/productos/info/' + productoNuevo.id)
-        //     }
-        // }
-        //     );
-
-       
-        //         res.redirect('/productos/info/' + productoNuevo.id)
-
-        //     }
-        // } else {
-        //     res.render('crear-producto', { errors: errors.array(), old: req.body });
-        // }
-        //     });
     },
 
     delete: (req,res) => {
