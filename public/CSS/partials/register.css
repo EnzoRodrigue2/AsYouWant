@@ -8,7 +8,7 @@
     background-color: var(--celeste);
     height: 100vh;
     width: 50vw;
-    justify-content: center;
+    
 }
 .register_logo {
     width: 100%;
@@ -85,13 +85,17 @@
 
 .register_iconContein {
     display: flex;
-    flex-direction: row-reverse;
-    margin-top: 20px;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-left: 50px;
+    z-index: 10;
+    position: fixed;
 }
 
 .register_icon {
     font-size: 40px;
     color: var(--gris-oscuro);
+    opacity: 0.5;
 }
 
 .category-crear ul{
