@@ -5,7 +5,7 @@
 }
 
 .top-crear {
-    padding-top: 60px;
+    padding-top: 130px;
 }
 
 .crear_form {
@@ -90,6 +90,22 @@
     list-style: none;
     padding-left: 20px !important;
 }
+
+.crear_iconContein {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    margin-left: 60px;
+    z-index: 10;
+    position: fixed;
+}
+
+.crear_icon {
+    font-size: 40px;
+    color: var(--gris-oscuro);
+    opacity: 0.5;
+}
+
 
 @media (max-width: 760px) {
     .description-crear input, .price-crear input, .button {

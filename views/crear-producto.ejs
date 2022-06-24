@@ -4,6 +4,11 @@
 <body>
     <%- include('./partials/header.ejs') %>
     <main class="main_crear">
+        <a href="/usuario/perfil/<%= findUser.id%>">
+            <div class="crear_iconContein">
+                <i class="crear_icon fa-solid fa-circle-arrow-left"></i>
+            </div>
+        </a>
         <div class="top-crear">
             <h1>Creación de cursos</h1>
             <% if(locals.errors) {

@@ -178,7 +178,7 @@ const controller = {
     crear: (req,res) => {
         db.categoriaCursos.findAll()
         .then(function(categorias) {
-            return res.render('crear-producto', { categorias:categorias })
+            return res.render('crear-producto', { categorias:categorias, findUser:req.session.usuarioLogueado })
         })
     },
 

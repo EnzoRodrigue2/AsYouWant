@@ -13,9 +13,11 @@
 }
 
 .imagenPerfil {
-    border: 1px solid var(--marron);
+    border: 4px solid var(--gris-oscuro);
     border-radius: 50%;
     margin: 1rem;
+    object-fit: cover;
+    height: 150px;
 }
 
 .tituloUser {
