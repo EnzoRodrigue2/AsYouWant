@@ -52,6 +52,39 @@ const productsController = {
          })
      },
 
+    //  categoria: (req, res) => {
+    //     let categorias,
+    //     db.categoriaCursos.findAll()
+    //     .then(function(resultado){
+    //        let categoriaFiltro = "";
+    //        for(i=0;i<resultado.length;i++){
+    //            if(resultado[i].nombre == categoriaBuscada ){
+    //                categoriaFiltro = resultado[i];
+    //                break;
+    //            }
+    //        }
+    //        if (categoriaFiltro != "") {
+    //            db.Curso.findAll({
+    //                where:{
+    //                    categoriaCursos_ID: categoriaFiltro.id
+    //                }
+    //            })
+    //            .then(function(cursosFiltrados) {
+    //                let response = {
+    //                    count: cursosFiltrados.length,
+    //                    cursos: cursosFiltrados,
+    //                    status: 200
+    //                };
+    //                res.json(response)
+                   
+    //            })
+    //        } else {
+    //            res.json("Todavia no tenemos cursos sobre eso")
+    //        }
+
+    //     })
+    // },
+
      detail: (req, res) => {
         db.Curso.findByPk(req.params.id)
         .then(curso => {
