@@ -4,6 +4,11 @@
 <body>
     <%- include('./partials/header.ejs') %>
     <main class="main-general-bajo-header">
+        <a href="/productos/info/<%=productEditar.id%>">
+            <div class="crear_iconContein">
+                <i class="crear_icon fa-solid fa-circle-arrow-left"></i>
+            </div>
+        </a>
         <div class="top-editar">
             <h1 class="editar_tituloPrincipal">Edición de cursos</h1>
             <% if(locals.errors) {

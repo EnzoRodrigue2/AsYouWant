@@ -135,13 +135,13 @@ const controller = {
         let tieneAudio = (req.body.audio) ? 1 : 0;
         let tieneVideo = (req.body.video) ? 1 : 0;
         let tieneLectura = (req.body.lectura) ? 1 : 0;
-        let profesorID = "";
-        if(req.session.usuarioLogueado){
-            profesorID = req.session.usuarioLogueado
-        } else {
-            profesorID = null;
-        };
-        console.log(req.body);
+        let profesorID = null;
+        // if(req.session.usuarioLogueado){
+        //     profesorID = req.session.usuarioLogueado
+        // } else {
+        //     profesorID = null;
+        // };
+        
         let imagenCurso = ""
         if (req.file !== undefined) {
             imagenCurso = req.file.filename;
@@ -212,7 +212,7 @@ const controller = {
                 categoriaCursos_ID: resultado[0].id,
                 profesor_ID: profesorID,
                 unidades_ID: null,
-                imagen: "/imagenes/" + req.file.filename
+                imagen: "/images/" + req.file.filename
             })
             res.redirect('/productos');
         })
