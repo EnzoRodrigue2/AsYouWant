@@ -6,7 +6,7 @@ const Op = sequelize.Op;
 const usersController = {
 
     list: (req,res) => {
-        db.Usuario.findAll({attributes: ['id', 'nombre', 'apellido', 'email', 'detail']})
+        db.Usuario.findAll({attributes: ['id', 'nombre', 'apellido', 'email', 'detail', 'imagen']})
         .then(usuarios => {
             let response = {
                 count: usuarios.length,
