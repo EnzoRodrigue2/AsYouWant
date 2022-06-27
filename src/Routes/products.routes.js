@@ -11,7 +11,7 @@ const validateEdit = require('../middlewares/validateEdit')
 
 const storage = multer.diskStorage({
     destination: (req,res,cb) => {
-        cb(null,pathh.join(__dirname, '../../public/images/imagenes'))
+        cb(null,pathh.join(__dirname, '../../public/images'))
     },
     filename: (req,file,cb) => {
         const newFileName = 'curso-'+ Date.now() + pathh.extname(file.originalname);

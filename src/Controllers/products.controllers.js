@@ -7,9 +7,6 @@ const { validationResult } = require('express-validator');
 const db = require('../database/models');
 const { log } = require('console');
 
-// const Cursos = require('../database/models/Curso.js');
-
-
 const productsFilePath = path.join(__dirname, '../data/cursosDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -186,12 +183,13 @@ const controller = {
         let tieneAudio = (req.body.audio) ? 1 : 0;
         let tieneVideo = (req.body.video) ? 1 : 0;
         let tieneLectura = (req.body.lectura) ? 1 : 0;
-        let profesorID = "";
+        let profesorID = null;
         // if(req.session.usuarioLogueado){
         //     profesorID = req.session.usuarioLogueado
         // } else {
         //     profesorID = null;
         // };
+        console.log(req.body);
         db.categoriaCursos.findAll({
             where:{
                 nombre:req.body.categorias
@@ -210,7 +208,7 @@ const controller = {
                 categoriaCursos_ID: resultado[0].id,
                 profesor_ID: profesorID,
                 unidades_ID: null,
-                imagen: "/images/imagenes/" + req.file.filename
+                imagen: "/imagenes/" + req.file.filename
             })
             res.redirect('/productos');
         })
