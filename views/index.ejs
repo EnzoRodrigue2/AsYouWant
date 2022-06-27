@@ -5,29 +5,6 @@
     <%- include('./partials/header.ejs') %>
     <section>
         <img class="slide" src="/Images/banner.jpg" width="100%">
-        <!--
-        <div class="carrusel" width="100%">
-            <div class="mySlides fade">
-                <img class="slide" src="/Images/carrusel1.jpg" width="100%">
-                <div class="tituloCarrusel">Aprendé a tu manera desde donde estés</div>
-            </div>
-            <div class="mySlides fade">
-                <img class="slide" src="/Images/carrusel2.jpg" width="100%">
-                <div class="tituloCarrusel">Próximamente: Pastelería nivel 1</div>
-            </div>
-            <div class="mySlides fade">
-                <img class="slide" src="/Images/carrusel3.jpg" width="100%">
-                <div class="tituloCarrusel">Que tu pasión por aprender te guíe</div>
-            </div>
-        </div>
-        <a class="btn-prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="btn-next" onclick="plusSlides(1)">&#10095;</a>
-        <div style="text-align: center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-    -->
     </section>
     <main>
         <h1>Cursos Recomendados</h1>
@@ -37,24 +14,26 @@
                     <li class="li-curso">
                         <a href="/productos/info/<%=el.id %>">
                             <article class="container-curso" >
-                            <img src="<%=el.imagen %>" width="100%">
-                            <div class="course-card">
-                                <h3><%=el.titulo %></h3>
-                                <div>
-                                    <p><%=el.profesor %></p>
-                                    <div class="media">
-                                        <i class="fas fa-file-alt"></i>
-                                        <i class="fas fa-headphones"></i>
-                                        <i class="fas fa-video"></i>
+                                <img src="<%=el.imagen %>" width="100%">
+                                <div class="container-curso-info">
+                                    <div class="course-card">
+                                        <h3><%=el.titulo %></h3>
+                                        <div>
+                                            <p><%=el.profesor %></p>
+                                            <div class="media">
+                                                <i class="fas fa-file-alt"></i>
+                                                <i class="fas fa-headphones"></i>
+                                                <i class="fas fa-video"></i>
+                                            </div>
+                                        </div>
+                                        <p><%=el.precio %></p>
+                                    </div>
+                                    <div class="buttons">
+                                        <button class="add"><i class="fas fa-cart-plus"></i></button>
+                                        <button class="buy">Comprar</button>
                                     </div>
                                 </div>
-                                <p><%=el.precio %></p>
-                            </div>
-                            <div class="buttons">
-                                <button class="add"><i class="fas fa-cart-plus"></i></button>
-                                <button class="buy">Comprar</button>
-                            </div>
-                        </article>                        
+                            </article>                        
                         </a>
                     </li>
                 <% }) %>

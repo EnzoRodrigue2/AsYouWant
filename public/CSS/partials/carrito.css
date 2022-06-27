@@ -8,9 +8,12 @@
     padding-top: 60px
 }
 
-.carrito section {
+.carrito-general{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 50px;
+    flex-direction: row;
 }
 
 .contenido-carrito {
@@ -62,7 +65,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     width: 30%;
-    margin: 7rem 0 15rem;
+    margin: 1.5rem 1.5rem 15rem;
     padding: 1rem;
     background-color: var(--gris-claro);
 }
@@ -84,10 +87,16 @@
 }
 
 /*CURSOS CARRITO*/
+.carrito-titulo {
+    display: inline-flex;
+    padding-left: 50px;
+}
 
 .cursos2 {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 50px;
 }
 
 .cursos2 article {
@@ -124,6 +133,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 7px;
+    border-bottom: 1px solid var(--gris-claro);
     
 }
 .carrito-miniatura-curso {

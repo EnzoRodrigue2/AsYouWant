@@ -69,6 +69,7 @@ main section ul {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .li-curso {
@@ -85,7 +86,10 @@ main section ul {
 
 .container-curso {
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
 
 .course-card {
     width: 100%;
