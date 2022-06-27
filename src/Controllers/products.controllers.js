@@ -113,17 +113,21 @@ const controller = {
     
     edit: (req,res) => {
         let idProducto = req.params.id;
-        db.Curso.findAll({
-            where: {
-                id: idProducto
-            }
+        db.categoriaCursos.findAll()
+        .then(function(categoriasDB) {
+            let categorias = categoriasDB
+            db.Curso.findAll({
+                where: {
+                    id: idProducto
+                }
+            })
+            .then(function(curso){
+                let productEditar = curso[0];
+                console.log(productEditar)
+                return res.render('editar-producto', {productEditar, categorias:categorias, findUser:req.session.usuarioLogueado })
+            })
+            
         })
-        .then(function(curso){
-            let productEditar = curso[0];
-            console.log(productEditar)
-            res.render('editar-producto', {productEditar})
-        })
-
     },
 
     guardarCambios: (req,res) => {

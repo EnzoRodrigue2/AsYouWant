@@ -32,7 +32,6 @@ const controller = {
             }).then((usuarioALoguearse) =>{
                 req.session.usuarioLogueado = usuarioALoguearse;
                 let data = req.session.usuarioLogueado;
-                console.log(data);
                 res.redirect('/usuario/perfil/' + usuarioALoguearse.id);
             })
             .catch(err => {
@@ -67,7 +66,6 @@ const controller = {
         }
         // req.session.usuarioLogueado = findUser;
         let data = req.session.usuarioLogueado;
-        console.log(data);
     },
 
     register:(req,res,next) => {
@@ -97,6 +95,9 @@ const controller = {
                     imagen: req.file.filename
                 })
                 .then(usuario => {
+                    req.session.usuarioLogueado = usuario;
+                    let data = req.session.usuarioLogueado;
+
                     res.redirect('/usuario/perfil/' + usuario.id);
                     db.Usuario.update({
                         detail: '/api/users/' + usuario.id

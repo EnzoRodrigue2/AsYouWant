@@ -25,11 +25,9 @@
                 </div>
                 <h3 class="editar_tituloInfo">Categoría</h3>
                 <div class="category-edit">
-                    <label for="category-edit"><input type="radio" name="categorias" value="fotografia" id="fotografia" >Fotografía</label><br>
-                    <label for="category-edit"><input type="radio" name="categorias" value="habilidades-blandas" id="habilidades-blandas" >Habilidades blandas</label><br>
-                    <label for="category-edit"><input type="radio" name="categorias" value="dibujo-pintura" id="dibujo-pintura">Dibujo y pintura</label><br>
-                    <label for="category-edit"><input type="radio" name="categorias" value="manualidades" id="manualidades">Manualidades</label><br>
-                    <label for="category-edit"><input type="radio" name="categorias" value="cocina-cocteleria" id="cocina-cocteleria">Cocina y coctelería</label><br>
+                    <% for(i = 0; i < categorias.length; i++) { %>
+                        <label for="category-edit"><input type="radio" name="categorias" value="<%= categorias[i].nombre %>" id="<%= categorias[i].nombre %>" ><%=categorias[i].nombre%></label><br>
+                    <% } %> 
                 </div>
                 <h3 class="editar_tituloInfo">Cover del curso</h3>
                 <div class="foto">
