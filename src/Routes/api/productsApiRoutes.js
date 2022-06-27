@@ -1,19 +1,19 @@
 const express = require('express');
 const router = express.Router();
-const productsController = require('../../Controllers/api/productsApiController');
+const productsAPIController = require('../../Controllers/api/productsApiController');
 const cors = require('cors')
 
 
 router.use(cors());
 
 /*Lista de productos*/
-router.get('/', productsController.list);
+router.get('/', productsAPIController.list);
 
 /*Detalle de cada curso*/
-router.get('/info/:id', productsController.detail);
+router.get('/info/:id', productsAPIController.detail);
 
 /*Lista de productos por categoria*/
-router.get('/categoria/:categoria', productsController.categoria);
+router.get('/categorias/', productsAPIController.categorias);
 
 
 

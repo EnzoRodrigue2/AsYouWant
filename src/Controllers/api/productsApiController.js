@@ -19,37 +19,22 @@ const productsController = {
             }
         }); 
      },
-     categoria: (req, res) => {
-         let categoriaBuscada = req.params.categoria;
+     categorias: (req, res) => {
          db.categoriaCursos.findAll()
-         .then(function(resultado){
-            let categoriaFiltro = "";
-            for(i=0;i<resultado.length;i++){
-                if(resultado[i].nombre == categoriaBuscada ){
-                    categoriaFiltro = resultado[i];
-                    break;
-                }
-            }
-            if (categoriaFiltro != "") {
-                db.Curso.findAll({
-                    where:{
-                        categoriaCursos_ID: categoriaFiltro.id
-                    }
-                })
-                .then(function(cursosFiltrados) {
-                    let response = {
-                        count: cursosFiltrados.length,
-                        cursos: cursosFiltrados,
-                        status: 200
-                    };
-                    res.json(response)
-                    
-                })
-            } else {
-                res.json("Todavia no tenemos cursos sobre eso")
-            }
-
-         })
+         .then(function(categoriasBase) {
+             if (categoriasBase.length>0){
+                let response = {
+                    count: categoriasBase.length,
+                    Categorias: categoriasBase,
+                    status: 200
+                };
+                res.json(response)
+                
+             } else {
+                res.json("No encontramos categorias")
+             }
+            
+        })
      },
 
     //  categoria: (req, res) => {
